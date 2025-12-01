@@ -11,7 +11,7 @@ Phase 1–2:
 """
 
 from __future__ import annotations
-
+import difflib
 from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Optional
@@ -25,6 +25,8 @@ class CommandType(Enum):
     SMALLTALK = auto()
     SECURITY_MODE = auto()
     NORMAL_MODE = auto()
+    ENROLL_VOICE = auto()
+    ENROLL_FACE = auto()
     UNKNOWN = auto()
 
 
@@ -58,6 +60,22 @@ class CommandEngine:
                 raw_text=text,
                 message_to_user="I didn't catch that. Please repeat.",
             )
+        
+        # ---- ENROLLMENT COMMANDS ----
+        if any(kw in lowered for kw in ["enroll my voice", "train my voice", "setup my voice"]):
+            return ParsedCommand(
+                type=CommandType.ENROLL_VOICE,
+                raw_text=text,
+                message_to_user="Starting voice enrollment procedure.",
+            )
+
+        if any(kw in lowered for kw in ["enroll my face", "train my face", "setup my face"]):
+            return ParsedCommand(
+                type=CommandType.ENROLL_FACE,
+                raw_text=text,
+                message_to_user="Starting face enrollment procedure.",
+            )
+
 
         # ---- SECURITY MODE ----
         if "enter security mode" in lowered or "security alert" in lowered:
@@ -148,23 +166,45 @@ class CommandEngine:
 
     def _extract_app_name(self, lowered: str) -> Optional[str]:
         """
-        Super simple app name extraction.
-        We just look for known app keywords.
+        Try to figure out which app the user meant, even if STT
+        slightly misheard the word.
         """
+        import difflib
+
         known_apps = {
             "notepad": "notepad",
             "note pad": "notepad",
             "pad": "notepad",
             "text": "notepad",
+
             "chrome": "chrome",
             "browser": "chrome",
+
+            "edge": "edge",
+            "microsoft edge": "edge",
+            "ms edge": "edge",
+
             "code": "code",
             "vs code": "code",
             "visual studio code": "code",
+
             "whatsapp": "whatsapp",
         }
 
+        # 1) Exact substring match
         for key, app in known_apps.items():
             if key in lowered:
                 return app
+
+        # 2) Fuzzy match on individual words
+        words = lowered.replace(".", " ").split()
+        keys = list(known_apps.keys())
+
+        for word in words:
+            if len(word) < 3:
+                continue
+            close = difflib.get_close_matches(word, keys, n=1, cutoff=0.6)
+            if close:
+                return known_apps[close[0]]
+
         return None

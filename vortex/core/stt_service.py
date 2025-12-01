@@ -1,13 +1,5 @@
 # vortex/core/stt_service.py
 
-"""
-STTService: offline speech-to-text using faster-whisper (Whisper tiny model).
-
-Phase 2A:
-- Transcribe short voice commands
-- Optimized for speed, not perfect accuracy
-"""
-
 from __future__ import annotations
 
 from faster_whisper import WhisperModel
@@ -18,14 +10,14 @@ from typing import Tuple
 class STTService:
     def __init__(
         self,
-        model_size: str = "tiny",
-        device: str = "cuda",
-        compute_type: str = "float16",
+        model_size: str = "tiny.en",   # use English-only tiny for speed & accuracy
+        device: str = "cpu",
+        compute_type: str = "int8",    # good for CPU
     ):
         """
-        model_size: "tiny", "base", etc.
-        device: "cpu" or "cuda" if you have GPU
-        compute_type: "int8" for speed on CPU
+        model_size: "tiny.en", "base.en", etc.
+        device: "cpu" or "cuda"
+        compute_type: "int8" for CPU, "float16" for GPU
         """
         self.model = WhisperModel(model_size, device=device, compute_type=compute_type)
 
@@ -37,12 +29,15 @@ class STTService:
         if audio.ndim != 1:
             audio = audio.reshape(-1)
 
-        # faster-whisper accepts numpy float32
         segments, _ = self.model.transcribe(
             audio,
-            language="en",        # adjust later if you want multi-language
+            language="en",
             beam_size=1,
             best_of=1,
+            condition_on_previous_text=False,
+            temperature=0,
+            vad_filter=True,
+            vad_parameters={"min_silence_duration_ms": 400},
         )
 
         text = "".join(segment.text for segment in segments).strip()

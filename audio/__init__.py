@@ -1,4 +1,0 @@
-"""
-Audio input/output modules.
-"""
-

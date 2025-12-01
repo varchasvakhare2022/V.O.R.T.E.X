@@ -1,5 +1,0 @@
-2025-12-01 11:49:53,134 - INFO - Configuration loaded from config.json
-2025-12-01 11:49:53,135 - WARNING - Voice profile file exists but appears invalid
-2025-12-01 11:50:32,427 - INFO - Enrolling owner voice with 10 samples
-2025-12-01 11:50:33,642 - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
-2025-12-01 11:50:33,643 - INFO - Owner voice enrolled successfully with 10 embeddings

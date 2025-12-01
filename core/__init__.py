@@ -1,4 +1,0 @@
-"""
-Core application logic modules.
-"""
-

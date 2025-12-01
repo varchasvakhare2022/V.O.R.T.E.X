@@ -47,3 +47,96 @@
 2025-12-01 14:31:26 | ERROR | vortex | Failed to open whatsapp: [WinError 2] The system cannot find the file specified
 2025-12-01 14:31:26 | INFO | vortex | System message: I tried to open whatsapp but something went wrong.
 2025-12-01 14:31:44 | INFO | vortex | VORTEX shutting down.
+2025-12-01 14:36:58 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 14:36:58 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 14:37:18 | INFO | vortex | User command: note that i need to go to washroom in 2mins
+2025-12-01 14:37:18 | INFO | vortex | Note stored: i need to go to washroom in 2mins
+2025-12-01 14:37:18 | INFO | vortex | System message: I'll remember that: i need to go to washroom in 2mins
+2025-12-01 14:37:44 | INFO | vortex | User command: how are you
+2025-12-01 14:37:44 | INFO | vortex | System message: Online and fully operational. How can I assist you?
+2025-12-01 14:37:52 | INFO | vortex | User command: fully operational for sure?
+2025-12-01 14:37:52 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 14:38:14 | INFO | vortex | System message: You've been quiet for a while. Need any help?
+2025-12-01 14:39:26 | INFO | vortex | VORTEX shutting down.
+2025-12-01 14:52:39 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 14:52:40 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 14:53:11 | INFO | vortex | User command: note that I need to go to washroom in 2mins
+2025-12-01 14:53:11 | INFO | vortex | Note stored: I need to go to washroom in 2mins
+2025-12-01 14:53:11 | INFO | vortex | System message: I'll remember that: I need to go to washroom in 2mins
+2025-12-01 14:53:27 | INFO | vortex | User command: open notepad
+2025-12-01 14:53:27 | INFO | vortex | System message: Opening notepad for you.
+2025-12-01 14:53:28 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-01 14:53:42 | INFO | vortex | User command: enter security mode
+2025-12-01 14:53:42 | INFO | vortex | System message: Entering security mode. All systems on high alert.
+2025-12-01 14:53:55 | INFO | vortex | User command: normal mode
+2025-12-01 14:53:55 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-01 14:54:19 | INFO | vortex | VORTEX shutting down.
+2025-12-01 15:07:46 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:08:18 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:08:32 | INFO | vortex | User command (typed): vortex
+2025-12-01 15:08:32 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 15:08:54 | INFO | vortex | Voice capture requested.
+2025-12-01 15:08:54 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:08:58 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:08:59 | INFO | vortex | STT result: 'Hello.'
+2025-12-01 15:08:59 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 15:08:59 | INFO | vortex | Voice capture requested.
+2025-12-01 15:08:59 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:09:03 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:09:03 | INFO | vortex | STT result: 'I'm going to go to the bathroom.'
+2025-12-01 15:09:03 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 15:09:12 | INFO | vortex | Voice capture requested.
+2025-12-01 15:09:12 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:09:16 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:09:16 | INFO | vortex | STT result: 'Open NotePad'
+2025-12-01 15:09:16 | INFO | vortex | System message: Opening notepad for you.
+2025-12-01 15:09:16 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-01 15:09:20 | INFO | vortex | Voice capture requested.
+2025-12-01 15:09:20 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:09:24 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:09:24 | INFO | vortex | STT result: 'Close note pad'
+2025-12-01 15:09:24 | INFO | vortex | Note stored: pad
+2025-12-01 15:09:24 | INFO | vortex | System message: I'll remember that: pad
+2025-12-01 15:11:11 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-01 15:14:03 | INFO | vortex | System message: You've been quiet for a while. Need any help?
+2025-12-01 15:15:14 | INFO | vortex | System message: I'm monitoring your system. Everything looks stable.
+2025-12-01 15:17:39 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-01 15:19:27 | INFO | vortex | VORTEX shutting down.
+2025-12-01 15:20:32 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:20:33 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:20:37 | INFO | vortex | Voice capture requested.
+2025-12-01 15:20:37 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:20:41 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:20:41 | INFO | vortex | STT result: 'Open Notepad'
+2025-12-01 15:20:41 | INFO | vortex | System message: Opening notepad for you.
+2025-12-01 15:20:41 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-01 15:20:45 | INFO | vortex | Voice capture requested.
+2025-12-01 15:20:45 | INFO | vortex | Recording voice phrase...
+2025-12-01 15:20:49 | INFO | vortex | Recording finished, running STT...
+2025-12-01 15:20:49 | INFO | vortex | STT result: 'Close load pad'
+2025-12-01 15:21:26 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:21:27 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:21:32 | INFO | vortex | User command (typed): close notepad
+2025-12-01 15:22:31 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:22:32 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:22:37 | INFO | vortex | User command (typed): close notepad
+2025-12-01 15:24:58 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:24:59 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:25:09 | INFO | vortex | User command (typed): close notepad
+2025-12-01 15:25:09 | INFO | vortex | System message: Closing notepad for you.
+2025-12-01 15:25:09 | INFO | vortex | System message: I couldn't find any running instance of notepad.
+2025-12-01 15:25:25 | INFO | vortex | User command (typed): open notepad
+2025-12-01 15:25:25 | INFO | vortex | System message: Opening notepad for you.
+2025-12-01 15:25:25 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-01 15:25:31 | INFO | vortex | User command (typed): close notepad
+2025-12-01 15:25:31 | INFO | vortex | System message: Closing notepad for you.
+2025-12-01 15:25:31 | INFO | vortex | System message: I couldn't find any running instance of notepad.
+2025-12-01 15:27:37 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-01 15:29:11 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-01 15:30:51 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-01 15:33:04 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 15:33:06 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 15:33:14 | INFO | vortex | User command (typed): close notepad
+2025-12-01 15:33:14 | INFO | vortex | System message: Closing notepad for you.
+2025-12-01 15:33:14 | INFO | vortex | Closed application: notepad
+2025-12-01 15:33:26 | INFO | vortex | VORTEX shutting down.

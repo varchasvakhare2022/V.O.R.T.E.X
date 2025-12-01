@@ -19,9 +19,9 @@ class VortexTheme:
     NORMAL = "normal"
     SECURITY = "security"
 
-
 class VortexWindow(QtWidgets.QMainWindow):
     command_entered = QtCore.pyqtSignal(str)
+    voice_listen_requested = QtCore.pyqtSignal()
 
     def __init__(self):
         super().__init__()
@@ -171,6 +171,19 @@ class VortexWindow(QtWidgets.QMainWindow):
         # ESC to exit
         quit_sc = QtGui.QShortcut(QtGui.QKeySequence("Esc"), self)
         quit_sc.activated.connect(self.close)
+
+        # Ctrl+Space to trigger voice listening
+        listen_sc = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Space"), self)
+        listen_sc.activated.connect(self._on_listen_shortcut)
+    
+    def _on_listen_shortcut(self):
+        """
+        Called when the user presses Ctrl+Space.
+        We just emit a signal; controller will handle audio.
+        """
+        self.set_status("LISTENING (voice)")
+        self.voice_listen_requested.emit()
+
 
     def _setup_system_monitor(self):
         """Update CPU/RAM info periodically."""

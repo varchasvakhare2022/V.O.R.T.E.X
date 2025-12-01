@@ -1,22 +1,26 @@
 # vortex/core/command_engine.py
 
 """
-CommandEngine: interprets user text commands into actions + responses.
+CommandEngine: interprets user text (typed or voice) into structured commands.
 
-Phase 1:
-- Simple rule-based parsing
-- Not a real AI yet, but structured so we can upgrade later
+Phase 1–2:
+- Handles opening/closing apps
+- Note-taking
+- Smalltalk
+- Security mode toggles
 """
 
 from __future__ import annotations
+
 from dataclasses import dataclass
 from enum import Enum, auto
-import datetime
 from typing import Optional
+import datetime
 
 
 class CommandType(Enum):
     OPEN_APP = auto()
+    CLOSE_APP = auto()
     NOTE = auto()
     SMALLTALK = auto()
     SECURITY_MODE = auto()
@@ -35,13 +39,15 @@ class ParsedCommand:
 
 class CommandEngine:
     """
-    Phase 1 "brain":
+    Phase 1–2 "brain":
     - Maps natural-ish phrases to a ParsedCommand
     - Later we can replace internals with a local LLM while keeping the same interface.
     """
 
     def __init__(self, owner_name: str = "User"):
         self.owner_name = owner_name
+
+    # ------------- MAIN PARSER -------------
 
     def parse(self, text: str) -> ParsedCommand:
         lowered = text.lower().strip()
@@ -68,7 +74,18 @@ class CommandEngine:
                 message_to_user="Returning to normal operational mode.",
             )
 
-        # ---- OPEN APP (process BEFORE note) ----
+        # ---- CLOSE APP ----
+        if any(kw in lowered for kw in ["close", "exit", "shut", "quit"]):
+            app_name = self._extract_app_name(lowered)
+            if app_name:
+                return ParsedCommand(
+                    type=CommandType.CLOSE_APP,
+                    raw_text=text,
+                    app_name=app_name,
+                    message_to_user=f"Closing {app_name} for you.",
+                )
+
+        # ---- OPEN APP ----
         if any(kw in lowered for kw in ["open", "launch", "start"]):
             app_name = self._extract_app_name(lowered)
             if app_name:
@@ -80,7 +97,8 @@ class CommandEngine:
                 )
 
         # ---- NOTE COMMANDS ----
-        if "note" in lowered or "remember" in lowered:
+        # Only treat as note if it DOESN'T look like "notepad"/"note pad"
+        if ("note" in lowered or "remember" in lowered) and "note pad" not in lowered:
             note_text = text
             for kw in ["note that", "note this", "note", "remember that", "remember"]:
                 if kw in lowered:
@@ -95,7 +113,14 @@ class CommandEngine:
                 message_to_user=f"I'll remember that: {note_text}",
             )
 
-        # ---- SMALLTALK ----
+        # ---- SMALLTALK / WAKE NAME ----
+        if "vortex" in lowered:
+            return ParsedCommand(
+                type=CommandType.SMALLTALK,
+                raw_text=text,
+                message_to_user="You called, I'm listening.",
+            )
+
         if any(kw in lowered for kw in ["how are you", "how are u", "are you there"]):
             return ParsedCommand(
                 type=CommandType.SMALLTALK,
@@ -119,17 +144,23 @@ class CommandEngine:
             message_to_user="I'm still learning. I didn't understand that command yet.",
         )
 
+    # ------------- HELPERS -------------
 
     def _extract_app_name(self, lowered: str) -> Optional[str]:
+        """
+        Super simple app name extraction.
+        We just look for known app keywords.
+        """
         known_apps = {
             "notepad": "notepad",
-            "pad": "notepad",
             "note pad": "notepad",
+            "pad": "notepad",
             "text": "notepad",
             "chrome": "chrome",
             "browser": "chrome",
             "code": "code",
             "vs code": "code",
+            "visual studio code": "code",
             "whatsapp": "whatsapp",
         }
 
@@ -137,4 +168,3 @@ class CommandEngine:
             if key in lowered:
                 return app
         return None
-

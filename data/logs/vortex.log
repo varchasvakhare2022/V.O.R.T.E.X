@@ -1,0 +1,723 @@
+2025-12-01 11:41:47 - root - INFO - ======================================================================
+2025-12-01 11:41:47 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:41:47 - root - INFO - ======================================================================
+2025-12-01 11:41:47 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:41:54 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:41:54 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:41:57 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:41:57 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:41:57 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:41:57 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:41:58 - comtypes.client._code_cache - INFO - Could not import comtypes.gen, trying to create it.
+2025-12-01 11:41:58 - comtypes.client._code_cache - INFO - Created comtypes.gen directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:41:58 - comtypes.client._code_cache - INFO - Writing __init__.py file: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen\__init__.py'
+2025-12-01 11:41:58 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - # Generating comtypes.gen.SpeechLib
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+2025-12-01 11:41:58 - comtypes.client._generate - INFO - # Generating comtypes.gen.stdole
+2025-12-01 11:41:59 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:41:59 - VORTEX.SpeakerVerifier - INFO - Speaker verification in TEST MODE - all speakers will be accepted
+2025-12-01 11:41:59 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:41:59 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:41:59 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:41:59 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:41:59 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:41:59 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:41:59 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:42:02 - VORTEX - INFO - AudioManager started
+2025-12-01 11:42:02 - VORTEX.Main - CRITICAL - Fatal error in main: cannot import name 'QShortcut' from 'PyQt6.QtCore' (C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyQt6\QtCore.pyd)
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\main.py", line 146, in main
+    vortex.start()
+    ~~~~~~~~~~~~^^
+  File "D:\GitHub\V.O.R.T.E.X\core\vortex.py", line 129, in start
+    self._setup_test_trigger()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\GitHub\V.O.R.T.E.X\core\vortex.py", line 160, in _setup_test_trigger
+    from PyQt6.QtCore import QShortcut
+ImportError: cannot import name 'QShortcut' from 'PyQt6.QtCore' (C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyQt6\QtCore.pyd)
+2025-12-01 11:42:07 - root - INFO - ======================================================================
+2025-12-01 11:42:07 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:42:07 - root - INFO - ======================================================================
+2025-12-01 11:42:07 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:42:08 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:42:08 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:42:08 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:42:08 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:42:08 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:42:08 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:42:08 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:42:08 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:42:09 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:42:09 - VORTEX.SpeakerVerifier - INFO - Speaker verification in TEST MODE - all speakers will be accepted
+2025-12-01 11:42:09 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:42:09 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:42:09 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:42:09 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:42:09 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:42:09 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:42:09 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:42:09 - VORTEX - INFO - AudioManager started
+2025-12-01 11:42:09 - VORTEX.Main - CRITICAL - Fatal error in main: cannot import name 'QShortcut' from 'PyQt6.QtCore' (C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyQt6\QtCore.pyd)
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\main.py", line 146, in main
+    vortex.start()
+    ~~~~~~~~~~~~^^
+  File "D:\GitHub\V.O.R.T.E.X\core\vortex.py", line 129, in start
+    self._setup_test_trigger()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\GitHub\V.O.R.T.E.X\core\vortex.py", line 160, in _setup_test_trigger
+    from PyQt6.QtCore import QShortcut
+ImportError: cannot import name 'QShortcut' from 'PyQt6.QtCore' (C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyQt6\QtCore.pyd)
+2025-12-01 11:43:19 - root - INFO - ======================================================================
+2025-12-01 11:43:19 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:43:19 - root - INFO - ======================================================================
+2025-12-01 11:43:19 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:43:19 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:43:19 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:43:21 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:43:21 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:43:21 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:43:21 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:43:21 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:43:21 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:43:21 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:43:21 - VORTEX.SpeakerVerifier - INFO - Speaker verification in TEST MODE - all speakers will be accepted
+2025-12-01 11:43:21 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:43:21 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:43:21 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:43:21 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:43:21 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:43:21 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:43:21 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:43:21 - VORTEX - INFO - AudioManager started
+2025-12-01 11:43:21 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:43:21 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:43:21 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:43:21 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:43:21 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:44:29 - VORTEX - INFO - TEST: Simulating wake-word detection
+2025-12-01 11:44:29 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:44:40 - VORTEX - INFO - TEST: Simulating wake-word detection
+2025-12-01 11:44:40 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:44:45 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:44:45 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:44:45 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:44:45 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:44:45 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:44:45 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:45:43 - root - INFO - ======================================================================
+2025-12-01 11:45:43 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:45:43 - root - INFO - ======================================================================
+2025-12-01 11:45:43 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:45:43 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:45:43 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:45:45 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:45:45 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:45:45 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:45:45 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:45:45 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:45:45 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:45:45 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:45:45 - VORTEX.SpeakerVerifier - INFO - Speaker verification in TEST MODE - all speakers will be accepted
+2025-12-01 11:45:45 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:45:45 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:45:45 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:45:45 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:45:45 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:45:45 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:45:45 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:45:45 - VORTEX - INFO - AudioManager started
+2025-12-01 11:45:45 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:45:45 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:45:45 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:45:45 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:45:45 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:47:57 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:47:57 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:47:57 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:47:57 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:47:57 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:47:57 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:51:00 - root - INFO - ======================================================================
+2025-12-01 11:51:00 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:51:00 - root - INFO - ======================================================================
+2025-12-01 11:51:00 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:51:00 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:51:00 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:51:02 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:51:02 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:51:02 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:51:02 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:51:02 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:51:02 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:51:02 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:51:02 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 11:51:02 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:51:02 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:51:02 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:51:02 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:51:02 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:51:02 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:51:02 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:51:02 - VORTEX - INFO - AudioManager started
+2025-12-01 11:51:02 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:51:02 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:51:02 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:51:02 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:51:02 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:53:35 - VORTEX - INFO - TEST: Simulating wake-word detection
+2025-12-01 11:53:35 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:53:45 - VORTEX - INFO - TEST: Simulating wake-word detection
+2025-12-01 11:53:45 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:53:48 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:53:48 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:53:48 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:53:48 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:53:48 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:53:48 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:56:17 - root - INFO - ======================================================================
+2025-12-01 11:56:17 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:56:17 - root - INFO - ======================================================================
+2025-12-01 11:56:17 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:56:17 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:56:17 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:56:19 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:56:19 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:56:19 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:56:19 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:56:19 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:56:19 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:56:19 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:56:19 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 11:56:19 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:56:19 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:56:19 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:56:19 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:56:19 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:56:19 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:56:19 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:56:19 - VORTEX - INFO - AudioManager started
+2025-12-01 11:56:19 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:56:19 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:56:19 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:56:19 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:56:19 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:56:34 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:56:34 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:56:34 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:56:34 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:56:34 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:56:34 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:56:51 - root - INFO - ======================================================================
+2025-12-01 11:56:51 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:56:51 - root - INFO - ======================================================================
+2025-12-01 11:56:51 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:56:51 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:56:51 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:56:53 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:56:53 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:56:53 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:56:53 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:56:53 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:56:53 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:56:53 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:56:53 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 11:56:53 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:56:53 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:56:53 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:56:53 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:56:53 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:56:53 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:56:53 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:56:53 - VORTEX - INFO - AudioManager started
+2025-12-01 11:56:53 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:56:53 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:56:53 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:56:53 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:56:53 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:56:54 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:56:59 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:56:59 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:56:59 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:56:59 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:56:59 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:56:59 - VORTEX.STT - INFO - Transcription successful: 'what time is it'
+2025-12-01 11:56:59 - VORTEX - INFO - Transcribed command: 'what time is it'
+2025-12-01 11:56:59 - VORTEX - INFO - Processing command: what time is it
+2025-12-01 11:56:59 - VORTEX.CommandProcessor - INFO - Processing command: 'what time is it' (owner: True)
+2025-12-01 11:56:59 - VORTEX - INFO - Command processed: type=CommandType.TIME_QUERY, success=True
+2025-12-01 11:56:59 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:57:04 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:57:04 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:57:04 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:57:04 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:57:04 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:57:04 - VORTEX.STT - INFO - Transcription successful: 'what time is it'
+2025-12-01 11:57:04 - VORTEX - INFO - Transcribed command: 'what time is it'
+2025-12-01 11:57:04 - VORTEX - INFO - Processing command: what time is it
+2025-12-01 11:57:04 - VORTEX.CommandProcessor - INFO - Processing command: 'what time is it' (owner: True)
+2025-12-01 11:57:04 - VORTEX - INFO - Command processed: type=CommandType.TIME_QUERY, success=True
+2025-12-01 11:57:04 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:57:09 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:57:09 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:57:09 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:57:09 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:57:09 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:57:09 - VORTEX.STT - INFO - Transcription successful: 'open notepad'
+2025-12-01 11:57:09 - VORTEX - INFO - Transcribed command: 'open notepad'
+2025-12-01 11:57:09 - VORTEX - INFO - Processing command: open notepad
+2025-12-01 11:57:09 - VORTEX.CommandProcessor - INFO - Processing command: 'open notepad' (owner: True)
+2025-12-01 11:57:09 - VORTEX.CommandProcessor - INFO - Opening app: notepad
+2025-12-01 11:57:09 - VORTEX.AppLauncher - INFO - Launching embedded app: notepad
+2025-12-01 11:57:09 - VORTEX.AppLauncher - INFO - Launched process: notepad
+2025-12-01 11:57:09 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 11:57:09 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:57:11 - VORTEX.WindowsIntegration - INFO - Found window 'Notepad': HWND=2426302
+2025-12-01 11:57:11 - VORTEX.AppLauncher - INFO - Found window for notepad: HWND=2426302
+2025-12-01 11:57:11 - VORTEX - INFO - Embedding app window: HWND=2426302
+2025-12-01 11:57:11 - VORTEX.WindowsIntegration - INFO - Successfully embedded window 2426302 into 132608
+2025-12-01 11:57:11 - VORTEX.UI - INFO - Successfully embedded window 2426302
+2025-12-01 11:57:11 - VORTEX.AppLauncher - INFO - Successfully embedded notepad
+2025-12-01 11:57:11 - VORTEX.WindowsIntegration - ERROR - Error positioning window: (87, 'SetWindowPos', 'The parameter is incorrect.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 154, in position_window
+    win32gui.SetWindowPos(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        hwnd,
+        ^^^^^
+    ...<2 lines>...
+        win32con.SWP_SHOWWINDOW
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pywintypes.error: (87, 'SetWindowPos', 'The parameter is incorrect.')
+2025-12-01 11:57:14 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:57:14 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:57:14 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:57:14 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:57:14 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:57:14 - VORTEX.STT - INFO - Transcription successful: 'open calculator'
+2025-12-01 11:57:14 - VORTEX - INFO - Transcribed command: 'open calculator'
+2025-12-01 11:57:14 - VORTEX - INFO - Processing command: open calculator
+2025-12-01 11:57:14 - VORTEX.CommandProcessor - INFO - Processing command: 'open calculator' (owner: True)
+2025-12-01 11:57:14 - VORTEX.CommandProcessor - INFO - Opening app: calculator
+2025-12-01 11:57:14 - VORTEX.AppLauncher - INFO - Launching embedded app: calculator
+2025-12-01 11:57:14 - VORTEX.AppLauncher - INFO - Launched process: calculator
+2025-12-01 11:57:14 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 11:57:15 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:57:15 - VORTEX.WindowsIntegration - INFO - Found window 'Calculator': HWND=524868
+2025-12-01 11:57:15 - VORTEX.AppLauncher - INFO - Found window for calculator: HWND=524868
+2025-12-01 11:57:15 - VORTEX - INFO - Embedding app window: HWND=524868
+2025-12-01 11:57:15 - VORTEX.WindowsIntegration - ERROR - Error embedding window: (1400, 'SetParent', 'Invalid window handle.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 129, in embed_window
+    win32gui.SetParent(child_hwnd, parent_hwnd)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.error: (1400, 'SetParent', 'Invalid window handle.')
+2025-12-01 11:57:15 - VORTEX.AppLauncher - WARNING - Failed to embed calculator, bringing to front instead
+2025-12-01 11:57:20 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:57:20 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:57:20 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:57:20 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:57:20 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:57:20 - VORTEX.STT - INFO - Transcription successful: 'what time is it'
+2025-12-01 11:57:20 - VORTEX - INFO - Transcribed command: 'what time is it'
+2025-12-01 11:57:20 - VORTEX - INFO - Processing command: what time is it
+2025-12-01 11:57:20 - VORTEX.CommandProcessor - INFO - Processing command: 'what time is it' (owner: True)
+2025-12-01 11:57:20 - VORTEX - INFO - Command processed: type=CommandType.TIME_QUERY, success=True
+2025-12-01 11:57:20 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:57:25 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:57:25 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:57:25 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:57:25 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:57:25 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:57:25 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:57:33 - root - INFO - ======================================================================
+2025-12-01 11:57:33 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:57:33 - root - INFO - ======================================================================
+2025-12-01 11:57:33 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:57:34 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:57:34 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:57:35 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:57:35 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:57:35 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:57:35 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:57:35 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:57:35 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:57:35 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:57:35 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 11:57:35 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:57:35 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:57:35 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:57:35 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:57:35 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:57:35 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:57:35 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:57:35 - VORTEX - INFO - AudioManager started
+2025-12-01 11:57:35 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:57:35 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:57:35 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:57:35 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:57:35 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:58:05 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:58:05 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:58:05 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:58:05 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:58:05 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:58:05 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 11:58:17 - root - INFO - ======================================================================
+2025-12-01 11:58:17 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 11:58:17 - root - INFO - ======================================================================
+2025-12-01 11:58:17 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 11:58:17 - VORTEX.Main - INFO - QApplication created
+2025-12-01 11:58:17 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 11:58:18 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 11:58:18 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 11:58:18 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 11:58:18 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 11:58:18 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 11:58:18 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 11:58:19 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 11:58:19 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 11:58:19 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 11:58:19 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 11:58:19 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 11:58:19 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 11:58:19 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 11:58:19 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 11:58:19 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 11:58:19 - VORTEX - INFO - AudioManager started
+2025-12-01 11:58:19 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 11:58:19 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 11:58:19 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 11:58:19 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 11:58:19 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 11:58:20 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:58:25 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:58:25 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:58:25 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:58:25 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:58:25 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:58:25 - VORTEX.STT - INFO - Transcription successful: 'open chrome'
+2025-12-01 11:58:25 - VORTEX - INFO - Transcribed command: 'open chrome'
+2025-12-01 11:58:25 - VORTEX - INFO - Processing command: open chrome
+2025-12-01 11:58:25 - VORTEX.CommandProcessor - INFO - Processing command: 'open chrome' (owner: True)
+2025-12-01 11:58:25 - VORTEX.CommandProcessor - INFO - Opening app: chrome
+2025-12-01 11:58:25 - VORTEX.AppLauncher - INFO - Launching embedded app: chrome
+2025-12-01 11:58:25 - VORTEX.AppLauncher - ERROR - Error launching app chrome: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\core\app_launcher.py", line 126, in launch_embedded_app
+    process = subprocess.Popen(app_path, shell=False)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-12-01 11:58:25 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=False
+2025-12-01 11:58:25 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:58:30 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:58:30 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:58:30 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 0.999)
+2025-12-01 11:58:30 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:58:30 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:58:30 - VORTEX.STT - INFO - Transcription successful: 'open calculator'
+2025-12-01 11:58:30 - VORTEX - INFO - Transcribed command: 'open calculator'
+2025-12-01 11:58:30 - VORTEX - INFO - Processing command: open calculator
+2025-12-01 11:58:30 - VORTEX.CommandProcessor - INFO - Processing command: 'open calculator' (owner: True)
+2025-12-01 11:58:30 - VORTEX.CommandProcessor - INFO - Opening app: calculator
+2025-12-01 11:58:30 - VORTEX.AppLauncher - INFO - Launching embedded app: calculator
+2025-12-01 11:58:30 - VORTEX.AppLauncher - INFO - Launched process: calculator
+2025-12-01 11:58:30 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 11:58:31 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:58:31 - VORTEX.WindowsIntegration - INFO - Found window 'Calculator': HWND=853494
+2025-12-01 11:58:31 - VORTEX.AppLauncher - INFO - Found window for calculator: HWND=853494
+2025-12-01 11:58:31 - VORTEX - INFO - Embedding app window: HWND=853494
+2025-12-01 11:58:31 - VORTEX.WindowsIntegration - ERROR - Error embedding window: (87, 'SetParent', 'The parameter is incorrect.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 129, in embed_window
+    win32gui.SetParent(child_hwnd, parent_hwnd)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.error: (87, 'SetParent', 'The parameter is incorrect.')
+2025-12-01 11:58:31 - VORTEX.AppLauncher - WARNING - Failed to embed calculator, bringing to front instead
+2025-12-01 11:58:36 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:58:36 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:58:36 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:58:36 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:58:36 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:58:36 - VORTEX.STT - INFO - Transcription successful: 'open calculator'
+2025-12-01 11:58:36 - VORTEX - INFO - Transcribed command: 'open calculator'
+2025-12-01 11:58:36 - VORTEX - INFO - Processing command: open calculator
+2025-12-01 11:58:36 - VORTEX.CommandProcessor - INFO - Processing command: 'open calculator' (owner: True)
+2025-12-01 11:58:36 - VORTEX.CommandProcessor - INFO - Opening app: calculator
+2025-12-01 11:58:36 - VORTEX.AppLauncher - INFO - Launching embedded app: calculator
+2025-12-01 11:58:36 - VORTEX.AppLauncher - INFO - Launched process: calculator
+2025-12-01 11:58:36 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 11:58:36 - VORTEX.WindowsIntegration - INFO - Found window 'Calculator': HWND=525524
+2025-12-01 11:58:36 - VORTEX.AppLauncher - INFO - Found window for calculator: HWND=525524
+2025-12-01 11:58:36 - VORTEX - INFO - Embedding app window: HWND=525524
+2025-12-01 11:58:36 - VORTEX.WindowsIntegration - ERROR - Error embedding window: (1400, 'SetParent', 'Invalid window handle.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 129, in embed_window
+    win32gui.SetParent(child_hwnd, parent_hwnd)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.error: (1400, 'SetParent', 'Invalid window handle.')
+2025-12-01 11:58:36 - VORTEX.AppLauncher - WARNING - Failed to embed calculator, bringing to front instead
+2025-12-01 11:58:44 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:58:49 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:58:49 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:58:49 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 0.998)
+2025-12-01 11:58:49 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:58:49 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:58:49 - VORTEX.STT - INFO - Transcription successful: 'open notepad'
+2025-12-01 11:58:49 - VORTEX - INFO - Transcribed command: 'open notepad'
+2025-12-01 11:58:49 - VORTEX - INFO - Processing command: open notepad
+2025-12-01 11:58:49 - VORTEX.CommandProcessor - INFO - Processing command: 'open notepad' (owner: True)
+2025-12-01 11:58:49 - VORTEX.CommandProcessor - INFO - Opening app: notepad
+2025-12-01 11:58:49 - VORTEX.AppLauncher - INFO - Launching embedded app: notepad
+2025-12-01 11:58:49 - VORTEX.AppLauncher - INFO - Launched process: notepad
+2025-12-01 11:58:49 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 11:58:50 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:58:51 - VORTEX.WindowsIntegration - INFO - Found window 'Notepad': HWND=67178
+2025-12-01 11:58:51 - VORTEX.AppLauncher - INFO - Found window for notepad: HWND=67178
+2025-12-01 11:58:51 - VORTEX - INFO - Embedding app window: HWND=67178
+2025-12-01 11:58:51 - VORTEX.WindowsIntegration - ERROR - Error embedding window: (1400, 'SetParent', 'Invalid window handle.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 129, in embed_window
+    win32gui.SetParent(child_hwnd, parent_hwnd)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+pywintypes.error: (1400, 'SetParent', 'Invalid window handle.')
+2025-12-01 11:58:51 - VORTEX.AppLauncher - WARNING - Failed to embed notepad, bringing to front instead
+2025-12-01 11:58:51 - VORTEX.WindowsIntegration - ERROR - Error bringing window to front: (1400, 'SetForegroundWindow', 'Invalid window handle.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 183, in bring_to_front
+    win32gui.SetForegroundWindow(hwnd)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+pywintypes.error: (1400, 'SetForegroundWindow', 'Invalid window handle.')
+2025-12-01 11:58:55 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:58:55 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:58:55 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 11:58:55 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:58:55 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:58:55 - VORTEX.STT - INFO - Transcription successful: 'what time is it'
+2025-12-01 11:58:55 - VORTEX - INFO - Transcribed command: 'what time is it'
+2025-12-01 11:58:55 - VORTEX - INFO - Processing command: what time is it
+2025-12-01 11:58:55 - VORTEX.CommandProcessor - INFO - Processing command: 'what time is it' (owner: True)
+2025-12-01 11:58:55 - VORTEX - INFO - Command processed: type=CommandType.TIME_QUERY, success=True
+2025-12-01 11:58:56 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 11:59:01 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 11:59:01 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 11:59:01 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 0.999)
+2025-12-01 11:59:01 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 11:59:01 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 11:59:01 - VORTEX.STT - INFO - Transcription successful: 'open chrome'
+2025-12-01 11:59:01 - VORTEX - INFO - Transcribed command: 'open chrome'
+2025-12-01 11:59:01 - VORTEX - INFO - Processing command: open chrome
+2025-12-01 11:59:01 - VORTEX.CommandProcessor - INFO - Processing command: 'open chrome' (owner: True)
+2025-12-01 11:59:01 - VORTEX.CommandProcessor - INFO - Opening app: chrome
+2025-12-01 11:59:01 - VORTEX.AppLauncher - INFO - Launching embedded app: chrome
+2025-12-01 11:59:01 - VORTEX.AppLauncher - ERROR - Error launching app chrome: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\core\app_launcher.py", line 126, in launch_embedded_app
+    process = subprocess.Popen(app_path, shell=False)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-12-01 11:59:01 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=False
+2025-12-01 11:59:03 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 11:59:03 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 11:59:03 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 11:59:03 - VORTEX - INFO - VORTEX stopped
+2025-12-01 11:59:03 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 11:59:03 - VORTEX.Main - INFO - Application exited with code: 0
+2025-12-01 12:01:17 - root - INFO - ======================================================================
+2025-12-01 12:01:17 - root - INFO - VORTEX - Voice-Oriented Responsive Terminal EXecutive
+2025-12-01 12:01:17 - root - INFO - ======================================================================
+2025-12-01 12:01:17 - root - INFO - Logging initialized - Console + File: data/logs/vortex.log
+2025-12-01 12:01:17 - VORTEX.Main - INFO - QApplication created
+2025-12-01 12:01:17 - VORTEX.Main - INFO - Creating MainWindow...
+2025-12-01 12:01:19 - VORTEX.UI - INFO - VORTEX window displayed in fullscreen
+2025-12-01 12:01:19 - VORTEX.Main - INFO - MainWindow created and displayed
+2025-12-01 12:01:19 - VORTEX.Main - INFO - Initializing VORTEX controller...
+2025-12-01 12:01:19 - VORTEX - INFO - Initializing VORTEX services...
+2025-12-01 12:01:19 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\vkvar\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-12-01 12:01:19 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\vkvar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\comtypes\gen'
+2025-12-01 12:01:19 - VORTEX.TTS - INFO - TTS engine initialized successfully
+2025-12-01 12:01:19 - VORTEX.SpeakerVerifier - INFO - Voice profile loaded: 10 embeddings
+2025-12-01 12:01:19 - VORTEX.SpeakerVerifier - INFO - Similarity threshold set to 0.7
+2025-12-01 12:01:19 - VORTEX.SpeakerVerifier - INFO - Voice profile saved to data/voice_profile/owner_voice.pkl
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: notepad -> notepad.exe (fullscreen: False)
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: calculator -> calc.exe (fullscreen: False)
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: chrome -> chrome.exe (fullscreen: False)
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: firefox -> firefox.exe (fullscreen: False)
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: vscode -> code.exe (fullscreen: False)
+2025-12-01 12:01:19 - VORTEX.AppLauncher - INFO - Added app mapping: valorant -> C:\Riot Games\VALORANT\live\VALORANT.exe (fullscreen: True)
+2025-12-01 12:01:19 - VORTEX - INFO - VORTEX services initialized
+2025-12-01 12:01:19 - VORTEX.Main - INFO - VORTEX controller initialized
+2025-12-01 12:01:19 - VORTEX.Main - INFO - Starting VORTEX services...
+2025-12-01 12:01:19 - VORTEX - INFO - Starting VORTEX...
+2025-12-01 12:01:19 - VORTEX - INFO - AudioManager started
+2025-12-01 12:01:19 - VORTEX - INFO - Test trigger configured: Click button or press SPACE to simulate wake word
+2025-12-01 12:01:19 - VORTEX - INFO - VORTEX started successfully
+2025-12-01 12:01:19 - VORTEX.Main - INFO - VORTEX services started
+2025-12-01 12:01:19 - VORTEX.Main - INFO - Starting Qt event loop...
+2025-12-01 12:01:19 - VORTEX.Main - INFO - VORTEX is now running. Say 'Vortex' to activate (or press SPACE for test mode)
+2025-12-01 12:01:45 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 12:01:50 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 12:01:50 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 12:01:50 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 12:01:50 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 12:01:50 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 12:01:50 - VORTEX.STT - INFO - Transcription successful: 'open chrome'
+2025-12-01 12:01:50 - VORTEX - INFO - Transcribed command: 'open chrome'
+2025-12-01 12:01:50 - VORTEX - INFO - Processing command: open chrome
+2025-12-01 12:01:50 - VORTEX.CommandProcessor - INFO - Processing command: 'open chrome' (owner: True)
+2025-12-01 12:01:50 - VORTEX.CommandProcessor - INFO - Opening app: chrome
+2025-12-01 12:01:50 - VORTEX.AppLauncher - INFO - Launching embedded app: chrome
+2025-12-01 12:01:50 - VORTEX.AppLauncher - ERROR - Error launching app chrome: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\core\app_launcher.py", line 126, in launch_embedded_app
+    process = subprocess.Popen(app_path, shell=False)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-12-01 12:01:50 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=False
+2025-12-01 12:02:49 - VORTEX - INFO - Wake word 'Vortex' detected
+2025-12-01 12:02:54 - VORTEX - INFO - Command audio received: 161792 bytes
+2025-12-01 12:02:54 - VORTEX - INFO - Processing command audio (speaker verification + STT)...
+2025-12-01 12:02:54 - VORTEX.SpeakerVerifier - INFO - Speaker verified as owner (similarity: 1.000)
+2025-12-01 12:02:54 - VORTEX - INFO - Speaker verification result: OWNER
+2025-12-01 12:02:54 - VORTEX - INFO - Transcribing audio to text...
+2025-12-01 12:02:54 - VORTEX.STT - INFO - Transcription successful: 'open notepad'
+2025-12-01 12:02:54 - VORTEX - INFO - Transcribed command: 'open notepad'
+2025-12-01 12:02:54 - VORTEX - INFO - Processing command: open notepad
+2025-12-01 12:02:54 - VORTEX.CommandProcessor - INFO - Processing command: 'open notepad' (owner: True)
+2025-12-01 12:02:54 - VORTEX.CommandProcessor - INFO - Opening app: notepad
+2025-12-01 12:02:54 - VORTEX.AppLauncher - INFO - Launching embedded app: notepad
+2025-12-01 12:02:54 - VORTEX.AppLauncher - INFO - Launched process: notepad
+2025-12-01 12:02:54 - VORTEX - INFO - Command processed: type=CommandType.OPEN_APP, success=True
+2025-12-01 12:02:56 - VORTEX.WindowsIntegration - INFO - Found window 'Notepad': HWND=394374
+2025-12-01 12:02:56 - VORTEX.AppLauncher - INFO - Found window for notepad: HWND=394374
+2025-12-01 12:02:56 - VORTEX - INFO - Embedding app window: HWND=394374
+2025-12-01 12:02:56 - VORTEX.WindowsIntegration - INFO - Successfully embedded window 394374 into 787740
+2025-12-01 12:02:56 - VORTEX.UI - INFO - Successfully embedded window 394374
+2025-12-01 12:02:56 - VORTEX.AppLauncher - INFO - Successfully embedded notepad
+2025-12-01 12:02:56 - VORTEX.WindowsIntegration - ERROR - Error positioning window: (87, 'SetWindowPos', 'The parameter is incorrect.')
+Traceback (most recent call last):
+  File "D:\GitHub\V.O.R.T.E.X\utils\windows_integration.py", line 154, in position_window
+    win32gui.SetWindowPos(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        hwnd,
+        ^^^^^
+    ...<2 lines>...
+        win32con.SWP_SHOWWINDOW
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pywintypes.error: (87, 'SetWindowPos', 'The parameter is incorrect.')
+2025-12-01 12:02:58 - VORTEX.Main - INFO - Application shutting down...
+2025-12-01 12:02:58 - VORTEX - INFO - Stopping VORTEX...
+2025-12-01 12:02:58 - VORTEX.TTS - INFO - TTS service shut down
+2025-12-01 12:02:58 - VORTEX - INFO - VORTEX stopped
+2025-12-01 12:02:58 - VORTEX.Main - INFO - Shutdown complete
+2025-12-01 12:02:58 - VORTEX.Main - INFO - Application exited with code: 0

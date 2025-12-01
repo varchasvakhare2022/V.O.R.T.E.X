@@ -5,9 +5,11 @@ VortexController:
 - Connects UI, CommandEngine, TTSService, Timeline, logging
 - AudioManager + STTService for voice commands
 - IdentityManager for voice + face verification
+- MemoryManager for persistent notes / memories
 - CameraMonitor for camera-block security
 - WakeWordListener (Porcupine) for "Jarvis" wake word
 - Friend-mode chatter
+- PersonalityProfile for Jarvis-like behavior
 """
 
 from __future__ import annotations
@@ -30,8 +32,10 @@ from .core.timeline import TimelineManager
 from .core.audio_manager import AudioManager
 from .core.stt_service import STTService
 from .core.identity import IdentityManager
+from .core.memory import MemoryManager
 from .core.camera_monitor import CameraMonitor
 from .core.wake_word import WakeWordListener
+from .core.personality import PersonalityProfile
 
 
 class VortexController(QtCore.QObject):
@@ -51,16 +55,18 @@ class VortexController(QtCore.QObject):
         self.command_engine = CommandEngine(owner_name=owner_name)
         self.tts = TTSService()
         self.timeline = TimelineManager()
+        self.personality = PersonalityProfile(owner_name=owner_name)
 
         self.audio_manager = AudioManager()
-        # use tiny.en for speed + English accuracy
         self.stt_service = STTService(model_size="tiny.en", device="cpu", compute_type="int8")
 
+        data_dir = Path(__file__).resolve().parents[1] / "data"
         self.identity = IdentityManager(
             audio_manager=self.audio_manager,
             logger=self.logger,
-            data_dir=Path(__file__).resolve().parents[1] / "data",
+            data_dir=data_dir,
         )
+        self.memory = MemoryManager(data_dir=data_dir, logger=self.logger)
 
         # Camera security
         self.camera_locked: bool = False
@@ -71,10 +77,7 @@ class VortexController(QtCore.QObject):
             callback_on_restored=self._camera_restored,
         )
 
-        # Only allow one voice recording at a time
         self._recording_lock = threading.Lock()
-
-        # Friend mode chatter
         self._friend_mode_running = True
         self._friend_thread: Optional[threading.Thread] = None
 
@@ -96,20 +99,20 @@ class VortexController(QtCore.QObject):
         # Start camera monitoring
         self.camera_monitor.start(camera_index=0)
 
-        # Initial greeting
-        greet = f"VORTEX online. Welcome back, {self.owner_name}."
+        # Initial greeting (personality-based)
+        greet = self.personality.system_greeting()
         self._emit_system_message(greet)
         self.window.set_status("IDLE")
         self._add_timeline("system", greet)
 
-        # Wake word listener (Porcupine) -----------------------
+        # Wake word listener (Porcupine)
         PORCUPINE_ACCESS_KEY = "h2cmEG5UAD2TDYKeQmxEXlbKGGa8wuElX6ZwBhZq3lOvF1XWvfKEJw=="  # <- replace with your real key
 
         if PORCUPINE_ACCESS_KEY:
             self.wake_listener = WakeWordListener(
                 logger=self.logger,
                 on_detect=lambda: self.wake_word_detected.emit(),
-                keyword="jarvis",          # built-in Porcupine keyword
+                keyword="jarvis",
                 access_key=PORCUPINE_ACCESS_KEY,
             )
             self.wake_word_detected.connect(self._on_wake_word)
@@ -121,7 +124,7 @@ class VortexController(QtCore.QObject):
             self.system_message.emit("Wake word disabled (no Porcupine access key).")
             self._add_timeline("wake", "Wake word disabled (no access key)")
 
-    # ---------- Text command handling (keyboard) ----------
+    # ---------- Text command handling ----------
 
     @QtCore.pyqtSlot(str)
     def handle_user_command(self, text: str):
@@ -133,18 +136,12 @@ class VortexController(QtCore.QObject):
 
     @QtCore.pyqtSlot()
     def start_voice_capture(self):
-        """
-        Called when UI requests listening (Ctrl+Space) OR wake word fires.
-        Spawns a background thread to record and transcribe, but only if
-        we're not already recording.
-        """
         if self._recording_lock.locked():
             self.logger.info("Voice capture requested but a recording is already in progress. Ignoring.")
             return
 
         self.logger.info("Voice capture requested.")
 
-        # Pause wake listener while we record, to avoid mic conflicts
         try:
             if hasattr(self, "wake_listener") and self.wake_listener is not None:
                 self.wake_listener.stop()
@@ -162,11 +159,9 @@ class VortexController(QtCore.QObject):
                     return
 
                 self.logger.info("Recording voice phrase...")
-                # 3 seconds is usually enough for a short command
                 audio, sr = self.audio_manager.record_phrase(duration_sec=3.0)
                 self.logger.info("Recording finished, verifying identity...")
 
-                # 1) Voice verification
                 if self.identity.has_voiceprint():
                     is_owner, v_sim = self.identity.verify_voice(audio, sample_rate=sr)
                     if is_owner:
@@ -181,8 +176,6 @@ class VortexController(QtCore.QObject):
                         if self.identity.has_faceprint():
                             face_ok = False
                             f_sim = 0.0
-
-                            # pause camera monitor so only one thing uses webcam
                             try:
                                 self.camera_monitor.stop()
                             except Exception as e:
@@ -195,7 +188,6 @@ class VortexController(QtCore.QObject):
                                 face_ok = False
                                 f_sim = 0.0
                             finally:
-                                # restart camera monitor
                                 try:
                                     self.camera_monitor.start(camera_index=0)
                                 except Exception as e:
@@ -217,10 +209,8 @@ class VortexController(QtCore.QObject):
                 else:
                     self.logger.info("No voiceprint enrolled; skipping voice verification.")
 
-                # 2) If we reach here, identity is OK → do STT
                 self.logger.info("Identity verified. Running STT...")
-                text = self.stt_service.transcribe(audio, sample_rate=sr)
-                text = text.strip()
+                text = self.stt_service.transcribe(audio, sample_rate=sr).strip()
                 self.logger.info(f"STT result: '{text}'")
             except Exception as e:
                 self.logger.error(f"Voice capture/STT failed: {e}")
@@ -228,7 +218,6 @@ class VortexController(QtCore.QObject):
                 self.window.set_status("IDLE")
                 return
             finally:
-                # Whatever happens, bring wake word back online
                 try:
                     if hasattr(self, "wake_listener") and self.wake_listener is not None:
                         self.wake_listener.start()
@@ -241,29 +230,22 @@ class VortexController(QtCore.QObject):
                 self.window.set_status("IDLE")
                 return
 
-            # Send recognized text back to Qt main thread
             self.voice_command_ready.emit(text)
 
     @QtCore.pyqtSlot(str)
     def _handle_voice_command_text(self, text: str):
-        """
-        Runs in Qt thread; we now have recognized text from voice.
-        Treat it like a user command, but mark as [voice].
-        """
         display_text = f"[voice] {text}"
         self.user_message.emit(display_text)
         self._add_timeline("voice", text)
 
-        # Process the command
         self._process_command(text)
 
-        # After command handling is done, we're ready again
         self.window.set_status("IDLE")
-        ready_msg = "Ready for your next command."
+        ready_msg = self.personality.ready_prompt()
         self._emit_system_message(ready_msg)
         self._add_timeline("system", ready_msg)
 
-    # ---------- Command processing (shared) ----------
+    # ---------- Command processing ----------
 
     def _process_command(self, text: str):
         parsed = self.command_engine.parse(text)
@@ -275,9 +257,13 @@ class VortexController(QtCore.QObject):
             self._handle_close_app(parsed.app_name, parsed.message_to_user)
 
         elif parsed.type == CommandType.NOTE and parsed.note_text:
+            self.memory.add(parsed.note_text, category="note")
             self.logger.info(f"Note stored: {parsed.note_text}")
             self._add_timeline("note", parsed.note_text)
             self._emit_system_message(parsed.message_to_user)
+
+        elif parsed.type == CommandType.MEMORY_QUERY:
+            self._handle_memory_query(parsed)
 
         elif parsed.type == CommandType.ENROLL_VOICE:
             self._start_voice_enrollment(parsed.message_to_user)
@@ -298,12 +284,35 @@ class VortexController(QtCore.QObject):
             self._add_timeline("security", "Returned to normal mode")
 
         elif parsed.type == CommandType.SMALLTALK:
-            self._emit_system_message(parsed.message_to_user)
-            self._add_timeline("smalltalk", parsed.message_to_user)
+            reply = self.personality.smalltalk_reply(parsed.raw_text)
+            self._emit_system_message(reply)
+            self._add_timeline("smalltalk", reply)
 
         elif parsed.type == CommandType.UNKNOWN:
             self._emit_system_message(parsed.message_to_user)
             self._add_timeline("unknown", parsed.raw_text)
+
+    # ---------- Memory handling ----------
+
+    def _handle_memory_query(self, parsed):
+        action = parsed.memory_action or "recent"
+        if action == "search" and parsed.memory_query:
+            items = self.memory.search(parsed.memory_query, category="note", limit=5)
+            if not items:
+                msg = f"I couldn't find anything matching \"{parsed.memory_query}\" in your notes."
+            else:
+                lines = [f"{i.id}) {i.text} ({i.timestamp})" for i in items]
+                msg = "Here's what I remember related to that:\n" + "\n".join(lines)
+        else:
+            items = self.memory.list_recent(limit=5, category="note")
+            if not items:
+                msg = "I don't have any notes stored yet."
+            else:
+                lines = [f"{i.id}) {i.text} ({i.timestamp})" for i in items]
+                msg = "Here are your latest notes:\n" + "\n".join(lines)
+
+        self._emit_system_message(msg)
+        self._add_timeline("memory", msg)
 
     # ---------- App launching / closing ----------
 
@@ -316,7 +325,7 @@ class VortexController(QtCore.QObject):
             "chrome": ["chrome.exe"],
             "edge": ["msedge.exe"],
             "code": ["code.exe"],
-            "whatsapp": ["whatsapp.exe"],  # adjust if needed
+            "whatsapp": ["whatsapp.exe"],
         }
 
         cmd = app_map.get(app_name)
@@ -339,7 +348,6 @@ class VortexController(QtCore.QObject):
         self._emit_system_message(message)
         self._add_timeline("action", f"Closing app: {app_name}")
 
-        # Map logical names to process executable names (case-insensitive)
         proc_map = {
             "notepad": ["notepad.exe"],
             "chrome": ["chrome.exe"],
@@ -356,8 +364,8 @@ class VortexController(QtCore.QObject):
             return
 
         targets_lower = [t.lower() for t in targets]
-
         killed_any = False
+
         for proc in psutil.process_iter(attrs=["name", "pid"]):
             try:
                 name = proc.info["name"]
@@ -423,16 +431,9 @@ class VortexController(QtCore.QObject):
     def _start_friend_mode_thread(self):
         def friend_loop():
             while self._friend_mode_running:
-                delay = random.randint(60, 180)  # 1–3 minutes
+                delay = random.randint(60, 180)
                 time.sleep(delay)
-                msg = random.choice(
-                    [
-                        "You've been quiet for a while. Need any help?",
-                        "Remember to take short breaks while working.",
-                        "I'm monitoring your system. Everything looks stable.",
-                        "If you want to note something, just tell me.",
-                    ]
-                )
+                msg = self.personality.idle_prompt()
                 self._emit_system_message(msg)
                 self._add_timeline("friend", msg)
 
@@ -443,35 +444,25 @@ class VortexController(QtCore.QObject):
 
     @QtCore.pyqtSlot()
     def _on_wake_word(self):
-        """
-        Called when Porcupine detects the wake word.
-        """
         if self.camera_locked:
             self.logger.info("Wake word detected but camera is locked; ignoring.")
             return
 
         if self._recording_lock.locked():
-            # Already handling a previous command
             self.logger.info("Wake word detected while already recording; ignoring.")
             return
 
         self.logger.info("Wake word accepted. Preparing for voice command.")
         self.window.set_status("AWAKE")
         msg = "Yes, I'm listening."
-        # show in UI but DO NOT speak, to avoid recording our own voice
         self._emit_system_message(msg, speak=False)
         self._add_timeline("wake", "Wake word detected")
 
-        # Start recording the command shortly after the wake word
         QtCore.QTimer.singleShot(200, self.start_voice_capture)
 
-
-    # ---------- Camera security callbacks ----------
+    # ---------- Camera security ----------
 
     def _camera_blocked(self):
-        """
-        Called when camera is covered (dark frames).
-        """
         self.camera_locked = True
         self.window.set_theme(VortexTheme.SECURITY)
         self.window.set_status("CAMERA BLOCKED")
@@ -481,9 +472,6 @@ class VortexController(QtCore.QObject):
         self._add_timeline("security", msg)
 
     def _camera_restored(self):
-        """
-        Called when camera feed becomes normal again.
-        """
         self.camera_locked = False
         self.window.set_theme(VortexTheme.NORMAL)
         self.window.set_status("IDLE")
@@ -515,14 +503,10 @@ class VortexController(QtCore.QObject):
     # ---------- Utility ----------
 
     def _emit_system_message(self, text: str, speak: bool = True):
-        """
-        Send a system message to the UI and (optionally) speak it.
-        """
         self.system_message.emit(text)
         if speak:
             self.tts.speak(text)
         self.logger.info(f"System message: {text}")
-
 
     def _add_timeline(self, kind: str, text: str):
         ev = self.timeline.add_event(kind, text)

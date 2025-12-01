@@ -1746,3 +1746,325 @@
 2025-12-01 23:02:07 | INFO | vortex | CameraMonitor stopped.
 2025-12-01 23:02:07 | INFO | vortex | WakeWordListener stopped.
 2025-12-01 23:02:07 | INFO | vortex | VORTEX shutting down.
+2025-12-01 23:08:16 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 23:08:20 | INFO | vortex | CameraMonitor started.
+2025-12-01 23:08:20 | INFO | vortex | System message: VORTEX online. Welcome back, Varchasva.
+2025-12-01 23:08:20 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:08:20 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:08:20 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:08:27 | INFO | vortex | Wake word detected.
+2025-12-01 23:08:27 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:08:27 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:08:27 | INFO | vortex | Voice capture requested.
+2025-12-01 23:08:27 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:08:27 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:08:30 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:08:30 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-01 23:08:30 | INFO | vortex | Voice encoder loaded.
+2025-12-01 23:08:32 | INFO | vortex | Voice similarity: 0.782
+2025-12-01 23:08:32 | INFO | vortex | Voice verified (similarity=0.782)
+2025-12-01 23:08:32 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:08:32 | INFO | vortex | STT result: 'Open the node sap.'
+2025-12-01 23:08:32 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:08:32 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:08:32 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:08:32 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:08:32 | INFO | vortex | System message: Opening code for you.
+2025-12-01 23:08:32 | ERROR | vortex | Failed to open code: [WinError 2] The system cannot find the file specified
+2025-12-01 23:08:32 | INFO | vortex | System message: I tried to open code but something went wrong.
+2025-12-01 23:08:32 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:08:43 | INFO | vortex | Wake word detected.
+2025-12-01 23:08:43 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:08:43 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:08:43 | INFO | vortex | Voice capture requested.
+2025-12-01 23:08:43 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:08:43 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:08:47 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:08:47 | INFO | vortex | Voice similarity: 0.824
+2025-12-01 23:08:47 | INFO | vortex | Voice verified (similarity=0.824)
+2025-12-01 23:08:47 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:08:47 | INFO | vortex | STT result: 'Could you open the pad for me?'
+2025-12-01 23:08:47 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:08:47 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:08:47 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:08:47 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:08:47 | INFO | vortex | System message: Opening notepad for you.
+2025-12-01 23:08:47 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-01 23:08:47 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:08:54 | INFO | vortex | Wake word detected.
+2025-12-01 23:08:54 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:08:54 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:08:54 | INFO | vortex | Voice capture requested.
+2025-12-01 23:08:54 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:08:54 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:08:57 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:08:57 | INFO | vortex | Voice similarity: 0.837
+2025-12-01 23:08:57 | INFO | vortex | Voice verified (similarity=0.837)
+2025-12-01 23:08:57 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:08:58 | INFO | vortex | STT result: 'Close the note pad, I don't need it.'
+2025-12-01 23:08:58 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:08:58 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:08:58 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:08:58 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:08:58 | INFO | vortex | System message: Closing notepad for you.
+2025-12-01 23:08:58 | INFO | vortex | Closed application: notepad
+2025-12-01 23:08:58 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:09:18 | INFO | vortex | Wake word detected.
+2025-12-01 23:09:18 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:09:18 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:09:18 | INFO | vortex | Voice capture requested.
+2025-12-01 23:09:18 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:09:18 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:09:21 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:09:21 | INFO | vortex | Voice similarity: 0.812
+2025-12-01 23:09:21 | INFO | vortex | Voice verified (similarity=0.812)
+2025-12-01 23:09:21 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:09:21 | INFO | vortex | STT result: 'Could you pull up the browser for me?'
+2025-12-01 23:09:21 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:09:22 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:09:22 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:09:22 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:09:22 | INFO | vortex | System message: Opening chrome for you.
+2025-12-01 23:09:22 | ERROR | vortex | Failed to open chrome: [WinError 2] The system cannot find the file specified
+2025-12-01 23:09:22 | INFO | vortex | System message: I tried to open chrome but something went wrong.
+2025-12-01 23:09:22 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:09:31 | INFO | vortex | Wake word detected.
+2025-12-01 23:09:31 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:09:31 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:09:32 | INFO | vortex | Voice capture requested.
+2025-12-01 23:09:32 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:09:32 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:09:35 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:09:35 | INFO | vortex | Voice similarity: 0.853
+2025-12-01 23:09:35 | INFO | vortex | Voice verified (similarity=0.853)
+2025-12-01 23:09:35 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:09:35 | INFO | vortex | STT result: 'Add your fully functional.'
+2025-12-01 23:09:35 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:09:35 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:09:35 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:09:35 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:09:35 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:09:35 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:09:48 | INFO | vortex | User command (typed): are you fully functional
+2025-12-01 23:09:48 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:10:30 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-01 23:12:06 | INFO | vortex | System message: You've been quiet for a while. Need any help?
+2025-12-01 23:12:15 | INFO | vortex | Wake word detected.
+2025-12-01 23:12:15 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:12:15 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:12:15 | INFO | vortex | Voice capture requested.
+2025-12-01 23:12:15 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:12:15 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:12:18 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:12:18 | INFO | vortex | Voice similarity: 0.748
+2025-12-01 23:12:18 | WARNING | vortex | VOICE MISMATCH (similarity=0.748)
+2025-12-01 23:12:18 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-01 23:12:19 | INFO | vortex | CameraMonitor stopped.
+2025-12-01 23:12:19 | INFO | vortex | Loading InsightFace model...
+2025-12-01 23:12:20 | INFO | vortex | InsightFace model loaded.
+2025-12-01 23:12:26 | INFO | vortex | Face similarity attempt: 0.820
+2025-12-01 23:12:26 | INFO | vortex | CameraMonitor started.
+2025-12-01 23:12:26 | INFO | vortex | Face verified (similarity=0.820). Proceeding.
+2025-12-01 23:12:26 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:12:27 | INFO | vortex | STT result: 'I will see you again.'
+2025-12-01 23:12:27 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:12:27 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:12:27 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:12:27 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:12:27 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:12:27 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:12:58 | INFO | vortex | Wake word detected.
+2025-12-01 23:12:58 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:12:58 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:12:58 | INFO | vortex | Voice capture requested.
+2025-12-01 23:12:58 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:12:58 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:13:02 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:13:02 | INFO | vortex | Voice similarity: 0.844
+2025-12-01 23:13:02 | INFO | vortex | Voice verified (similarity=0.844)
+2025-12-01 23:13:02 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:13:02 | INFO | vortex | STT result: 'Andrew'
+2025-12-01 23:13:02 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:13:02 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:13:02 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:13:02 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:13:02 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:13:02 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:13:38 | INFO | vortex | Wake word detected.
+2025-12-01 23:13:38 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:13:38 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:13:39 | INFO | vortex | Voice capture requested.
+2025-12-01 23:13:39 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:13:39 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:13:42 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:13:42 | INFO | vortex | Voice similarity: 0.851
+2025-12-01 23:13:42 | INFO | vortex | Voice verified (similarity=0.851)
+2025-12-01 23:13:42 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:13:42 | INFO | vortex | STT result: 'Hello'
+2025-12-01 23:13:42 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'jarvis', 'grasshopper', 'picovoice', 'blueberry', 'porcupine', 'hey google', 'pico clock', 'bumblebee', 'grapefruit', 'terminator', 'computer', 'ok google', 'americano', 'hey barista', 'hey siri']
+2025-12-01 23:13:42 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:13:42 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:13:42 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:13:42 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:13:42 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:14:15 | INFO | vortex | CameraMonitor stopped.
+2025-12-01 23:14:16 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:14:16 | INFO | vortex | VORTEX shutting down.
+2025-12-01 23:16:37 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 23:16:39 | INFO | vortex | CameraMonitor started.
+2025-12-01 23:16:39 | INFO | vortex | System message: Late session, Varchasva? VORTEX online and watching your back. Try not to break the timeline by staying up too late.
+2025-12-01 23:16:39 | INFO | vortex | Porcupine built-in keywords: ['hey barista', 'hey google', 'bumblebee', 'computer', 'picovoice', 'terminator', 'americano', 'alexa', 'jarvis', 'grasshopper', 'pico clock', 'porcupine', 'ok google', 'hey siri', 'blueberry', 'grapefruit']
+2025-12-01 23:16:39 | ERROR | vortex | WakeWordListener: failed to init Porcupine: Initialization failed:
+  [0] Picovoice Error (code `0000006F`)
+  [1] Failed to parse AccessKey `PUT_YOUR_ACCESS_KEY_HERE`.
+  [2] Picovoice Error (code `00000136`)
+2025-12-01 23:17:49 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 23:17:50 | INFO | vortex | CameraMonitor started.
+2025-12-01 23:17:50 | INFO | vortex | System message: Late session, Varchasva? VORTEX online and watching your back. Try not to break the timeline by staying up too late.
+2025-12-01 23:17:50 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'hey barista', 'jarvis', 'picovoice', 'blueberry', 'terminator', 'computer', 'porcupine', 'hey siri', 'americano', 'grasshopper', 'hey google', 'ok google', 'pico clock', 'bumblebee', 'grapefruit']
+2025-12-01 23:17:50 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:17:50 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:18:02 | INFO | vortex | Wake word detected.
+2025-12-01 23:18:02 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:18:02 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:18:02 | INFO | vortex | Voice capture requested.
+2025-12-01 23:18:02 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:18:02 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:18:05 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:18:05 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-01 23:18:05 | INFO | vortex | Voice encoder loaded.
+2025-12-01 23:18:07 | INFO | vortex | Voice similarity: 0.840
+2025-12-01 23:18:07 | INFO | vortex | Voice verified (similarity=0.840)
+2025-12-01 23:18:07 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:18:07 | INFO | vortex | STT result: 'How are you?'
+2025-12-01 23:18:07 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'hey barista', 'jarvis', 'picovoice', 'blueberry', 'terminator', 'computer', 'porcupine', 'hey siri', 'americano', 'grasshopper', 'hey google', 'ok google', 'pico clock', 'bumblebee', 'grapefruit']
+2025-12-01 23:18:07 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:18:07 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:18:07 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:18:07 | INFO | vortex | System message: Systems are stable and I'm feeling pretty good. How about you?
+2025-12-01 23:18:07 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:18:19 | INFO | vortex | Wake word detected.
+2025-12-01 23:18:19 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:18:19 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:18:19 | INFO | vortex | Voice capture requested.
+2025-12-01 23:18:19 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:18:19 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:18:22 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:18:22 | INFO | vortex | Voice similarity: 0.814
+2025-12-01 23:18:22 | INFO | vortex | Voice verified (similarity=0.814)
+2025-12-01 23:18:22 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:18:22 | INFO | vortex | STT result: 'I am also good. Can you open?'
+2025-12-01 23:18:22 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'hey barista', 'jarvis', 'picovoice', 'blueberry', 'terminator', 'computer', 'porcupine', 'hey siri', 'americano', 'grasshopper', 'hey google', 'ok google', 'pico clock', 'bumblebee', 'grapefruit']
+2025-12-01 23:18:23 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:18:23 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:18:23 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:18:23 | INFO | vortex | System message: Opening chrome for you.
+2025-12-01 23:18:23 | ERROR | vortex | Failed to open chrome: [WinError 2] The system cannot find the file specified
+2025-12-01 23:18:23 | INFO | vortex | System message: I tried to open chrome but something went wrong.
+2025-12-01 23:18:23 | INFO | vortex | System message: Systems idle and ready.
+2025-12-01 23:18:43 | INFO | vortex | Wake word detected.
+2025-12-01 23:18:43 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:18:43 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:18:43 | INFO | vortex | Voice capture requested.
+2025-12-01 23:18:43 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:18:43 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:18:46 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:18:46 | INFO | vortex | Voice similarity: 0.857
+2025-12-01 23:18:46 | INFO | vortex | Voice verified (similarity=0.857)
+2025-12-01 23:18:46 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:18:46 | INFO | vortex | STT result: 'Are you fully functional?'
+2025-12-01 23:18:46 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'hey barista', 'jarvis', 'picovoice', 'blueberry', 'terminator', 'computer', 'porcupine', 'hey siri', 'americano', 'grasshopper', 'hey google', 'ok google', 'pico clock', 'bumblebee', 'grapefruit']
+2025-12-01 23:18:47 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:18:47 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:18:47 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:18:47 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:18:47 | INFO | vortex | System message: Ready for your next command.
+2025-12-01 23:19:27 | INFO | vortex | System message: Late hours detected. Don't forget to rest.
+2025-12-01 23:21:22 | INFO | vortex | System message: Late hours detected. Don't forget to rest.
+2025-12-01 23:21:33 | INFO | vortex | Wake word detected.
+2025-12-01 23:21:33 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:21:33 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:21:33 | INFO | vortex | Voice capture requested.
+2025-12-01 23:21:33 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:21:33 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:21:36 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:21:36 | INFO | vortex | Voice similarity: 0.845
+2025-12-01 23:21:36 | INFO | vortex | Voice verified (similarity=0.845)
+2025-12-01 23:21:36 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:21:37 | INFO | vortex | STT result: 'What else can you do?'
+2025-12-01 23:21:37 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'hey barista', 'jarvis', 'picovoice', 'blueberry', 'terminator', 'computer', 'porcupine', 'hey siri', 'americano', 'grasshopper', 'hey google', 'ok google', 'pico clock', 'bumblebee', 'grapefruit']
+2025-12-01 23:21:37 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:21:37 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:21:37 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:21:37 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:21:37 | INFO | vortex | System message: Standing by for further instructions.
+2025-12-01 23:21:41 | INFO | vortex | CameraMonitor stopped.
+2025-12-01 23:21:41 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:21:42 | INFO | vortex | VORTEX shutting down.
+2025-12-01 23:32:09 | INFO | vortex | VORTEX logging initialized.
+2025-12-01 23:32:10 | INFO | vortex | Memory file not found at D:\GitHub\V.O.R.T.E.X\data\memory.json, starting empty.
+2025-12-01 23:32:10 | INFO | vortex | CameraMonitor started.
+2025-12-01 23:32:10 | INFO | vortex | System message: Late session, Varchasva? VORTEX online and watching your back. Try not to break the timeline by staying up too late.
+2025-12-01 23:32:10 | INFO | vortex | Porcupine built-in keywords: ['terminator', 'alexa', 'ok google', 'americano', 'picovoice', 'computer', 'hey google', 'blueberry', 'grapefruit', 'hey siri', 'jarvis', 'porcupine', 'hey barista', 'grasshopper', 'bumblebee', 'pico clock']
+2025-12-01 23:32:11 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:32:11 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:32:22 | INFO | vortex | Wake word detected.
+2025-12-01 23:32:22 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:32:22 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:32:22 | INFO | vortex | Voice capture requested.
+2025-12-01 23:32:22 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:32:22 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:32:25 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:32:25 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-01 23:32:26 | INFO | vortex | Voice encoder loaded.
+2025-12-01 23:32:27 | INFO | vortex | Voice similarity: 0.774
+2025-12-01 23:32:27 | INFO | vortex | Voice verified (similarity=0.774)
+2025-12-01 23:32:27 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:32:27 | INFO | vortex | STT result: 'I have an examined fourth PMD remember that.'
+2025-12-01 23:32:27 | INFO | vortex | Porcupine built-in keywords: ['terminator', 'alexa', 'ok google', 'americano', 'picovoice', 'computer', 'hey google', 'blueberry', 'grapefruit', 'hey siri', 'jarvis', 'porcupine', 'hey barista', 'grasshopper', 'bumblebee', 'pico clock']
+2025-12-01 23:32:27 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:32:27 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:32:27 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:32:27 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-01 23:32:27 | INFO | vortex | System message: Standing by for further instructions.
+2025-12-01 23:32:49 | INFO | vortex | Wake word detected.
+2025-12-01 23:32:49 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:32:49 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:32:50 | INFO | vortex | Voice capture requested.
+2025-12-01 23:32:50 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:32:50 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:32:53 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:32:53 | INFO | vortex | Voice similarity: 0.798
+2025-12-01 23:32:53 | INFO | vortex | Voice verified (similarity=0.798)
+2025-12-01 23:32:53 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:32:53 | INFO | vortex | STT result: 'Do you remember that I am exon?'
+2025-12-01 23:32:53 | INFO | vortex | Porcupine built-in keywords: ['terminator', 'alexa', 'ok google', 'americano', 'picovoice', 'computer', 'hey google', 'blueberry', 'grapefruit', 'hey siri', 'jarvis', 'porcupine', 'hey barista', 'grasshopper', 'bumblebee', 'pico clock']
+2025-12-01 23:32:53 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:32:53 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:32:53 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:32:53 | INFO | vortex | Memory added [1] (note): I am exon?
+2025-12-01 23:32:53 | INFO | vortex | Note stored: I am exon?
+2025-12-01 23:32:53 | INFO | vortex | System message: I'll remember that: I am exon?
+2025-12-01 23:32:53 | INFO | vortex | System message: Systems idle and ready.
+2025-12-01 23:33:01 | INFO | vortex | Wake word detected.
+2025-12-01 23:33:01 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-01 23:33:01 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-01 23:33:01 | INFO | vortex | Voice capture requested.
+2025-12-01 23:33:01 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:33:01 | INFO | vortex | Recording voice phrase...
+2025-12-01 23:33:04 | INFO | vortex | Recording finished, verifying identity...
+2025-12-01 23:33:04 | INFO | vortex | Voice similarity: 0.838
+2025-12-01 23:33:04 | INFO | vortex | Voice verified (similarity=0.838)
+2025-12-01 23:33:04 | INFO | vortex | Identity verified. Running STT...
+2025-12-01 23:33:04 | INFO | vortex | STT result: 'What did I tell you to remember?'
+2025-12-01 23:33:04 | INFO | vortex | Porcupine built-in keywords: ['terminator', 'alexa', 'ok google', 'americano', 'picovoice', 'computer', 'hey google', 'blueberry', 'grapefruit', 'hey siri', 'jarvis', 'porcupine', 'hey barista', 'grasshopper', 'bumblebee', 'pico clock']
+2025-12-01 23:33:05 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-01 23:33:05 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-01 23:33:05 | INFO | vortex | Wake listener restarted after command.
+2025-12-01 23:33:05 | INFO | vortex | System message: Here are your latest notes:
+1) I am exon? (2025-12-01T23:32:53)
+2025-12-01 23:33:05 | INFO | vortex | System message: I'm listening whenever you are.
+2025-12-01 23:33:46 | INFO | vortex | System message: Still awake? I can help you wrap things up.
+2025-12-01 23:33:46 | INFO | vortex | CameraMonitor stopped.
+2025-12-01 23:33:46 | INFO | vortex | WakeWordListener stopped.
+2025-12-01 23:33:48 | INFO | vortex | VORTEX shutting down.

@@ -2,254 +2,146 @@
 
 **Voice-Oriented Responsive Terminal EXecutive**
 
-VORTEX is a Windows desktop AI assistant that provides voice-controlled interaction with your computer. It features always-listening microphone input, wake word detection ("Vortex"), speaker verification for security, and a fullscreen tech-style UI. VORTEX can launch applications, execute commands, and respond to voice instructions while maintaining a sleek, dark interface with neon accents.
+VORTEX is a Windows desktop AI assistant with a PyQt6 console UI, Porcupine wake-word detection, camera-aware security, memory, workflows, and a lightweight rule-based command engine. It can listen for "Vortex", record a short phrase, transcribe it, and execute actions such as opening/closing apps, storing notes, and running predefined workflows.
 
 ## Features
 
-- Always-listening microphone with wake word detection
-- Speaker verification for secure access
-- Fullscreen PyQt6 tech-style UI
-- Voice command execution
-- Application launching and window management
-- Text-to-speech responses
+- Porcupine wake word ("Vortex" or fallback "Jarvis") with custom `.ppn` support
+- Camera security: detects a blocked/covered webcam and temporarily disables commands
+- Voice capture → Whisper-like STT pipeline (tiny.en on CPU) + TTS responses
+- Memory: persistent JSON store with optional semantic search
+- Workflows: JSON-defined steps (say, sleep, open/close app, note) in `data/workflows/`
+- Timeline + Memory panels in the UI; animated console messages
+- Rule-based command parsing for open/close apps, notes, smalltalk fallback
+- Friend mode: occasional personality prompts during idle time
 
 ---
 
 ## Prerequisites
 
-- **Python 3.8 or higher** (Python 3.9+ recommended)
-- **Windows 10/11** (required for pywin32 and Windows-specific features)
-- **Microphone** connected and working
-- **Administrator privileges** (may be required for some operations)
+- **Python 3.10+** (uses modern typing syntax)
+- **Windows 10/11**
+- **Microphone** (for voice capture) and **webcam** (for security monitor)
+- **Porcupine access key** (for wake word). If omitted, wake word is disabled but you can still click the mic button or type commands.
+- Recommended: Visual C++ Build Tools for compiling packages like `pyaudio` if needed.
 
 ## Installation
 
-### 1. Clone or Download the Project
-
 ```bash
 cd D:\GitHub\V.O.R.T.E.X
-```
-
-### 2. Create a Virtual Environment (Recommended)
-
-```bash
 python -m venv venv
 venv\Scripts\activate
-```
-
-### 3. Install Dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
-**Note:** If you encounter issues installing `pyaudio` on Windows, you may need to:
-- Install Microsoft Visual C++ Build Tools
-- Or download a pre-built wheel from: https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
-  ```bash
-  pip install PyAudio‑0.2.14‑cp39‑cp39‑win_amd64.whl
-  ```
-  (Replace `cp39` with your Python version)
+If `pyaudio` fails, install a prebuilt wheel from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio (match your Python version).
 
-### 4. Verify Installation
+## Wake Word Setup
 
-```bash
-python -c "import PyQt6; import pyaudio; import pyttsx3; import numpy; print('All dependencies installed!')"
-```
+1. Put your Porcupine access key in `vortex/controller.py` (see `PORCUPINE_ACCESS_KEY`).
+2. A custom wakeword file is expected at `data/wakewords/vortex_en_windows_v3_0_0.ppn`. If missing, the controller falls back to the built-in keyword "Jarvis".
+3. If you leave the access key empty, wake word is disabled; you can still trigger the mic button manually or type commands.
 
-## Running VORTEX
-
-### Basic Run
+## Running
 
 ```bash
 python main.py
 ```
 
-The application will:
-1. Initialize logging (console + `data/logs/vortex.log`)
-2. Load configuration from `config.json`
-3. Open in fullscreen mode
-4. Start listening for the wake word "Vortex"
+On first run VORTEX will:
+- Start the camera monitor (security)
+- Create `data/workflows/focus_mode.json` if none exist
+- Create `data/memory.json` on first note
+- Begin friend-mode idle prompts and log to `logs/vortex.log`
 
-### First Run
+The UI opens maximized with a console on the left and tabs (Commands/Timeline/Memory) on the right. Use the text box or mic button at the bottom to issue commands.
 
-On first run, VORTEX will:
-- Create default `config.json` if it doesn't exist
-- Create necessary directories (`data/logs/`, `data/voice_profile/`)
-- Start in **test mode** (speaker verification accepts all speakers)
+## Using VORTEX
 
-### Testing the Application
+- **Wake word**: Say "Vortex" (or "Jarvis" fallback) if a Porcupine key is configured.
+- **Manual mic**: Click the mic button to record a short phrase.
+- **Typed commands**: Enter text in the command box and press Enter/Send.
+- **Security**: If the webcam is dark/blocked, VORTEX switches to SECURITY theme, ignores commands, and announces it. Removing the obstruction restores normal mode.
 
-Since wake-word detection is currently a placeholder, use the test trigger:
+### Built-in commands (examples)
 
-1. **Click the red "🔴 Simulate Wake Word" button** in the status bar
-2. **OR press the SPACE key** to simulate wake word detection
-3. VORTEX will record 5 seconds of audio (or use the simulated command)
-4. The STT service will return a random test command
-5. Watch the console/logs to see the full processing flow
+- Focus workflow: `focus mode`, `start focus mode`, or `run workflow focus mode`
+- List workflows: `list workflows` / `show workflows`
+- Run a workflow: `run workflow <name>`
+- Open apps: `open notepad | chrome | edge | code | whatsapp`
+- Close apps: `close <app>`, or `close that/it` to close the last opened app
+- Notes: `remember that ...`, `make a note that ...`
+- Recall notes: `what did I tell you to remember`, `what do you remember`
+- Security reset: `normal mode` / `return to normal mode`
 
-### Using VORTEX
+### Workflows
 
-1. **Wake Word**: Say "Vortex" (currently simulated via button/SPACE)
-2. **Command Examples**:
-   - "open notepad" - Opens Notepad (embedded in VORTEX)
-   - "open calculator" - Opens Calculator
-   - "open chrome" - Opens Chrome browser
-   - "what time is it" - Returns current time
-   - "open valorant" - Opens Valorant (minimizes VORTEX)
-   - "vortex come back" - Restores VORTEX window
+Workflows live in `data/workflows/*.json`. Supported step types: `say`, `sleep`, `open_app`, `close_app`, `note`.
 
-3. **Keyboard Shortcuts**:
-   - `SPACE` - Simulate wake word (test mode)
-   - `ESC` or `F11` - Toggle fullscreen
-
-## Voice Enrollment (Training Your Voice Model)
-
-To train VORTEX to recognize your voice:
-
-### Step 1: Run the Enrollment Script
-
-```bash
-python enroll_voice.py
-```
-
-### Step 2: Follow the Prompts
-
-1. **Choose number of samples** (recommended: 5-10)
-   - More samples = better accuracy
-   - Minimum: 3 samples
-
-2. **Choose sample duration** (recommended: 3 seconds)
-   - Each sample will record for this duration
-
-3. **Record your voice**
-   - Speak clearly and naturally
-   - You can say anything: your name, a phrase, or just talk
-   - Wait for the recording to complete before speaking
-
-### Step 3: Enable Voice Verification
-
-After enrollment, edit `config.json`:
-
+Example (`data/workflows/focus_mode.json` created automatically):
 ```json
 {
-  "speaker_verification": {
-    "similarity_threshold": 0.7,
-    "test_mode": false
-  }
+  "name": "focus_mode",
+  "description": "Close distractions and open coding tools for deep work.",
+  "steps": [
+    {"type": "say", "text": "Entering focus mode. Closing distractions and opening your tools."},
+    {"type": "close_app", "app": "chrome"},
+    {"type": "close_app", "app": "edge"},
+    {"type": "sleep", "seconds": 1},
+    {"type": "open_app", "app": "code"},
+    {"type": "note", "text": "Focus session started by VORTEX.", "category": "workflow"},
+    {"type": "say", "text": "You're all set. Let's get some serious work done."}
+  ]
 }
 ```
+Create new workflows by copying this pattern and placing the JSON file in `data/workflows/`.
 
-Set `"test_mode": false` to enable real voice verification.
+## Data & Logs
 
-### Step 4: Restart VORTEX
+- Logs: `logs/vortex.log`
+- Memory store: `data/memory.json`
+- Wake word files: `data/wakewords/`
+- Workflows: `data/workflows/`
 
-```bash
-python main.py
+## Project Structure (current)
+
 ```
-
-Now VORTEX will:
-- ✅ Accept commands only from your voice
-- 🚨 Show "Intruder alert" if someone else speaks
-
-**Note:** If you need to re-enroll, just run `enroll_voice.py` again. It will overwrite your previous voice profile.
-
-## Configuration
-
-Edit `config.json` to customize:
-
-- **Wake word**: Change `"wake_word"` value
-- **App paths**: Update `"apps"` section with your application paths
-- **Speaker verification**: Adjust `"speaker_verification.similarity_threshold"` (0.0-1.0)
-- **Test mode**: Set `"speaker_verification.test_mode"` to `false` for production
-
-Example:
-```json
-{
-  "wake_word": "vortex",
-  "apps": {
-    "notepad": "notepad.exe",
-    "vscode": "C:\\Users\\YourName\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
-  }
-}
+V.O.R.T.E.X/
+├── main.py
+├── README.md
+├── logs/
+│   └── vortex.log
+├── data/
+│   ├── memory.json
+│   ├── wakewords/
+│   │   └── vortex_en_windows_v3_0_0.ppn
+│   └── workflows/
+│       └── focus_mode.json   # auto-created sample
+└── vortex/
+    ├── ui.py                 # PyQt6 window, console/tabs/input
+    ├── controller.py         # Orchestrator (wake word, STT, TTS, workflows, security)
+    └── core/
+        ├── audio_manager.py
+        ├── camera_monitor.py
+        ├── command_engine.py
+        ├── identity.py
+        ├── logger.py
+        ├── memory.py
+        ├── personality.py
+        ├── stt_service.py
+        ├── timeline.py
+        ├── tts_service.py
+        ├── wake_word.py
+        └── workflow_engine.py
 ```
 
 ## Troubleshooting
 
-### Audio Issues
-
-- **"No microphone found"**: Check Windows microphone permissions
-- **"PyAudio error"**: Ensure microphone is not being used by another application
-- **"Audio stream error"**: Try running as Administrator
-
-### Import Errors
-
-- **"ModuleNotFoundError"**: Run `pip install -r requirements.txt` again
-- **"PyQt6 not found"**: Ensure virtual environment is activated
-
-### Window Issues
-
-- **"Window not embedding"**: Some apps (especially games) cannot be embedded due to security restrictions
-- **"VORTEX not minimizing"**: Check that callbacks are properly set in `core/vortex.py`
-
-### Logs
-
-Check `data/logs/vortex.log` for detailed error messages and execution flow.
-
-## Windows Startup (Optional)
-
-To run VORTEX automatically on Windows startup:
-
-```python
-from core.startup_helper import StartupHelper
-
-helper = StartupHelper()
-helper.print_startup_instructions()  # Shows detailed instructions
-```
-
-Or manually:
-1. Press `Windows + R`, type `shell:startup`
-2. Create a shortcut to `python.exe` with arguments: `"D:\GitHub\V.O.R.T.E.X\main.py"`
-3. Or create a batch file that activates venv and runs the script
-
-## Project Structure
-
-```
-V.O.R.T.E.X/
-├── main.py                 # Entry point
-├── config.json             # Configuration file
-├── requirements.txt        # Python dependencies
-├── core/                   # Core backend modules
-│   ├── vortex.py          # Main orchestrator
-│   ├── config.py          # Configuration manager
-│   ├── audio_manager.py   # Audio capture
-│   ├── stt_service.py     # Speech-to-text
-│   ├── tts_service.py     # Text-to-speech
-│   ├── speaker_verification.py
-│   ├── command_processor.py
-│   └── app_launcher.py
-├── ui/                     # PyQt6 GUI
-│   ├── main_window.py
-│   └── widgets/
-└── data/                   # Data storage
-    ├── logs/              # Application logs
-    └── voice_profile/     # Voice enrollment data
-```
-
-## Development Notes
-
-- **Test Mode**: Currently uses stub implementations for wake-word detection and STT
-- **Speaker Verification**: In test mode, accepts all speakers (set `test_mode: false` for production)
-- **STT**: Returns random test commands (replace `StubSTTProvider` with real implementation)
-- **Wake Word**: Currently simulated via button/keyboard (implement real detection later)
-
-## Next Steps for Production
-
-1. Replace `StubSTTProvider` with real STT (Whisper, Vosk, etc.)
-2. Implement real wake-word detection (Porcupine, custom model)
-3. Replace speaker verification placeholder with real embedding model
-4. Enroll owner's voice for speaker verification
-5. Test with real microphone input
+- **Wake word not working**: Add a valid Porcupine access key in `vortex/controller.py`; ensure the `.ppn` file exists in `data/wakewords/`.
+- **Camera blocked notice keeps appearing**: Ensure the webcam is uncovered and available to OpenCV; the monitor now tolerates temporary failures but will stay in SECURITY while frames are dark/unreadable.
+- **PyAudio errors**: Close other apps using the mic; install a compatible wheel; run inside the virtual environment.
+- **Missing packages**: `pip install -r requirements.txt` (from the activated venv).
+- **Slow or empty STT**: Check microphone input levels and that the device is not muted.
 
 ---
 

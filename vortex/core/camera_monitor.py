@@ -47,9 +47,16 @@ class CameraMonitor:
         self.thread = None
 
     def _is_dark(self, frame):
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        brightness = np.mean(gray)
-        return brightness < self.dark_threshold
+        """Check if frame is dark. Returns False if frame is invalid."""
+        if frame is None:
+            return False
+        try:
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            brightness = np.mean(gray)
+            return brightness < self.dark_threshold
+        except Exception as e:
+            self.logger.warning(f"CameraMonitor: error processing frame: {e}")
+            return False
 
     def _run(self, camera_index):
         cap = cv2.VideoCapture(camera_index)
@@ -58,31 +65,61 @@ class CameraMonitor:
             return
 
         dark_count = 0
+        consecutive_failures = 0
+        max_failures = 10  # After this many consecutive failures, consider camera unavailable
 
         while self.running:
-            ret, frame = cap.read()
-            if not ret:
+            try:
+                ret, frame = cap.read()
+                
+                # Check if read was successful and frame is valid
+                if not ret or frame is None:
+                    consecutive_failures += 1
+                    if consecutive_failures >= max_failures:
+                        self.logger.error("CameraMonitor: camera appears unavailable after multiple read failures.")
+                        # Treat as blocked if we can't read frames
+                        if not self.blocked_state:
+                            self.blocked_state = True
+                            self.callback_on_blocked()
+                    time.sleep(0.1)
+                    continue
+                
+                # Reset failure counter on successful read
+                consecutive_failures = 0
+                
+                # Check if frame is dark
+                if self._is_dark(frame):
+                    dark_count += 1
+                else:
+                    dark_count = 0
+
+                # Enter blocked state
+                if dark_count >= self.dark_frames_required and not self.blocked_state:
+                    self.blocked_state = True
+                    self.logger.warning("CameraMonitor: camera appears covered/blocked.")
+                    self.callback_on_blocked()
+
+                # Exit blocked state
+                if dark_count == 0 and self.blocked_state:
+                    self.blocked_state = False
+                    self.logger.info("CameraMonitor: camera feed restored.")
+                    self.callback_on_restored()
+
+            except Exception as e:
+                self.logger.error(f"CameraMonitor: error reading from camera: {e}")
+                consecutive_failures += 1
+                if consecutive_failures >= max_failures:
+                    self.logger.error("CameraMonitor: camera appears unavailable after multiple errors.")
+                    if not self.blocked_state:
+                        self.blocked_state = True
+                        self.callback_on_blocked()
                 time.sleep(0.1)
                 continue
 
-            if self._is_dark(frame):
-                dark_count += 1
-            else:
-                dark_count = 0
-
-            # Enter blocked state
-            if dark_count >= self.dark_frames_required and not self.blocked_state:
-                self.blocked_state = True
-                self.logger.warning("CameraMonitor: camera appears covered/blocked.")
-                self.callback_on_blocked()
-
-            # Exit blocked state
-            if dark_count == 0 and self.blocked_state:
-                self.blocked_state = False
-                self.logger.info("CameraMonitor: camera feed restored.")
-                self.callback_on_restored()
-
             time.sleep(0.2)
 
-        cap.release()
+        try:
+            cap.release()
+        except Exception as e:
+            self.logger.warning(f"CameraMonitor: error releasing camera: {e}")
         self.logger.info("CameraMonitor stopped.")

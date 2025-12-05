@@ -1,271 +1,379 @@
 # vortex/ui.py
 
-"""
-PyQt6 UI for VORTEX.
+from __future__ import annotations
 
-Phase 1++:
-- Fullscreen window
-- Black + green tech theme, red on security
-- Console output + recent commands + timeline tab
-- Typing animation for system messages
-- Simple CPU/RAM monitor in status bar
-"""
+from enum import Enum, auto
 
-from PyQt6 import QtWidgets, QtGui, QtCore
-import psutil
+from PyQt6.QtCore import Qt, pyqtSignal
+from PyQt6.QtWidgets import (
+    QMainWindow,
+    QWidget,
+    QTextEdit,
+    QTabWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QLineEdit,
+    QPushButton,
+    QLabel,
+    QListWidget,
+    QListWidgetItem,
+    QFrame,
+)
 
 
-class VortexTheme:
-    NORMAL = "normal"
-    SECURITY = "security"
+# -----------------------------------------------------------------------------
+# Theme enum
+# -----------------------------------------------------------------------------
 
-class VortexWindow(QtWidgets.QMainWindow):
-    command_entered = QtCore.pyqtSignal(str)
-    voice_listen_requested = QtCore.pyqtSignal()
+class VortexTheme(Enum):
+    NORMAL = auto()
+    SECURITY = auto()
+    LOCKDOWN = auto()
+
+
+# -----------------------------------------------------------------------------
+# Main window
+# -----------------------------------------------------------------------------
+
+class VortexWindow(QMainWindow):
+    """
+    Main VORTEX UI window.
+
+    Layout:
+    - Top:  status bar with STATUS label
+    - Center left:  console (dialog between YOU and VORTEX)
+    - Center right: tabbed panel (Commands / Timeline / Memory)
+    - Bottom: command input, Send button, Mic button
+
+    Colors (only four):
+    - Background: black (#000000)
+    - Primary text: green (#00FF00)
+    - Accent: blue (#00BFFF)
+    - Security / error: red (#FF0033)
+    """
+
+    # Emitted when the user presses Enter or clicks Send
+    command_entered = pyqtSignal(str)
+    # Emitted when the user clicks the Mic button
+    voice_listen_requested = pyqtSignal()
+
+    GREEN = "#00FF00"
+    BLUE = "#00BFFF"
+    RED = "#FF0033"
+    BLACK = "#000000"
 
     def __init__(self):
         super().__init__()
 
-        self._current_theme = VortexTheme.NORMAL
+        self.setWindowTitle("V.O.R.T.E.X")
+        # Start maximized by default
+        self.setWindowState(self.windowState() | Qt.WindowState.WindowMaximized)
 
-        # typing animation state
-        self._msg_queue: list[str] = []
-        self._animating = False
-        self._current_msg = ""
-        self._current_index = 0
-        self._typing_timer = QtCore.QTimer(self)
-        self._typing_timer.timeout.connect(self._typing_step)
-
-        self.setWindowTitle("VORTEX - Voice-Oriented Responsive Terminal EXecutive")
-        self.setWindowFlag(QtCore.Qt.WindowType.FramelessWindowHint)
-        self.showFullScreen()
-
-        self._setup_palette()
-        self._setup_ui()
-        self._setup_shortcuts()
-        self._setup_system_monitor()
-
-    # ---------- Theme & palette ----------
-
-    def _setup_palette(self):
-        palette = self.palette()
-        if self._current_theme == VortexTheme.NORMAL:
-            bg = QtGui.QColor(0, 0, 0)  # AMOLED black
-            text = QtGui.QColor(0, 255, 120)  # neon green
-        else:
-            bg = QtGui.QColor(0, 0, 0)
-            text = QtGui.QColor(255, 60, 60)  # alert red
-
-        palette.setColor(QtGui.QPalette.ColorRole.Window, bg)
-        palette.setColor(QtGui.QPalette.ColorRole.Base, QtGui.QColor(10, 10, 10))
-        palette.setColor(QtGui.QPalette.ColorRole.Text, text)
-        palette.setColor(QtGui.QPalette.ColorRole.WindowText, text)
-        self.setPalette(palette)
-
-        accent_color = "#00FF78" if self._current_theme == VortexTheme.NORMAL else "#FF4040"
-
-        self._console_style = (
-            "QTextEdit {"
-            "background-color: #050505;"
-            f"color: {accent_color};"
-            "font-family: 'Consolas', monospace;"
-            "font-size: 14px;"
-            "border: 1px solid #008040;"
-            "}"
-        )
-        self._list_style = (
-            "QListWidget {"
-            "background-color: #050505;"
-            f"color: {accent_color};"
-            "font-family: 'Consolas', monospace;"
-            "font-size: 12px;"
-            "border: 1px solid #008040;"
-            "}"
-        )
-        self._status_style = (
-            f"color: {accent_color}; font-family: 'Consolas', monospace; font-size: 16px;"
-        )
-
-    def set_theme(self, theme: str):
-        if theme not in (VortexTheme.NORMAL, VortexTheme.SECURITY):
-            return
-        self._current_theme = theme
-        self._setup_palette()
-        # Re-apply styles
-        self.console.setStyleSheet(self._console_style)
-        self.recent_commands.setStyleSheet(self._list_style)
-        self.timeline_list.setStyleSheet(self._list_style)
-        self.status_label.setStyleSheet(self._status_style)
-        self.stats_label.setStyleSheet(self._status_style)
-
-    # ---------- UI layout ----------
-
-    def _setup_ui(self):
-        central = QtWidgets.QWidget()
+        central = QWidget(self)
         self.setCentralWidget(central)
 
-        main_layout = QtWidgets.QVBoxLayout(central)
-        main_layout.setContentsMargins(20, 20, 20, 20)
-        main_layout.setSpacing(10)
+        root_layout = QVBoxLayout(central)
+        root_layout.setContentsMargins(8, 8, 8, 8)
+        root_layout.setSpacing(6)
 
-        # Top status bar (two labels: status + system stats)
-        status_layout = QtWidgets.QHBoxLayout()
-        status_layout.setSpacing(20)
+        # ---- Status bar ----------------------------------------------------
+        self.status_frame = QFrame()
+        self.status_frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.status_frame.setObjectName("statusFrame")
 
-        self.status_label = QtWidgets.QLabel("STATUS: IDLE")
-        self.status_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.status_label.setStyleSheet(self._status_style)
+        status_layout = QHBoxLayout(self.status_frame)
+        status_layout.setContentsMargins(8, 4, 8, 4)
+        status_layout.setSpacing(4)
 
-        self.stats_label = QtWidgets.QLabel("CPU: --%  RAM: --%")
-        self.stats_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
-        self.stats_label.setStyleSheet(self._status_style)
+        self.status_label = QLabel("STATUS: IDLE")
+        self.status_label.setObjectName("statusLabel")
 
         status_layout.addWidget(self.status_label)
-        status_layout.addWidget(self.stats_label)
+        status_layout.addStretch(1)
 
-        # Main area: console + right side tabs
-        center_layout = QtWidgets.QHBoxLayout()
-        center_layout.setSpacing(10)
+        root_layout.addWidget(self.status_frame)
 
-        # Console (main output)
-        self.console = QtWidgets.QTextEdit()
+        # ---- Center area ---------------------------------------------------
+        center_frame = QFrame()
+        center_frame.setObjectName("centerFrame")
+        center_layout = QHBoxLayout(center_frame)
+        center_layout.setContentsMargins(0, 0, 0, 0)
+        center_layout.setSpacing(6)
+
+        # Left: console
+        console_frame = QFrame()
+        console_layout = QVBoxLayout(console_frame)
+        console_layout.setContentsMargins(0, 0, 0, 0)
+        console_layout.setSpacing(0)
+
+        self.console = QTextEdit()
         self.console.setReadOnly(True)
-        self.console.setStyleSheet(self._console_style)
+        self.console.setObjectName("console")
+        self.console.setAcceptRichText(True)
 
-        # Right side: tabs (Recent commands + Timeline)
-        self.tabs = QtWidgets.QTabWidget()
-        self.tabs.setTabPosition(QtWidgets.QTabWidget.TabPosition.North)
+        console_layout.addWidget(self.console)
 
-        self.recent_commands = QtWidgets.QListWidget()
-        self.recent_commands.setStyleSheet(self._list_style)
-        self.timeline_list = QtWidgets.QListWidget()
-        self.timeline_list.setStyleSheet(self._list_style)
+        # Right: tabs
+        side_frame = QFrame()
+        side_layout = QVBoxLayout(side_frame)
+        side_layout.setContentsMargins(0, 0, 0, 0)
+        side_layout.setSpacing(0)
 
-        self.tabs.addTab(self.recent_commands, "Commands")
+        self.tabs = QTabWidget()
+        self.tabs.setObjectName("sideTabs")
+
+        # Commands tab: just a list of user commands
+        self.commands_list = QListWidget()
+        self.commands_list.setObjectName("commandsList")
+        self.tabs.addTab(self.commands_list, "Commands")
+
+        # Timeline tab: system events
+        self.timeline_list = QListWidget()
+        self.timeline_list.setObjectName("timelineList")
         self.tabs.addTab(self.timeline_list, "Timeline")
-        self.tabs.setMaximumWidth(340)
 
-        center_layout.addWidget(self.console, stretch=3)
-        center_layout.addWidget(self.tabs, stretch=1)
+        # Memory tab: multi-line text
+        self.memory_view = QTextEdit()
+        self.memory_view.setReadOnly(True)
+        self.memory_view.setObjectName("memoryView")
+        self.tabs.addTab(self.memory_view, "Memory")
 
-        # Command input (bottom)
-        self.command_input = QtWidgets.QLineEdit()
+        side_layout.addWidget(self.tabs)
+
+        center_layout.addWidget(console_frame, stretch=3)
+        center_layout.addWidget(side_frame, stretch=1)
+
+        root_layout.addWidget(center_frame, stretch=1)
+
+        # ---- Bottom input bar ---------------------------------------------
+        input_frame = QFrame()
+        input_frame.setObjectName("inputFrame")
+        input_layout = QHBoxLayout(input_frame)
+        input_layout.setContentsMargins(4, 4, 4, 4)
+        input_layout.setSpacing(6)
+
+        self.command_input = QLineEdit()
+        self.command_input.setObjectName("commandInput")
         self.command_input.setPlaceholderText("Type a command for VORTEX and press Enter...")
-        self.command_input.setStyleSheet(
-            "QLineEdit {"
-            "background-color: #050505;"
-            "color: #00FF78;"
-            "font-family: 'Consolas', monospace;"
-            "font-size: 14px;"
-            "border: 1px solid #008040;"
-            "padding: 6px;"
-            "}"
-        )
-        self.command_input.returnPressed.connect(self._on_command_entered)
+        self.command_input.returnPressed.connect(self._on_return_pressed)
 
-        main_layout.addLayout(status_layout)
-        main_layout.addLayout(center_layout)
-        main_layout.addWidget(self.command_input)
+        self.send_button = QPushButton("Send")
+        self.send_button.setObjectName("sendButton")
+        self.send_button.clicked.connect(self._on_send_clicked)
 
-    def _setup_shortcuts(self):
-        # ESC to exit
-        quit_sc = QtGui.QShortcut(QtGui.QKeySequence("Esc"), self)
-        quit_sc.activated.connect(self.close)
+        self.mic_button = QPushButton("\u1F399")  # microphone icon-ish
+        self.mic_button.setObjectName("micButton")
+        self.mic_button.setText("🎙")
+        self.mic_button.clicked.connect(self._on_mic_clicked)
 
-        # Ctrl+Space to trigger voice listening
-        listen_sc = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Space"), self)
-        listen_sc.activated.connect(self._on_listen_shortcut)
-    
-    def _on_listen_shortcut(self):
-        """
-        Called when the user presses Ctrl+Space.
-        We just emit a signal; controller will handle audio.
-        """
-        self.set_status("LISTENING (voice)")
-        self.voice_listen_requested.emit()
+        input_layout.addWidget(self.command_input, stretch=1)
+        input_layout.addWidget(self.send_button)
+        input_layout.addWidget(self.mic_button)
 
+        root_layout.addWidget(input_frame)
 
-    def _setup_system_monitor(self):
-        """Update CPU/RAM info periodically."""
-        self._stats_timer = QtCore.QTimer(self)
-        self._stats_timer.timeout.connect(self._update_stats)
-        self._stats_timer.start(1000)  # every second
+        # Apply base style
+        self._apply_theme_styles(VortexTheme.NORMAL)
 
-    def _update_stats(self):
-        cpu = psutil.cpu_percent(interval=0.0)
-        ram = psutil.virtual_memory().percent
-        self.stats_label.setText(f"CPU: {cpu:4.1f}%   RAM: {ram:4.1f}%")
+    # ------------------------------------------------------------------ #
+    # Input handlers
+    # ------------------------------------------------------------------ #
 
-    # ---------- Public helpers ----------
-
-    @QtCore.pyqtSlot(str)
-    def append_system_message(self, text: str):
-        """Instant append (not animated). Keep for fallback if needed."""
-        self._append_line(f"[VORTEX] {text}")
-
-    @QtCore.pyqtSlot(str)
-    def append_system_message_animated(self, text: str):
-        """
-        Enqueue a system message to be shown with typing animation.
-        """
-        self._msg_queue.append(f"[VORTEX] {text}")
-        if not self._animating:
-            self._start_next_message()
-
-    @QtCore.pyqtSlot(str)
-    def append_user_command(self, text: str):
-        self._append_line(f"[YOU] {text}")
-        self.recent_commands.addItem(text)
-        self.recent_commands.scrollToBottom()
-
-    @QtCore.pyqtSlot(str)
-    def add_timeline_entry(self, text: str):
-        self.timeline_list.addItem(text)
-        self.timeline_list.scrollToBottom()
-
-    def set_status(self, text: str):
-        self.status_label.setText(f"STATUS: {text}")
-
-    # ---------- Internal helpers ----------
-
-    def _append_line(self, text: str):
-        self.console.append(text)
-        self.console.moveCursor(QtGui.QTextCursor.MoveOperation.End)
-
-    def _on_command_entered(self):
+    def _on_return_pressed(self):
         text = self.command_input.text().strip()
         if not text:
             return
         self.command_input.clear()
-        self.append_user_command(text)
         self.command_entered.emit(text)
 
-    # ---------- Typing animation ----------
+    def _on_send_clicked(self):
+        self._on_return_pressed()
 
-    def _start_next_message(self):
-        if not self._msg_queue:
-            self._animating = False
-            self._typing_timer.stop()
+    def _on_mic_clicked(self):
+        self.voice_listen_requested.emit()
+
+    # ------------------------------------------------------------------ #
+    # Public methods used by controller
+    # ------------------------------------------------------------------ #
+
+    def append_system_message_animated(self, text: str):
+        """
+        Append a system message from VORTEX.
+        Styling: [VORTEX] prefix in blue, text in green.
+        """
+        if not text:
+            return
+        html = (
+            f'<span style="color:{self.BLUE};">[VORTEX]</span> '
+            f'<span style="color:{self.GREEN};">{self._escape(text)}</span>'
+        )
+        self._append_console_html(html)
+
+    def append_user_command(self, text: str):
+        """
+        Append a user command line.
+        Also logs into the "Commands" tab.
+        """
+        if not text:
             return
 
-        self._animating = True
-        self._current_msg = self._msg_queue.pop(0)
-        self._current_index = 0
+        html = (
+            f'<span style="color:{self.BLUE};">[YOU]</span> '
+            f'<span style="color:{self.GREEN};">{self._escape(text)}</span>'
+        )
+        self._append_console_html(html)
 
-        # Add a new empty line first
-        self.console.append("")
-        self.console.moveCursor(QtGui.QTextCursor.MoveOperation.End)
-        self._typing_timer.start(15)  # ms between characters
+        self.commands_list.addItem(QListWidgetItem(text))
+        self.commands_list.scrollToBottom()
 
-    def _typing_step(self):
-        if self._current_index >= len(self._current_msg):
-            # Done with this message
-            self._typing_timer.stop()
-            self._start_next_message()
-            return
+    def add_timeline_entry(self, text: str):
+        """
+        Add an entry string to the Timeline tab.
+        """
+        self.timeline_list.addItem(QListWidgetItem(text))
+        self.timeline_list.scrollToBottom()
 
+    def update_memory_panel(self, text: str):
+        """
+        Replace the Memory tab text.
+        """
+        self.memory_view.setPlainText(text)
+
+    def set_status(self, text: str):
+        """
+        Update the top status label.
+        """
+        self.status_label.setText(f"STATUS: {text}")
+
+    def set_theme(self, theme: VortexTheme):
+        """
+        Public entry point to switch the visual theme.
+        """
+        self._apply_theme_styles(theme)
+
+    # ------------------------------------------------------------------ #
+    # Internal helpers
+    # ------------------------------------------------------------------ #
+
+    def _escape(self, text: str) -> str:
+        """
+        Simple HTML escape for < and > to avoid breaking formatting.
+        """
+        return (
+            text.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+        )
+
+    def _append_console_html(self, html: str):
+        """
+        Append a line of HTML to the console with a newline.
+        """
         cursor = self.console.textCursor()
-        cursor.movePosition(QtGui.QTextCursor.MoveOperation.End)
-        cursor.insertText(self._current_msg[self._current_index])
+        cursor.movePosition(cursor.MoveOperation.End)
+        if self.console.toPlainText():
+            cursor.insertHtml("<br/>" + html)
+        else:
+            cursor.insertHtml(html)
         self.console.setTextCursor(cursor)
-        self._current_index += 1
+        self.console.ensureCursorVisible()
+
+    def _apply_theme_styles(self, theme: VortexTheme):
+        """
+        Apply style sheets for the whole window depending on theme.
+        Only uses the 4 allowed colors.
+        """
+
+        # Base: AMOLED black background, green foreground.
+        base_style = f"""
+        QMainWindow {{
+            background-color: {self.BLACK};
+        }}
+        QWidget {{
+            background-color: {self.BLACK};
+            color: {self.GREEN};
+            font-family: Consolas, Menlo, "Courier New", monospace;
+            font-size: 11pt;
+        }}
+        QTabWidget::pane {{
+            border: 1px solid {self.BLUE};
+        }}
+        QTabBar::tab {{
+            background-color: {self.BLACK};
+            color: {self.GREEN};
+            padding: 4px 8px;
+            border: 1px solid {self.BLUE};
+        }}
+        QTabBar::tab:selected {{
+            background-color: {self.BLUE};
+            color: {self.BLACK};
+        }}
+        QTextEdit, QLineEdit {{
+            background-color: {self.BLACK};
+            color: {self.GREEN};
+            border: 1px solid {self.BLUE};
+        }}
+        QLineEdit#commandInput {{
+            padding: 4px;
+        }}
+        QListWidget {{
+            background-color: {self.BLACK};
+            color: {self.GREEN};
+            border: 1px solid {self.BLUE};
+        }}
+        QPushButton {{
+            background-color: {self.BLACK};
+            color: {self.GREEN};
+            border: 1px solid {self.BLUE};
+            padding: 4px 10px;
+        }}
+        QPushButton:hover {{
+            background-color: {self.BLUE};
+            color: {self.BLACK};
+        }}
+        QFrame#centerFrame {{
+            border: 1px solid {self.BLUE};
+        }}
+        QFrame#inputFrame {{
+            border-top: 1px solid {self.BLUE};
+        }}
+        QFrame#statusFrame {{
+            border: 1px solid {self.BLUE};
+        }}
+        QLabel#statusLabel {{
+            font-weight: bold;
+        }}
+        """
+
+        # Theme-specific overrides
+        if theme == VortexTheme.NORMAL:
+            extra = ""
+        elif theme == VortexTheme.SECURITY:
+            extra = f"""
+            QFrame#centerFrame {{
+                border: 1px solid {self.RED};
+            }}
+            QFrame#statusFrame {{
+                border: 1px solid {self.RED};
+            }}
+            QLabel#statusLabel {{
+                color: {self.RED};
+            }}
+            """
+        elif theme == VortexTheme.LOCKDOWN:
+            # Lockdown: stronger red, but still same red color
+            extra = f"""
+            QFrame#centerFrame {{
+                border: 2px solid {self.RED};
+            }}
+            QFrame#statusFrame {{
+                border: 2px solid {self.RED};
+            }}
+            QLabel#statusLabel {{
+                color: {self.RED};
+            }}
+            """
+        else:
+            extra = ""
+
+        self.setStyleSheet(base_style + extra)

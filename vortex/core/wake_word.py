@@ -1,136 +1,115 @@
+# vortex/core/wake_word.py
+
 from __future__ import annotations
 
 import threading
-import queue
-from typing import Callable
+from typing import Callable, Optional
 
 import numpy as np
-import sounddevice as sd
 import pvporcupine
+import sounddevice as sd
 
 
 class WakeWordListener:
+    """
+    Simple Porcupine-based wake word listener.
+
+    Supports two modes:
+      - Built-in keyword: pass `keyword="jarvis"` etc.
+      - Custom keyword file: pass `keyword_path="path/to/vortex.ppn"`
+
+    Exactly one of (keyword, keyword_path) should be provided.
+    """
+
     def __init__(
         self,
         logger,
         on_detect: Callable[[], None],
-        keyword: str,
         access_key: str,
+        keyword: Optional[str] = None,
+        keyword_path: Optional[str] = None,
     ):
-        """
-        on_detect: called whenever the wake word is detected.
-        keyword: built-in Porcupine keyword, e.g. "jarvis"
-        access_key: your Picovoice AccessKey (required).
-        """
         self.logger = logger
         self.on_detect = on_detect
-        self.keyword = keyword
-        self.access_key = access_key
-
-        self._porcupine = None
-        self._audio_stream = None
-        self._thread: threading.Thread | None = None
         self._running = False
+        self._thread: Optional[threading.Thread] = None
 
-        self._detect_queue: "queue.Queue[bool]" = queue.Queue()
+        if not access_key:
+            raise ValueError("Porcupine access_key is required for WakeWordListener")
 
-    # ---------- lifecycle ----------
+        if keyword_path:
+            self.logger.info(f"WakeWordListener: using custom keyword file: {keyword_path}")
+            self._porcupine = pvporcupine.create(
+                access_key=access_key,
+                keyword_paths=[keyword_path],
+            )
+        else:
+            if not keyword:
+                keyword = "jarvis"
+            builtins = pvporcupine.KEYWORDS
+            self.logger.info(f"Porcupine built-in keywords: {builtins}")
+            if keyword not in builtins:
+                raise ValueError(
+                    f"Keyword '{keyword}' is not a built-in Porcupine keyword. "
+                    f"Available: {', '.join(builtins)}"
+                )
+
+            self.logger.info(f"WakeWordListener: using built-in keyword: {keyword}")
+            self._porcupine = pvporcupine.create(
+                access_key=access_key,
+                keywords=[keyword],
+            )
+
+        self.sample_rate = self._porcupine.sample_rate
+        self.frame_length = self._porcupine.frame_length
+
+    # -------------- public API --------------
 
     def start(self):
+        """Start the wake word listening loop in a background thread."""
         if self._running:
             return
-
-        if not self.access_key:
-            self.logger.error("WakeWordListener: access_key is empty. Wake word disabled.")
-            return
-
-        try:
-            # List available built-in keywords in logs for debug
-            try:
-                kws = list(pvporcupine.KEYWORDS)
-                self.logger.info(f"Porcupine built-in keywords: {kws}")
-            except Exception:
-                pass
-
-            self._porcupine = pvporcupine.create(
-                access_key=self.access_key,
-                keywords=[self.keyword],
-            )
-            self.logger.info(
-                f"WakeWordListener: initialized Porcupine with keyword '{self.keyword}'"
-            )
-        except Exception as e:
-            self.logger.error(f"WakeWordListener: failed to init Porcupine: {e}")
-            return
-
-        try:
-            self._audio_stream = sd.RawInputStream(
-                samplerate=self._porcupine.sample_rate,
-                blocksize=self._porcupine.frame_length,
-                dtype="int16",
-                channels=1,
-                callback=self._audio_callback,
-            )
-            self._audio_stream.start()
-        except Exception as e:
-            self.logger.error(f"WakeWordListener: failed to open audio stream: {e}")
-            if self._porcupine is not None:
-                self._porcupine.delete()
-                self._porcupine = None
-            return
-
         self._running = True
-        self._thread = threading.Thread(target=self._run_detection_loop, daemon=True)
+        self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
-        self.logger.info("WakeWordListener started and listening for wake word.")
+        self.logger.info("WakeWordListener: started.")
 
     def stop(self):
+        """Stop listening and join the background thread."""
+        if not self._running:
+            return
         self._running = False
+        if self._thread and self._thread.is_alive():
+            self._thread.join(timeout=1.0)
+        self.logger.info("WakeWordListener: stopped.")
+
+    # -------------- internal loop --------------
+
+    def _run(self):
         try:
-            if self._audio_stream is not None:
-                self._audio_stream.stop()
-                self._audio_stream.close()
-        except Exception:
-            pass
+            with sd.InputStream(
+                channels=1,
+                samplerate=self.sample_rate,
+                blocksize=self.frame_length,
+                dtype="int16",
+            ) as stream:
+                self.logger.info(
+                    f"WakeWordListener: audio stream opened "
+                    f"(sample_rate={self.sample_rate}, frame_length={self.frame_length})"
+                )
 
-        if self._porcupine is not None:
-            try:
-                self._porcupine.delete()
-            except Exception:
-                pass
-        self._porcupine = None
-        self.logger.info("WakeWordListener stopped.")
+                while self._running:
+                    audio_frame, _ = stream.read(self.frame_length)
+                    pcm = np.frombuffer(audio_frame, dtype=np.int16)
 
-    # ---------- internal ----------
-
-    def _audio_callback(self, in_data, frame_count, time_info, status):
-        if status:
-            self.logger.warning(f"WakeWordListener audio status: {status}")
-        if not self._porcupine:
-            return
-
-        pcm = np.frombuffer(in_data, dtype=np.int16)
-        try:
-            result = self._porcupine.process(pcm)
+                    keyword_index = self._porcupine.process(pcm)
+                    if keyword_index >= 0:
+                        self.logger.info("WakeWordListener: wake word detected.")
+                        try:
+                            self.on_detect()
+                        except Exception as cb_err:
+                            self.logger.error(f"WakeWordListener: callback error: {cb_err}")
         except Exception as e:
-            self.logger.error(f"WakeWordListener process error: {e}")
-            return
-
-        if result >= 0:
-            # keyword detected
-            try:
-                self._detect_queue.put_nowait(True)
-            except queue.Full:
-                pass
-
-    def _run_detection_loop(self):
-        while self._running:
-            try:
-                _ = self._detect_queue.get(timeout=0.5)
-            except queue.Empty:
-                continue
-            self.logger.info("Wake word detected.")
-            try:
-                self.on_detect()
-            except Exception as e:
-                self.logger.error(f"WakeWordListener on_detect error: {e}")
+            self.logger.error(f"WakeWordListener: error in loop: {e}")
+        finally:
+            self.logger.info("WakeWordListener: exiting audio loop.")

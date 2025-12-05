@@ -1,8 +1,50 @@
 [
   {
     "id": 1,
-    "timestamp": "2025-12-01T23:32:53",
+    "timestamp": "2025-12-02T14:36:04",
+    "category": "schedule",
+    "text": "i have an exam at 4"
+  },
+  {
+    "id": 2,
+    "timestamp": "2025-12-03T11:56:06",
+    "category": "workflow",
+    "text": "Focus session started by VORTEX."
+  },
+  {
+    "id": 3,
+    "timestamp": "2025-12-05T11:46:37",
     "category": "note",
-    "text": "I am exon?"
+    "text": "pad"
+  },
+  {
+    "id": 4,
+    "timestamp": "2025-12-05T12:08:56",
+    "category": "note",
+    "text": "pad"
+  },
+  {
+    "id": 5,
+    "timestamp": "2025-12-05T12:20:14",
+    "category": "note",
+    "text": "i have an exam in 2 hours"
+  },
+  {
+    "id": 6,
+    "timestamp": "2025-12-05T12:20:29",
+    "category": "note",
+    "text": "?"
+  },
+  {
+    "id": 7,
+    "timestamp": "2025-12-05T12:27:05",
+    "category": "note",
+    "text": "i have an exam in 2 hours"
+  },
+  {
+    "id": 8,
+    "timestamp": "2025-12-05T12:29:33",
+    "category": "note",
+    "text": "i have an exam in 2 hours"
   }
 ]

@@ -1,5 +1,7 @@
 # main.py
 
+from __future__ import annotations
+
 import sys
 from PyQt6 import QtWidgets
 
@@ -11,13 +13,15 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
 
     window = VortexWindow()
-    controller = VortexController(window, owner_name="Varchasva")
+    controller = VortexController(window)
 
-    window.show()
-    exit_code = app.exec()
+    # Jarvis-style: start full screen / maximized
+    window.showFullScreen()   # use showFullScreen() if you want *true* full-screen
 
-    controller.shutdown()
-    sys.exit(exit_code)
+    # Make sure controller isn't garbage-collected
+    window.controller = controller  # type: ignore
+
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":

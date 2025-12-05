@@ -1,0 +1,35 @@
+{
+  "name": "focus_mode",
+  "description": "Close distractions and open coding tools for deep work.",
+  "steps": [
+    {
+      "type": "say",
+      "text": "Entering focus mode. Closing distractions and opening your tools."
+    },
+    {
+      "type": "close_app",
+      "app": "chrome"
+    },
+    {
+      "type": "close_app",
+      "app": "edge"
+    },
+    {
+      "type": "sleep",
+      "seconds": 1
+    },
+    {
+      "type": "open_app",
+      "app": "code"
+    },
+    {
+      "type": "note",
+      "text": "Focus session started by VORTEX.",
+      "category": "workflow"
+    },
+    {
+      "type": "say",
+      "text": "You're all set. Let's get some serious work done."
+    }
+  ]
+}

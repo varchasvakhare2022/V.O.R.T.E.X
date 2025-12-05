@@ -2068,3 +2068,1567 @@
 2025-12-01 23:33:46 | INFO | vortex | CameraMonitor stopped.
 2025-12-01 23:33:46 | INFO | vortex | WakeWordListener stopped.
 2025-12-01 23:33:48 | INFO | vortex | VORTEX shutting down.
+2025-12-02 10:58:17 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 10:58:17 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 10:58:17 | INFO | vortex | CameraMonitor started.
+2025-12-02 10:58:17 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online and standing by.
+2025-12-02 10:58:17 | INFO | vortex | Porcupine built-in keywords: ['jarvis', 'picovoice', 'hey google', 'hey barista', 'grapefruit', 'computer', 'hey siri', 'blueberry', 'porcupine', 'grasshopper', 'alexa', 'ok google', 'pico clock', 'americano', 'terminator', 'bumblebee']
+2025-12-02 10:58:18 | ERROR | vortex | WakeWordListener: failed to init Porcupine: Initialization failed:
+  [0] Picovoice Error (code `0000006F`)
+  [1] Failed to parse AccessKey `PUT_YOUR_ACCESS_KEY_HERE`.
+  [2] Picovoice Error (code `00000136`)
+2025-12-02 10:58:34 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 10:58:34 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 10:58:34 | INFO | vortex | VORTEX shutting down.
+2025-12-02 10:59:09 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 10:59:09 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 10:59:09 | INFO | vortex | CameraMonitor started.
+2025-12-02 10:59:09 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online and standing by.
+2025-12-02 10:59:09 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 10:59:09 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 10:59:09 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 10:59:16 | INFO | vortex | Wake word detected.
+2025-12-02 10:59:16 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 10:59:16 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 10:59:17 | INFO | vortex | Voice capture requested.
+2025-12-02 10:59:17 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 10:59:17 | INFO | vortex | Recording voice phrase...
+2025-12-02 10:59:20 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 10:59:20 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 10:59:20 | INFO | vortex | Voice encoder loaded.
+2025-12-02 10:59:21 | INFO | vortex | Voice similarity: 0.756
+2025-12-02 10:59:21 | INFO | vortex | Voice verified (similarity=0.756)
+2025-12-02 10:59:21 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 10:59:21 | INFO | vortex | STT result: 'Open note pad.'
+2025-12-02 10:59:21 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 10:59:22 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 10:59:22 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 10:59:22 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 10:59:22 | INFO | vortex | System message: Opening notepad for you.
+2025-12-02 10:59:22 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-02 10:59:22 | INFO | vortex | System message: Standing by for further instructions.
+2025-12-02 10:59:27 | INFO | vortex | Wake word detected.
+2025-12-02 10:59:27 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 10:59:27 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 10:59:27 | INFO | vortex | Voice capture requested.
+2025-12-02 10:59:27 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 10:59:27 | INFO | vortex | Recording voice phrase...
+2025-12-02 10:59:30 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 10:59:30 | INFO | vortex | Voice similarity: 0.805
+2025-12-02 10:59:30 | INFO | vortex | Voice verified (similarity=0.805)
+2025-12-02 10:59:30 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 10:59:30 | INFO | vortex | STT result: 'I think by further adunctions.'
+2025-12-02 10:59:30 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 10:59:31 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 10:59:31 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 10:59:31 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 10:59:31 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 10:59:31 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 10:59:39 | INFO | vortex | Wake word detected.
+2025-12-02 10:59:39 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 10:59:39 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 10:59:39 | INFO | vortex | Voice capture requested.
+2025-12-02 10:59:39 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 10:59:39 | INFO | vortex | Recording voice phrase...
+2025-12-02 10:59:42 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 10:59:42 | INFO | vortex | Voice similarity: 0.794
+2025-12-02 10:59:42 | INFO | vortex | Voice verified (similarity=0.794)
+2025-12-02 10:59:42 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 10:59:43 | INFO | vortex | STT result: 'Open that again.'
+2025-12-02 10:59:43 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 10:59:43 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 10:59:43 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 10:59:43 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 10:59:43 | INFO | vortex | System message: Opening notepad again for you.
+2025-12-02 10:59:43 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-02 10:59:43 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 10:59:49 | INFO | vortex | Wake word detected.
+2025-12-02 10:59:49 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 10:59:49 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 10:59:49 | INFO | vortex | Voice capture requested.
+2025-12-02 10:59:49 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 10:59:49 | INFO | vortex | Recording voice phrase...
+2025-12-02 10:59:52 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 10:59:52 | INFO | vortex | Voice similarity: 0.799
+2025-12-02 10:59:52 | INFO | vortex | Voice verified (similarity=0.799)
+2025-12-02 10:59:52 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 10:59:53 | INFO | vortex | STT result: 'close all node tags.'
+2025-12-02 10:59:53 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 10:59:53 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 10:59:53 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 10:59:53 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 10:59:53 | INFO | vortex | System message: Closing code for you.
+2025-12-02 10:59:53 | INFO | vortex | System message: I couldn't find any running instance of code.
+2025-12-02 10:59:53 | INFO | vortex | System message: Systems idle and ready.
+2025-12-02 11:00:06 | INFO | vortex | Wake word detected.
+2025-12-02 11:00:06 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 11:00:06 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 11:00:06 | INFO | vortex | Voice capture requested.
+2025-12-02 11:00:06 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 11:00:06 | INFO | vortex | Recording voice phrase...
+2025-12-02 11:00:09 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 11:00:09 | INFO | vortex | Voice similarity: 0.826
+2025-12-02 11:00:09 | INFO | vortex | Voice verified (similarity=0.826)
+2025-12-02 11:00:09 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 11:00:10 | INFO | vortex | STT result: 'Close the nut pad.'
+2025-12-02 11:00:10 | INFO | vortex | Porcupine built-in keywords: ['computer', 'jarvis', 'terminator', 'grasshopper', 'hey barista', 'grapefruit', 'hey google', 'bumblebee', 'americano', 'ok google', 'pico clock', 'hey siri', 'porcupine', 'blueberry', 'alexa', 'picovoice']
+2025-12-02 11:00:10 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 11:00:10 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 11:00:10 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 11:00:10 | INFO | vortex | System message: Closing notepad for you.
+2025-12-02 11:00:10 | INFO | vortex | Closed application: notepad
+2025-12-02 11:00:10 | INFO | vortex | System message: Standing by for further instructions.
+2025-12-02 11:00:26 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 11:00:26 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 11:00:26 | INFO | vortex | VORTEX shutting down.
+2025-12-02 11:24:51 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 11:24:52 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 11:24:52 | INFO | vortex | CameraMonitor started.
+2025-12-02 11:24:52 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online and standing by.
+2025-12-02 11:24:52 | INFO | vortex | Porcupine built-in keywords: ['bumblebee', 'hey google', 'pico clock', 'porcupine', 'grapefruit', 'grasshopper', 'jarvis', 'terminator', 'computer', 'picovoice', 'ok google', 'alexa', 'blueberry', 'hey siri', 'americano', 'hey barista']
+2025-12-02 11:24:53 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 11:24:54 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 11:25:03 | INFO | vortex | User command (typed): remember that my DBMS lab is at 4 pm on Friday.
+2025-12-02 11:25:03 | INFO | vortex | Memory added [2] (note): my DBMS lab is at 4 pm on Friday
+2025-12-02 11:25:03 | INFO | vortex | Note stored: my DBMS lab is at 4 pm on Friday
+2025-12-02 11:25:03 | INFO | vortex | System message: I'll remember that: my DBMS lab is at 4 pm on Friday
+2025-12-02 11:25:16 | INFO | vortex | User command (typed): open notepad
+2025-12-02 11:25:16 | INFO | vortex | System message: Opening notepad for you.
+2025-12-02 11:25:16 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-02 11:25:23 | INFO | vortex | User command (typed): close it
+2025-12-02 11:25:23 | INFO | vortex | System message: Closing notepad for you.
+2025-12-02 11:25:23 | INFO | vortex | Closed application: notepad
+2025-12-02 11:25:33 | INFO | vortex | User command (typed): what did i tell you about my lab?
+2025-12-02 11:25:34 | INFO | vortex | System message: Here's what I remember related to that:
+2) my DBMS lab is at 4 pm on Friday (2025-12-02T11:25:03)
+2025-12-02 11:26:12 | INFO | vortex | User command (typed): could you elaborate it
+2025-12-02 11:26:12 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:26:20 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-02 11:26:28 | INFO | vortex | User command (typed): what are things you noted down?
+2025-12-02 11:26:28 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:26:37 | INFO | vortex | User command (typed): what do you remember?
+2025-12-02 11:26:37 | INFO | vortex | System message: Here are your latest notes:
+1) I am exon? (2025-12-01T23:32:53)
+2) my DBMS lab is at 4 pm on Friday (2025-12-02T11:25:03)
+2025-12-02 11:26:43 | INFO | vortex | User command (typed): delete the notes
+2025-12-02 11:26:43 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:28:08 | INFO | vortex | System message: You've been quiet for a while. Need any help?
+2025-12-02 11:28:25 | INFO | vortex | User command (typed): enter security mode
+2025-12-02 11:28:25 | INFO | vortex | System message: Entering security mode.
+2025-12-02 11:28:30 | INFO | vortex | User command (typed): enter normal mode
+2025-12-02 11:28:30 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-02 11:28:34 | INFO | vortex | User command (typed): security mode
+2025-12-02 11:28:34 | INFO | vortex | System message: Entering security mode.
+2025-12-02 11:28:38 | INFO | vortex | User command (typed): normal
+2025-12-02 11:28:38 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:28:41 | INFO | vortex | User command (typed): normal mode
+2025-12-02 11:28:41 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-02 11:28:45 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-02 11:28:45 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-02 11:28:55 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-02 11:28:55 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-02 11:29:04 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 11:29:04 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 11:29:04 | INFO | vortex | VORTEX shutting down.
+2025-12-02 11:43:16 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 11:44:00 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 11:44:00 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-02 11:44:00 | INFO | vortex | CameraMonitor started.
+2025-12-02 11:44:00 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online and standing by.
+2025-12-02 11:44:00 | INFO | vortex | Porcupine built-in keywords: ['grasshopper', 'hey barista', 'alexa', 'pico clock', 'bumblebee', 'blueberry', 'picovoice', 'grapefruit', 'porcupine', 'jarvis', 'hey siri', 'computer', 'ok google', 'americano', 'hey google', 'terminator']
+2025-12-02 11:44:00 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 11:44:00 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 11:44:13 | INFO | vortex | User command (typed): what you noted
+2025-12-02 11:44:13 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:44:21 | INFO | vortex | User command (typed): what did you note
+2025-12-02 11:44:21 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:44:26 | INFO | vortex | User command (typed): what did you remember
+2025-12-02 11:44:26 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:44:37 | INFO | vortex | User command (typed): what about my lab
+2025-12-02 11:44:37 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:44:45 | INFO | vortex | User command (typed): what about my lab?
+2025-12-02 11:44:45 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 11:45:12 | INFO | vortex | User command (typed): what did i tell you about my lab
+2025-12-02 11:45:12 | INFO | vortex | System message: Here's what I remember related to that:
+2) my DBMS lab is at 4 pm on Friday (2025-12-02T11:25:03)
+2025-12-02 11:45:17 | INFO | vortex | User command (typed): delete that
+2025-12-02 11:45:17 | INFO | vortex | No memory results for query 'te that'.
+2025-12-02 11:45:17 | INFO | vortex | System message: I couldn't find anything related to "te that" to delete.
+2025-12-02 11:45:31 | INFO | vortex | User command (typed): forget that
+2025-12-02 11:45:31 | INFO | vortex | No memory results for query 'et that'.
+2025-12-02 11:45:31 | INFO | vortex | System message: I couldn't find anything related to "et that" to delete.
+2025-12-02 11:45:44 | INFO | vortex | User command (typed): remove that note
+2025-12-02 11:45:44 | INFO | vortex | No memory results for query 've that note'.
+2025-12-02 11:45:44 | INFO | vortex | System message: I couldn't find anything related to "ve that note" to delete.
+2025-12-02 11:46:00 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-02 11:46:05 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 11:46:05 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 11:46:05 | INFO | vortex | VORTEX shutting down.
+2025-12-02 12:25:27 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 12:25:33 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 12:25:33 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-02 12:25:33 | INFO | vortex | CameraMonitor started.
+2025-12-02 12:25:33 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 12:25:33 | INFO | vortex | Porcupine built-in keywords: ['alexa', 'computer', 'hey siri', 'jarvis', 'pico clock', 'porcupine', 'terminator', 'picovoice', 'blueberry', 'ok google', 'hey barista', 'grapefruit', 'grasshopper', 'hey google', 'bumblebee', 'americano']
+2025-12-02 12:25:33 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 12:25:34 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 12:25:46 | INFO | vortex | User command (typed): what do you remember
+2025-12-02 12:25:46 | INFO | vortex | System message: Here are your latest notes:
+1) I am exon? (2025-12-01T23:32:53)
+2) my DBMS lab is at 4 pm on Friday (2025-12-02T11:25:03)
+2025-12-02 12:25:51 | INFO | vortex | User command (typed): delete those
+2025-12-02 12:25:51 | INFO | vortex | No memory results for query 'those'.
+2025-12-02 12:25:51 | INFO | vortex | System message: I couldn't find anything related to "those" to delete.
+2025-12-02 12:26:00 | INFO | vortex | User command (typed): delete that
+2025-12-02 12:26:00 | INFO | vortex | Deleted memory id=1 (category=note).
+2025-12-02 12:26:00 | INFO | vortex | System message: I've deleted this note for you: I am exon?
+2025-12-02 12:26:12 | INFO | vortex | User command (typed): what do you remember
+2025-12-02 12:26:12 | INFO | vortex | System message: Here are your latest notes:
+2) my DBMS lab is at 4 pm on Friday (2025-12-02T11:25:03)
+2025-12-02 12:26:21 | INFO | vortex | User command (typed): forget that
+2025-12-02 12:26:21 | INFO | vortex | Deleted memory id=2 (category=note).
+2025-12-02 12:26:21 | INFO | vortex | System message: I've deleted this note for you: my DBMS lab is at 4 pm on Friday
+2025-12-02 12:26:29 | INFO | vortex | User command (typed): what do you remember
+2025-12-02 12:26:29 | INFO | vortex | System message: I don't have any notes stored yet.
+2025-12-02 12:27:09 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-02 12:27:13 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 12:27:13 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 12:27:15 | INFO | vortex | VORTEX shutting down.
+2025-12-02 13:37:47 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 13:38:21 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 13:38:21 | INFO | vortex | Loaded 0 memories from disk.
+2025-12-02 13:38:21 | INFO | vortex | CameraMonitor started.
+2025-12-02 13:38:21 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 13:38:21 | INFO | vortex | Porcupine built-in keywords: ['terminator', 'grasshopper', 'bumblebee', 'computer', 'hey barista', 'hey google', 'blueberry', 'grapefruit', 'pico clock', 'alexa', 'picovoice', 'jarvis', 'americano', 'ok google', 'porcupine', 'hey siri']
+2025-12-02 13:38:22 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 13:38:23 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 13:38:24 | WARNING | vortex | WakeWordListener audio status: input overflow
+2025-12-02 13:38:43 | INFO | vortex | Wake word detected.
+2025-12-02 13:38:43 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 13:38:43 | INFO | vortex | System message: Yes, I'm listening.
+2025-12-02 13:38:43 | INFO | vortex | Voice capture requested.
+2025-12-02 13:38:43 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 13:38:43 | INFO | vortex | Recording voice phrase...
+2025-12-02 13:38:46 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 13:38:46 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 13:38:46 | INFO | vortex | Voice encoder loaded.
+2025-12-02 13:38:50 | INFO | vortex | Voice similarity: 0.724
+2025-12-02 13:38:50 | WARNING | vortex | VOICE MISMATCH. similarity=0.724
+2025-12-02 13:38:50 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-02 13:39:03 | INFO | vortex | Loading InsightFace model...
+2025-12-02 13:40:25 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 13:40:31 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 13:40:31 | INFO | vortex | Loaded 0 memories from disk.
+2025-12-02 13:40:31 | INFO | vortex | CameraMonitor started.
+2025-12-02 13:40:31 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 13:40:31 | INFO | vortex | Porcupine built-in keywords: ['bumblebee', 'hey google', 'hey siri', 'ok google', 'computer', 'picovoice', 'porcupine', 'jarvis', 'pico clock', 'terminator', 'americano', 'alexa', 'grasshopper', 'grapefruit', 'hey barista', 'blueberry']
+2025-12-02 13:40:32 | INFO | vortex | WakeWordListener: initialized Porcupine with keyword 'jarvis'
+2025-12-02 13:40:32 | INFO | vortex | WakeWordListener started and listening for wake word.
+2025-12-02 13:40:33 | WARNING | vortex | WakeWordListener audio status: input overflow
+2025-12-02 13:40:45 | INFO | vortex | User command (typed): remember i have my exam at 2pm
+2025-12-02 13:40:45 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 13:41:33 | INFO | vortex | User command (typed): note i have an exam at 2pm
+2025-12-02 13:41:33 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 13:41:38 | INFO | vortex | User command (typed): open notepad
+2025-12-02 13:41:38 | INFO | vortex | System message: Opening notepad for you.
+2025-12-02 13:41:39 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-02 13:41:44 | INFO | vortex | User command (typed): close it
+2025-12-02 13:41:44 | INFO | vortex | System message: Closing notepad for you.
+2025-12-02 13:41:44 | INFO | vortex | Closed application: notepad
+2025-12-02 13:41:56 | INFO | vortex | User command (typed): note
+2025-12-02 13:41:56 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 13:42:11 | INFO | vortex | User command (typed): what do you remember?
+2025-12-02 13:42:11 | INFO | vortex | System message: I don't have any notes stored yet.
+2025-12-02 13:42:21 | INFO | vortex | User command (typed): remember i have an exam at 2
+2025-12-02 13:42:21 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 13:43:27 | INFO | vortex | System message: I'm monitoring your system. Everything looks stable.
+2025-12-02 13:43:46 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 13:43:46 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 13:43:46 | INFO | vortex | VORTEX shutting down.
+2025-12-02 13:56:27 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 13:56:36 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 13:56:36 | INFO | vortex | Loaded 0 memories from disk.
+2025-12-02 13:56:36 | INFO | vortex | CameraMonitor started.
+2025-12-02 13:56:36 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 13:56:36 | INFO | vortex | Porcupine built-in keywords: ['americano', 'grasshopper', 'bumblebee', 'hey barista', 'terminator', 'porcupine', 'blueberry', 'hey siri', 'hey google', 'ok google', 'alexa', 'picovoice', 'grapefruit', 'jarvis', 'computer', 'pico clock']
+2025-12-02 13:56:36 | ERROR | vortex | WakeWordListener: failed to init Porcupine: One or more keywords are not available by default. Available default keywords are:\namericano, grasshopper, bumblebee, hey barista, terminator, porcupine, blueberry, hey siri, hey google, ok google, alexa, picovoice, grapefruit, jarvis, computer, pico clock
+2025-12-02 13:57:43 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-02 13:59:02 | INFO | vortex | User command (typed): remember i have exam in 2 hours
+2025-12-02 13:59:02 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 13:59:32 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-02 14:00:54 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-02 14:03:39 | INFO | vortex | System message: I'm monitoring your system. Everything looks stable.
+2025-12-02 14:03:47 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 14:03:47 | INFO | vortex | WakeWordListener stopped.
+2025-12-02 14:03:47 | INFO | vortex | VORTEX shutting down.
+2025-12-02 14:35:28 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 14:35:35 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 14:35:35 | INFO | vortex | Loaded 0 memories from disk.
+2025-12-02 14:35:35 | INFO | vortex | CameraMonitor started.
+2025-12-02 14:35:35 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 14:35:35 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 14:35:35 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 14:35:35 | INFO | vortex | WakeWordListener: started.
+2025-12-02 14:35:36 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 14:35:43 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 14:35:43 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 14:35:43 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 14:35:44 | INFO | vortex | Voice capture requested.
+2025-12-02 14:35:44 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 14:35:44 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 14:35:44 | INFO | vortex | Recording voice phrase...
+2025-12-02 14:35:47 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 14:35:47 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 14:35:47 | INFO | vortex | Voice encoder loaded.
+2025-12-02 14:35:48 | INFO | vortex | Voice similarity: 0.794
+2025-12-02 14:35:48 | INFO | vortex | Voice verified. similarity=0.794
+2025-12-02 14:35:48 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 14:35:48 | INFO | vortex | STT result: 'Not anything.'
+2025-12-02 14:35:48 | INFO | vortex | WakeWordListener: started.
+2025-12-02 14:35:48 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 14:35:48 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 14:35:48 | INFO | vortex | System message: I'm listening whenever you are.
+2025-12-02 14:35:48 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 14:36:04 | INFO | vortex | User command (typed): note that i have an exam at 4
+2025-12-02 14:36:04 | INFO | vortex | Memory added [1] (schedule): i have an exam at 4
+2025-12-02 14:36:05 | INFO | vortex | Note stored (schedule): i have an exam at 4
+2025-12-02 14:36:05 | INFO | vortex | System message: I'll remember that: i have an exam at 4
+2025-12-02 14:36:16 | INFO | vortex | User command (typed): what do you remember
+2025-12-02 14:36:16 | INFO | vortex | System message: Here are your latest notes:
+1) i have an exam at 4 (2025-12-02T14:36:04)
+2025-12-02 14:36:30 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 14:36:30 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 14:36:30 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 14:36:30 | INFO | vortex | Voice capture requested.
+2025-12-02 14:36:30 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 14:36:30 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 14:36:30 | INFO | vortex | Recording voice phrase...
+2025-12-02 14:36:34 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 14:36:34 | INFO | vortex | Voice similarity: 0.788
+2025-12-02 14:36:34 | INFO | vortex | Voice verified. similarity=0.788
+2025-12-02 14:36:34 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 14:36:34 | INFO | vortex | STT result: 'For good debt.'
+2025-12-02 14:36:34 | INFO | vortex | WakeWordListener: started.
+2025-12-02 14:36:34 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 14:36:34 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 14:36:34 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 14:36:34 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 14:36:46 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 14:36:46 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 14:36:46 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 14:36:46 | INFO | vortex | Voice capture requested.
+2025-12-02 14:36:46 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 14:36:46 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 14:36:46 | INFO | vortex | Recording voice phrase...
+2025-12-02 14:36:49 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 14:36:49 | INFO | vortex | Voice similarity: 0.800
+2025-12-02 14:36:49 | INFO | vortex | Voice verified. similarity=0.800
+2025-12-02 14:36:49 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 14:36:49 | INFO | vortex | STT result: 'forget.'
+2025-12-02 14:36:49 | INFO | vortex | WakeWordListener: started.
+2025-12-02 14:36:49 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 14:36:49 | INFO | vortex | No memory results for query 'forget.'.
+2025-12-02 14:36:49 | INFO | vortex | System message: I couldn't find anything related to "forget." to delete.
+2025-12-02 14:36:49 | INFO | vortex | System message: I'm listening whenever you are.
+2025-12-02 14:36:49 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 14:37:08 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 14:37:08 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 14:37:08 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 14:37:08 | INFO | vortex | Voice capture requested.
+2025-12-02 14:37:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 14:37:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 14:37:08 | INFO | vortex | Recording voice phrase...
+2025-12-02 14:37:11 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 14:37:11 | INFO | vortex | Voice similarity: 0.855
+2025-12-02 14:37:11 | INFO | vortex | Voice verified. similarity=0.855
+2025-12-02 14:37:11 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 14:37:11 | INFO | vortex | STT result: 'forget the schedule.'
+2025-12-02 14:37:11 | INFO | vortex | WakeWordListener: started.
+2025-12-02 14:37:11 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 14:37:11 | INFO | vortex | No memory results for query 'the schedule.'.
+2025-12-02 14:37:11 | INFO | vortex | System message: I couldn't find anything related to "the schedule." to delete.
+2025-12-02 14:37:11 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 14:37:11 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 14:37:21 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 14:37:22 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 14:37:22 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 14:37:22 | INFO | vortex | VORTEX shutting down.
+2025-12-02 15:00:00 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:00:06 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:00:06 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:00:06 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:00:06 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:00:06 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:00:06 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:00:07 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:00:07 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:00:22 | INFO | vortex | Voice capture requested.
+2025-12-02 15:00:22 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:00:22 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:00:22 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:00:23 | INFO | vortex | Voice capture requested but a recording is already in progress. Ignoring.
+2025-12-02 15:00:25 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:00:25 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 15:00:25 | INFO | vortex | Voice encoder loaded.
+2025-12-02 15:00:26 | INFO | vortex | Voice similarity: 0.660
+2025-12-02 15:00:26 | WARNING | vortex | VOICE MISMATCH. similarity=0.660
+2025-12-02 15:00:26 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-02 15:00:26 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-02 15:00:26 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:00:26 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:00:26 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:07:36 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:07:42 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:07:42 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:07:42 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:07:42 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:07:42 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:07:42 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:07:42 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:07:42 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:09:58 | INFO | vortex | System message: If you want to note something, just tell me.
+2025-12-02 15:10:07 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 15:10:07 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:10:07 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:10:07 | INFO | vortex | VORTEX shutting down.
+2025-12-02 15:18:44 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:18:49 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:18:49 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:18:49 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:18:49 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:18:49 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:18:49 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:18:50 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:20:33 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:20:39 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:20:39 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:20:39 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:20:39 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:20:39 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:20:39 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:20:40 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:24:44 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:24:50 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:24:50 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:24:50 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:24:50 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:24:50 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:24:50 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:24:51 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:24:51 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:24:55 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:24:55 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:24:55 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:24:55 | INFO | vortex | Voice capture requested.
+2025-12-02 15:24:55 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:24:55 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:24:55 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:24:58 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:24:58 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 15:24:58 | INFO | vortex | Voice encoder loaded.
+2025-12-02 15:25:00 | INFO | vortex | Voice similarity: 0.791
+2025-12-02 15:25:00 | INFO | vortex | Voice verified. similarity=0.791
+2025-12-02 15:25:00 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:25:00 | INFO | vortex | STT result: 'Holy functional rest of you.'
+2025-12-02 15:25:00 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:25:00 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:25:00 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 15:25:00 | INFO | vortex | System message: I'm listening whenever you are.
+2025-12-02 15:25:00 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:26:11 | INFO | vortex | System message: I'm monitoring your system. Everything looks stable.
+2025-12-02 15:26:16 | INFO | vortex | CameraMonitor stopped.
+2025-12-02 15:26:16 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:26:16 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:26:16 | INFO | vortex | VORTEX shutting down.
+2025-12-02 15:42:44 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:42:51 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:42:51 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:42:51 | INFO | vortex | Created sample workflow at D:\GitHub\V.O.R.T.E.X\data\workflows\focus_mode.json
+2025-12-02 15:42:51 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:42:51 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and fully functional.
+2025-12-02 15:42:51 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:42:51 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:42:51 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:42:52 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:43:40 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-02 15:43:40 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-02 15:43:44 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-02 15:43:44 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-02 15:45:19 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-02 15:46:48 | INFO | vortex | System message: I'm monitoring your system. Everything looks stable.
+2025-12-02 15:48:51 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:48:51 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:48:51 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:48:51 | INFO | vortex | Voice capture requested.
+2025-12-02 15:48:51 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:48:51 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:48:51 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:48:54 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:48:54 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 15:48:54 | INFO | vortex | Voice encoder loaded.
+2025-12-02 15:48:55 | INFO | vortex | Voice similarity: 0.802
+2025-12-02 15:48:55 | INFO | vortex | Voice verified. similarity=0.802
+2025-12-02 15:48:55 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:48:56 | INFO | vortex | STT result: 'Open note pad.'
+2025-12-02 15:48:56 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:48:56 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:48:56 | INFO | vortex | System message: Opening notepad for you.
+2025-12-02 15:48:56 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:48:56 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-02 15:48:56 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 15:49:00 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:49:00 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:49:00 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:49:00 | INFO | vortex | Voice capture requested.
+2025-12-02 15:49:00 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:49:00 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:49:00 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:49:03 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:49:03 | INFO | vortex | Voice similarity: 0.903
+2025-12-02 15:49:03 | INFO | vortex | Voice verified. similarity=0.903
+2025-12-02 15:49:03 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:49:04 | INFO | vortex | STT result: 'Close the note pad.'
+2025-12-02 15:49:04 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:49:04 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:49:04 | INFO | vortex | System message: Closing notepad for you.
+2025-12-02 15:49:04 | INFO | vortex | Closed application: notepad
+2025-12-02 15:49:04 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 15:49:04 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:49:24 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:49:24 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:49:24 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:49:24 | INFO | vortex | Voice capture requested.
+2025-12-02 15:49:24 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:49:24 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:49:24 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:49:27 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:49:27 | INFO | vortex | Voice similarity: 0.841
+2025-12-02 15:49:27 | INFO | vortex | Voice verified. similarity=0.841
+2025-12-02 15:49:27 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:49:27 | INFO | vortex | STT result: 'security mode.'
+2025-12-02 15:49:27 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:49:27 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:49:27 | INFO | vortex | System message: Entering security mode.
+2025-12-02 15:49:27 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 15:49:27 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:49:33 | INFO | vortex | System message: Remember to take short breaks while working.
+2025-12-02 15:49:44 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:49:44 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:49:44 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:49:44 | INFO | vortex | Voice capture requested.
+2025-12-02 15:49:44 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:49:44 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:49:44 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:49:48 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:49:48 | INFO | vortex | Voice similarity: 0.858
+2025-12-02 15:49:48 | INFO | vortex | Voice verified. similarity=0.858
+2025-12-02 15:49:48 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:49:48 | INFO | vortex | STT result: 'No, I don't anymore.'
+2025-12-02 15:49:48 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:49:48 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:49:48 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 15:49:48 | INFO | vortex | System message: Ready for your next command.
+2025-12-02 15:49:48 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:49:55 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:49:55 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:49:55 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:49:55 | INFO | vortex | Voice capture requested.
+2025-12-02 15:49:55 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:49:55 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:49:55 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:49:58 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:49:58 | INFO | vortex | Voice similarity: 0.858
+2025-12-02 15:49:58 | INFO | vortex | Voice verified. similarity=0.858
+2025-12-02 15:49:58 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:49:58 | INFO | vortex | STT result: 'No, I have many more.'
+2025-12-02 15:49:58 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:49:58 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:49:58 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 15:49:58 | INFO | vortex | System message: I'm listening whenever you are.
+2025-12-02 15:49:58 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:50:13 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:50:13 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:50:13 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:50:14 | INFO | vortex | Voice capture requested.
+2025-12-02 15:50:14 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:50:14 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:50:14 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:50:17 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:50:17 | INFO | vortex | Voice similarity: 0.848
+2025-12-02 15:50:17 | INFO | vortex | Voice verified. similarity=0.848
+2025-12-02 15:50:17 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:50:17 | INFO | vortex | STT result: 'No, I'm in mode.'
+2025-12-02 15:50:17 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:50:17 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:50:17 | INFO | vortex | System message: I'm still learning. I didn't understand that command yet.
+2025-12-02 15:50:17 | INFO | vortex | System message: Systems idle and ready.
+2025-12-02 15:50:17 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:50:29 | INFO | vortex | User command (typed): normal mode
+2025-12-02 15:50:29 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-02 15:50:36 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-02 15:58:04 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 15:58:11 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 15:58:11 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 15:58:11 | INFO | vortex | CameraMonitor started.
+2025-12-02 15:58:11 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-02 15:58:11 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:58:11 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 15:58:11 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:58:12 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:58:23 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:58:23 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:58:23 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:58:24 | INFO | vortex | Voice capture requested.
+2025-12-02 15:58:24 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:58:24 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:58:24 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:58:27 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:58:27 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 15:58:27 | INFO | vortex | Voice encoder loaded.
+2025-12-02 15:58:28 | INFO | vortex | Voice similarity: 0.775
+2025-12-02 15:58:28 | INFO | vortex | Voice verified. similarity=0.775
+2025-12-02 15:58:28 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:58:28 | INFO | vortex | STT result: 'I am bored.'
+2025-12-02 15:58:28 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:58:28 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:58:28 | INFO | vortex | System message: Boredom detected. We can either start a tiny project, clean up your tasks, or I can just roast your procrastination. Your call.
+2025-12-02 15:58:28 | INFO | vortex | System message: I'm here if you need me.
+2025-12-02 15:58:28 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:58:44 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 15:58:44 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 15:58:44 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 15:58:44 | INFO | vortex | Voice capture requested.
+2025-12-02 15:58:44 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 15:58:44 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 15:58:44 | INFO | vortex | Recording voice phrase...
+2025-12-02 15:58:47 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 15:58:47 | INFO | vortex | Voice similarity: 0.804
+2025-12-02 15:58:47 | INFO | vortex | Voice verified. similarity=0.804
+2025-12-02 15:58:47 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 15:58:48 | INFO | vortex | STT result: 'What kind of tiny projects we could start?'
+2025-12-02 15:58:48 | INFO | vortex | WakeWordListener: started.
+2025-12-02 15:58:48 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 15:58:48 | INFO | vortex | System message: Opening whatsapp for you.
+2025-12-02 15:58:48 | ERROR | vortex | Failed to open whatsapp: [WinError 2] The system cannot find the file specified
+2025-12-02 15:58:48 | INFO | vortex | System message: I tried to open whatsapp but something went wrong.
+2025-12-02 15:58:48 | INFO | vortex | System message: Your move.
+2025-12-02 15:58:48 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 15:59:07 | INFO | vortex | User command (typed): what kind of tiny projects we could start?
+2025-12-02 15:59:07 | INFO | vortex | System message: Opening whatsapp for you.
+2025-12-02 15:59:07 | ERROR | vortex | Failed to open whatsapp: [WinError 2] The system cannot find the file specified
+2025-12-02 15:59:07 | INFO | vortex | System message: I tried to open whatsapp but something went wrong.
+2025-12-02 15:59:17 | ERROR | vortex | WakeWordListener: error in loop: PortAudio not initialized [PaErrorCode -10000]
+2025-12-02 16:08:56 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 20:05:29 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 20:05:34 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 20:05:34 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 20:05:34 | INFO | vortex | CameraMonitor started.
+2025-12-02 20:05:34 | INFO | vortex | System message: Good evening, Varchasva. Systems are green. You can ask me to help, or just talk to me.
+2025-12-02 20:05:34 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 20:05:34 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 20:05:35 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:05:36 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:05:49 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 20:05:49 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 20:05:49 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 20:05:49 | INFO | vortex | Voice capture requested.
+2025-12-02 20:05:49 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:05:49 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:05:49 | INFO | vortex | Recording voice phrase...
+2025-12-02 20:05:53 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 20:05:53 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 20:05:53 | INFO | vortex | Voice encoder loaded.
+2025-12-02 20:05:54 | INFO | vortex | Voice similarity: 0.837
+2025-12-02 20:05:54 | INFO | vortex | Voice verified. similarity=0.837
+2025-12-02 20:05:54 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 20:05:54 | INFO | vortex | STT result: 'Open the door.'
+2025-12-02 20:05:54 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:05:54 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 20:10:57 | INFO | vortex | VORTEX logging initialized.
+2025-12-02 20:11:07 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-02 20:11:07 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-02 20:11:07 | INFO | vortex | CameraMonitor started.
+2025-12-02 20:11:07 | INFO | vortex | System message: Good evening, Varchasva. Systems are green. You can ask me to help, or just talk to me.
+2025-12-02 20:11:07 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-02 20:11:07 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 20:11:07 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-02 20:11:07 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:11:09 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:11:33 | INFO | vortex | User command (typed): vortex open chrome
+2025-12-02 20:11:33 | INFO | vortex | System message: Opening chrome for you.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:11:33 | ERROR | vortex | Failed to open chrome: [WinError 2] The system cannot find the file specified
+2025-12-02 20:11:33 | INFO | vortex | System message: I tried to open chrome but something went wrong.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:11:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:11:41 | INFO | vortex | Voice capture requested.
+2025-12-02 20:11:41 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:11:41 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:11:41 | INFO | vortex | Recording voice phrase...
+2025-12-02 20:11:44 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 20:11:44 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-02 20:11:44 | INFO | vortex | Voice encoder loaded.
+2025-12-02 20:11:44 | INFO | vortex | Voice capture requested but already recording; ignoring.
+2025-12-02 20:11:45 | INFO | vortex | Voice similarity: 0.657
+2025-12-02 20:11:45 | WARNING | vortex | VOICE MISMATCH. similarity=0.657
+2025-12-02 20:11:45 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:11:45 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:11:45 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 20:11:45 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:11:59 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 20:11:59 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 20:11:59 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 20:11:59 | INFO | vortex | Voice capture requested.
+2025-12-02 20:11:59 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:11:59 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:11:59 | INFO | vortex | Recording voice phrase...
+2025-12-02 20:12:02 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 20:12:02 | INFO | vortex | Voice similarity: 0.814
+2025-12-02 20:12:02 | INFO | vortex | Voice verified. similarity=0.814
+2025-12-02 20:12:02 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 20:12:02 | INFO | vortex | STT result: 'No other mind mode?'
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:02 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 20:12:02 | INFO | vortex | System message: Understood. How does that make you feel about your day?
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:02 | INFO | vortex | System message: I'm here if you need me.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:02 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:11 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-02 20:12:11 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-02 20:12:11 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-02 20:12:11 | INFO | vortex | Voice capture requested.
+2025-12-02 20:12:11 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:11 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:11 | INFO | vortex | Recording voice phrase...
+2025-12-02 20:12:14 | INFO | vortex | Recording finished, verifying identity...
+2025-12-02 20:12:14 | INFO | vortex | Voice similarity: 0.820
+2025-12-02 20:12:14 | INFO | vortex | Voice verified. similarity=0.820
+2025-12-02 20:12:14 | INFO | vortex | Identity verified. Running STT...
+2025-12-02 20:12:14 | INFO | vortex | STT result: 'Done, otherwise.'
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:14 | INFO | vortex | Wake listener restarted after command.
+2025-12-02 20:12:14 | INFO | vortex | System message: Understood. How does that make you feel about your day?
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:14 | INFO | vortex | System message: Your move.
+2025-12-02 20:12:14 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:15 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:15 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:15 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:15 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:20 | INFO | vortex | User command (typed): turn normal mode
+2025-12-02 20:12:20 | INFO | vortex | System message: Understood. How does that make you feel about your day?
+2025-12-02 20:12:20 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:20 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:20 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:20 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:24 | INFO | vortex | User command (typed): normal mode
+2025-12-02 20:12:24 | INFO | vortex | System message: Understood. Tell me more about that.
+2025-12-02 20:12:24 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:24 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:24 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:24 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:30 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-02 20:12:30 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-02 20:12:30 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:30 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:30 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:30 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:36 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-02 20:12:36 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-02 20:12:36 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-02 20:12:36 | INFO | vortex | WakeWordListener: stopped.
+2025-12-02 20:12:36 | INFO | vortex | WakeWordListener: started.
+2025-12-02 20:12:36 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-02 20:12:43 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-03 11:52:29 | INFO | vortex | VORTEX logging initialized.
+2025-12-03 11:53:03 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-03 11:53:03 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-03 11:53:03 | INFO | vortex | CameraMonitor started.
+2025-12-03 11:53:03 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online. You can ask me to help, or just talk to me.
+2025-12-03 11:53:03 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-03 11:53:03 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-03 11:53:03 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-03 11:53:04 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:06 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:08 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-03 11:53:08 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-03 11:53:08 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-03 11:53:08 | INFO | vortex | Voice capture requested.
+2025-12-03 11:53:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:08 | INFO | vortex | Recording voice phrase...
+2025-12-03 11:53:11 | INFO | vortex | Recording finished, verifying identity...
+2025-12-03 11:53:11 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-03 11:53:11 | INFO | vortex | Voice encoder loaded.
+2025-12-03 11:53:16 | INFO | vortex | Voice similarity: 0.644
+2025-12-03 11:53:16 | WARNING | vortex | VOICE MISMATCH. similarity=0.644
+2025-12-03 11:53:16 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:16 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:16 | INFO | vortex | Wake listener restarted after command.
+2025-12-03 11:53:16 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:29 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-03 11:53:29 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-03 11:53:29 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-03 11:53:29 | INFO | vortex | Voice capture requested.
+2025-12-03 11:53:29 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:29 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:29 | INFO | vortex | Recording voice phrase...
+2025-12-03 11:53:32 | INFO | vortex | Recording finished, verifying identity...
+2025-12-03 11:53:32 | INFO | vortex | Voice similarity: 0.866
+2025-12-03 11:53:32 | INFO | vortex | Voice verified. similarity=0.866
+2025-12-03 11:53:32 | INFO | vortex | Identity verified. Running STT...
+2025-12-03 11:53:33 | INFO | vortex | STT result: 'In our mind mode.'
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:33 | INFO | vortex | Wake listener restarted after command.
+2025-12-03 11:53:33 | INFO | vortex | System message: Got it. How does that make you feel about your day?
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:33 | INFO | vortex | System message: Your move.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:40 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-03 11:53:40 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-03 11:53:40 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-03 11:53:40 | INFO | vortex | Voice capture requested.
+2025-12-03 11:53:40 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:40 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:40 | INFO | vortex | Recording voice phrase...
+2025-12-03 11:53:43 | INFO | vortex | Recording finished, verifying identity...
+2025-12-03 11:53:43 | INFO | vortex | Voice similarity: 0.815
+2025-12-03 11:53:43 | INFO | vortex | Voice verified. similarity=0.815
+2025-12-03 11:53:43 | INFO | vortex | Identity verified. Running STT...
+2025-12-03 11:53:43 | INFO | vortex | STT result: 'I said no one will move.'
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:43 | INFO | vortex | Wake listener restarted after command.
+2025-12-03 11:53:43 | INFO | vortex | System message: Got it. How does that make you feel about your day?
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:43 | INFO | vortex | System message: Anything else on your mind?
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:53:43 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:54:02 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-03 11:54:25 | INFO | vortex | VORTEX logging initialized.
+2025-12-03 11:54:36 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-03 11:54:36 | INFO | vortex | Loaded 1 memories from disk.
+2025-12-03 11:54:36 | INFO | vortex | CameraMonitor started.
+2025-12-03 11:54:36 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online. You can ask me to help, or just talk to me.
+2025-12-03 11:54:36 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-03 11:54:36 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-03 11:54:36 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-03 11:54:37 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:54:38 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:54:41 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-03 11:54:41 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-03 11:54:41 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-03 11:54:41 | INFO | vortex | Voice capture requested.
+2025-12-03 11:54:41 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:54:41 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:54:41 | INFO | vortex | Recording voice phrase...
+2025-12-03 11:54:44 | INFO | vortex | Recording finished, verifying identity...
+2025-12-03 11:54:44 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-03 11:54:44 | INFO | vortex | Voice encoder loaded.
+2025-12-03 11:54:45 | INFO | vortex | Voice similarity: 0.621
+2025-12-03 11:54:45 | WARNING | vortex | VOICE MISMATCH. similarity=0.621
+2025-12-03 11:54:45 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:54:45 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:54:45 | INFO | vortex | Wake listener restarted after command.
+2025-12-03 11:54:45 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:54:53 | INFO | vortex | User command (typed): normal mode
+2025-12-03 11:54:53 | INFO | vortex | System message: Got it. Tell me more about that.
+2025-12-03 11:54:53 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:54:53 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:54:53 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:54:53 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:04 | INFO | vortex | User command (typed): im am bored
+2025-12-03 11:55:04 | INFO | vortex | System message: Boredom detected. We can either start a tiny project, clean up your tasks, or I can just roast your procrastination. Your call.
+2025-12-03 11:55:04 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:55:04 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:55:04 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:55:04 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:12 | INFO | vortex | User command (typed): What kind of tiny projects we could start?
+2025-12-03 11:55:12 | INFO | vortex | System message: Dangerous question. You know I always have project ideas. We could build a tiny focus timer that integrates with VORTEX and logs your deep-work sessions.
+2025-12-03 11:55:12 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:55:12 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:55:12 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:55:12 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:30 | INFO | vortex | User command (typed): I’m stressed about exams.
+2025-12-03 11:55:30 | INFO | vortex | System message: Exam mode, huh? If you tell me the subject and date, I can help you plan what to do each day.
+2025-12-03 11:55:30 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:55:30 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:55:30 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:55:30 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:37 | INFO | vortex | User command (typed): maths
+2025-12-03 11:55:37 | INFO | vortex | System message: Got it. Do you want advice, or do you just want me to listen?
+2025-12-03 11:55:37 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:55:37 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:55:37 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:55:37 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:44 | INFO | vortex | User command (typed): advice
+2025-12-03 11:55:44 | INFO | vortex | System message: Got it. How does that make you feel about your day?
+2025-12-03 11:55:44 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:55:44 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:55:44 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:55:44 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:55:52 | INFO | vortex | User command (typed): list workflows
+2025-12-03 11:55:52 | INFO | vortex | System message: Here are the workflows I know:
+- focus_mode: Close distractions and open coding tools for deep work.
+2025-12-03 11:56:04 | INFO | vortex | User command (typed): run workflow focus mode
+2025-12-03 11:56:04 | INFO | vortex | Running workflow: focus_mode
+2025-12-03 11:56:04 | INFO | vortex | System message: Executing workflow 'focus mode'.
+2025-12-03 11:56:04 | INFO | vortex | System message: Starting workflow 'focus_mode'.
+2025-12-03 11:56:04 | INFO | vortex | System message: Entering focus mode. Closing distractions and opening your tools.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:04 | INFO | vortex | System message: Closing chrome for you.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:04 | INFO | vortex | System message: I couldn't find any running instance of chrome.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:04 | INFO | vortex | System message: Closing edge for you.
+2025-12-03 11:56:04 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:05 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:05 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:05 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:05 | INFO | vortex | Closed application: edge
+2025-12-03 11:56:05 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:06 | INFO | vortex | System message: Opening code for you.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:06 | ERROR | vortex | Failed to open code: [WinError 2] The system cannot find the file specified
+2025-12-03 11:56:06 | INFO | vortex | System message: I tried to open code but something went wrong.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:06 | INFO | vortex | Memory added [2] (workflow): Focus session started by VORTEX.
+2025-12-03 11:56:06 | INFO | vortex | System message: You're all set. Let's get some serious work done.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:06 | INFO | vortex | System message: Workflow 'focus_mode' completed.
+2025-12-03 11:56:06 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:32 | INFO | vortex | User command (typed): open whatsapp
+2025-12-03 11:56:32 | INFO | vortex | System message: Opening whatsapp for you.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:32 | ERROR | vortex | Failed to open whatsapp: [WinError 2] The system cannot find the file specified
+2025-12-03 11:56:32 | INFO | vortex | System message: I tried to open whatsapp but something went wrong.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:32 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:56:46 | INFO | vortex | User command (typed): vortex
+2025-12-03 11:56:46 | INFO | vortex | System message: Got it. If you had to pick one next move after this, what would it be?
+2025-12-03 11:56:46 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-03 11:56:46 | INFO | vortex | WakeWordListener: stopped.
+2025-12-03 11:56:46 | INFO | vortex | WakeWordListener: started.
+2025-12-03 11:56:46 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-03 11:57:02 | ERROR | vortex | WakeWordListener: error in loop: Invalid stream pointer [PaErrorCode -9988]
+2025-12-04 23:38:50 | INFO | vortex | VORTEX logging initialized.
+2025-12-04 23:39:09 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-04 23:39:09 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-04 23:39:09 | INFO | vortex | CameraMonitor started.
+2025-12-04 23:39:09 | INFO | vortex | System message: Still awake, Varchasva? VORTEX is here with you. You can ask me to help, or just talk to me.
+2025-12-04 23:39:09 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-04 23:39:09 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-04 23:39:09 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-04 23:39:10 | INFO | vortex | WakeWordListener: started.
+2025-12-04 23:39:11 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-04 23:40:11 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-04 23:40:11 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-04 23:40:11 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-04 23:40:11 | INFO | vortex | WakeWordListener: stopped.
+2025-12-04 23:40:11 | INFO | vortex | WakeWordListener: started.
+2025-12-04 23:40:11 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-04 23:40:14 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-05 11:21:11 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 11:21:33 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 11:21:33 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-05 11:21:33 | INFO | vortex | CameraMonitor started.
+2025-12-05 11:21:33 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online. You can ask me to help, or just talk to me.
+2025-12-05 11:21:33 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 11:21:33 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:21:33 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:21:34 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:21:35 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:21:48 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 11:21:48 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 11:21:48 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 11:21:48 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 11:21:48 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:21:48 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:21:48 | INFO | vortex | Recording voice phrase...
+2025-12-05 11:21:52 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 11:21:52 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 11:21:52 | INFO | vortex | Voice encoder loaded.
+2025-12-05 11:21:56 | INFO | vortex | Voice similarity: 0.660
+2025-12-05 11:21:56 | WARNING | vortex | VOICE MISMATCH. similarity=0.660
+2025-12-05 11:21:56 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-05 11:21:56 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:28:59 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 11:29:05 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 11:29:05 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-05 11:29:05 | INFO | vortex | CameraMonitor started.
+2025-12-05 11:29:05 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online. You can ask me to help, or just talk to me.
+2025-12-05 11:29:05 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 11:29:05 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:29:05 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:29:06 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:29:06 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:29:16 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 11:29:16 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 11:29:16 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 11:29:17 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 11:29:17 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:29:17 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:29:17 | INFO | vortex | Recording voice phrase...
+2025-12-05 11:29:20 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 11:29:20 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 11:29:20 | INFO | vortex | Voice encoder loaded.
+2025-12-05 11:29:21 | INFO | vortex | Voice similarity: 0.853
+2025-12-05 11:29:21 | INFO | vortex | Voice verified. similarity=0.853
+2025-12-05 11:29:21 | INFO | vortex | Identity verified. Running STT...
+2025-12-05 11:29:21 | INFO | vortex | STT result: 'I love you.'
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:29:21 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 11:29:21 | INFO | vortex | System message: I don't have a heart, but if I did, it would definitely be running on your GPU.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:29:21 | INFO | vortex | System message: What do you want to do next?
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:29:21 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:30:13 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-05 11:30:13 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-05 11:30:13 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:30:13 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:30:13 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:30:13 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:30:18 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-05 11:30:18 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-05 11:30:18 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:30:18 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:30:18 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:30:18 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:30:25 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 11:30:25 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 11:30:25 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 11:30:25 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 11:30:25 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:30:25 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:30:25 | INFO | vortex | Recording voice phrase...
+2025-12-05 11:30:28 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 11:30:28 | INFO | vortex | Voice similarity: 0.742
+2025-12-05 11:30:28 | WARNING | vortex | VOICE MISMATCH. similarity=0.742
+2025-12-05 11:30:28 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:30:28 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:30:28 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 11:30:28 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:30:32 | INFO | vortex | System message: Morning check-in: slept enough, or are we running on coffee and stubbornness?
+2025-12-05 11:30:32 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:30:32 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:30:32 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:30:32 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:31:05 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 11:31:05 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 11:31:05 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 11:31:05 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 11:31:05 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:31:05 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:31:05 | INFO | vortex | Recording voice phrase...
+2025-12-05 11:31:08 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 11:31:08 | INFO | vortex | Voice similarity: 0.864
+2025-12-05 11:31:08 | INFO | vortex | Voice verified. similarity=0.864
+2025-12-05 11:31:08 | INFO | vortex | Identity verified. Running STT...
+2025-12-05 11:31:08 | INFO | vortex | STT result: 'No, add my mode.'
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:31:08 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 11:31:08 | INFO | vortex | System message: Got it. Tell me more about that.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:31:08 | INFO | vortex | System message: Anything else on your mind?
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:31:08 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:31:16 | INFO | vortex | User command (typed): normal mode
+2025-12-05 11:31:16 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-05 11:32:02 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-05 11:45:37 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 11:45:43 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 11:45:43 | INFO | vortex | Loaded 2 memories from disk.
+2025-12-05 11:45:43 | INFO | vortex | CameraMonitor started.
+2025-12-05 11:45:43 | INFO | vortex | System message: Good morning, Varchasva. VORTEX online. You can ask me to help, or just talk to me.
+2025-12-05 11:45:43 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 11:45:43 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:45:43 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 11:45:43 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:45:43 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:45:47 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 11:45:47 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 11:45:47 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 11:45:47 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 11:45:47 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:45:47 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:45:47 | INFO | vortex | Recording voice phrase...
+2025-12-05 11:45:50 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 11:45:50 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 11:45:50 | INFO | vortex | Voice encoder loaded.
+2025-12-05 11:45:52 | INFO | vortex | Voice similarity: 0.627
+2025-12-05 11:45:52 | WARNING | vortex | VOICE MISMATCH. similarity=0.627
+2025-12-05 11:45:52 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:45:52 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:45:52 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 11:45:52 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:06 | INFO | vortex | User command (typed): normal mode
+2025-12-05 11:46:06 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-05 11:46:12 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-05 11:46:12 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-05 11:46:12 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:12 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:12 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:12 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:18 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-05 11:46:18 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-05 11:46:18 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:18 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:18 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:18 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:27 | INFO | vortex | User command (typed): focus mode
+2025-12-05 11:46:27 | INFO | vortex | System message: Got it. Tell me more about that.
+2025-12-05 11:46:27 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:27 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:27 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:27 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:37 | INFO | vortex | User command (typed): open notepad
+2025-12-05 11:46:37 | INFO | vortex | Memory added [3] (note): pad
+2025-12-05 11:46:37 | INFO | vortex | Note stored: pad
+2025-12-05 11:46:37 | INFO | vortex | System message: I'll remember that: pad
+2025-12-05 11:46:37 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:37 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:37 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:37 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:49 | INFO | vortex | User command (typed): open whatsapp
+2025-12-05 11:46:49 | INFO | vortex | System message: Opening whatsapp for you.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:49 | ERROR | vortex | Failed to open whatsapp: [WinError 2] The system cannot find the file specified
+2025-12-05 11:46:49 | INFO | vortex | System message: I tried to open whatsapp but something went wrong.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:46:49 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:47:07 | INFO | vortex | System message: Morning check-in: slept enough, or are we running on coffee and stubbornness?
+2025-12-05 11:47:07 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:47:07 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:47:07 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:47:07 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:47:08 | INFO | vortex | User command (typed): forget that
+2025-12-05 11:47:08 | INFO | vortex | System message: Got it. How does that make you feel about your day?
+2025-12-05 11:47:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 11:47:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 11:47:08 | INFO | vortex | WakeWordListener: started.
+2025-12-05 11:47:08 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 11:47:19 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-05 11:47:19 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:12 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 12:08:19 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 12:08:19 | INFO | vortex | Loaded 3 memories from disk.
+2025-12-05 12:08:19 | INFO | vortex | CameraMonitor started.
+2025-12-05 12:08:19 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-05 12:08:19 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 12:08:19 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:08:19 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:08:19 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:19 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:08:23 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 12:08:23 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 12:08:23 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 12:08:23 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 12:08:23 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:23 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:08:23 | INFO | vortex | Recording voice phrase...
+2025-12-05 12:08:27 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 12:08:27 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 12:08:27 | INFO | vortex | Voice encoder loaded.
+2025-12-05 12:08:28 | INFO | vortex | Voice similarity: 0.651
+2025-12-05 12:08:28 | WARNING | vortex | VOICE MISMATCH. similarity=0.651
+2025-12-05 12:08:28 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:28 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:28 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 12:08:28 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:08:33 | INFO | vortex | User command (typed): normal mode
+2025-12-05 12:08:33 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-05 12:08:40 | INFO | vortex | User command (typed): open notepad
+2025-12-05 12:08:40 | INFO | vortex | System message: Opening notepad for you.
+2025-12-05 12:08:40 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:40 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:08:40 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:40 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:08:40 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-05 12:08:50 | INFO | vortex | User command (typed): close that
+2025-12-05 12:08:50 | INFO | vortex | System message: Heard. Do you want advice, or do you just want me to listen?
+2025-12-05 12:08:50 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:50 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:08:50 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:50 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:08:56 | INFO | vortex | User command (typed): close notepad
+2025-12-05 12:08:56 | INFO | vortex | Memory added [4] (note): pad
+2025-12-05 12:08:56 | INFO | vortex | Note stored: pad
+2025-12-05 12:08:56 | INFO | vortex | System message: I'll remember that: pad
+2025-12-05 12:08:56 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:08:56 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:08:56 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:08:56 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:18:43 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 12:18:49 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 12:18:49 | INFO | vortex | Loaded 4 memories from disk.
+2025-12-05 12:18:49 | INFO | vortex | CameraMonitor started.
+2025-12-05 12:18:49 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-05 12:18:49 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 12:18:49 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:18:49 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:18:50 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:18:50 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:04 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 12:19:04 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 12:19:04 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 12:19:04 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 12:19:04 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:04 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:04 | INFO | vortex | Recording voice phrase...
+2025-12-05 12:19:07 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 12:19:07 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 12:19:07 | INFO | vortex | Voice encoder loaded.
+2025-12-05 12:19:08 | INFO | vortex | Voice similarity: 0.839
+2025-12-05 12:19:08 | INFO | vortex | Voice verified. similarity=0.839
+2025-12-05 12:19:08 | INFO | vortex | Identity verified. Running STT...
+2025-12-05 12:19:09 | INFO | vortex | STT result: 'Open motor pad.'
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:09 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 12:19:09 | INFO | vortex | System message: Opening notepad for you.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:09 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-05 12:19:09 | INFO | vortex | System message: I'm here if you need me.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:09 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:16 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 12:19:16 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 12:19:16 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 12:19:16 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 12:19:16 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:16 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:16 | INFO | vortex | Recording voice phrase...
+2025-12-05 12:19:19 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 12:19:19 | INFO | vortex | Voice similarity: 0.847
+2025-12-05 12:19:19 | INFO | vortex | Voice verified. similarity=0.847
+2025-12-05 12:19:19 | INFO | vortex | Identity verified. Running STT...
+2025-12-05 12:19:20 | INFO | vortex | STT result: 'Close that.'
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:20 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 12:19:20 | INFO | vortex | System message: Heard. If you had to pick one next move after this, what would it be?
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:20 | INFO | vortex | System message: Your move.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:20 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:33 | INFO | vortex | User command (typed): close that
+2025-12-05 12:19:33 | INFO | vortex | System message: Closing notepad for you.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:33 | INFO | vortex | System message: I couldn't find any running instance of notepad.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:19:45 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 12:19:51 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 12:19:51 | INFO | vortex | Loaded 4 memories from disk.
+2025-12-05 12:19:51 | INFO | vortex | CameraMonitor started.
+2025-12-05 12:19:51 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-05 12:19:51 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 12:19:51 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:19:51 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:19:51 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:19:51 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:20:00 | INFO | vortex | User command (typed): open notepad
+2025-12-05 12:20:00 | INFO | vortex | System message: Opening notepad for you.
+2025-12-05 12:20:00 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:20:00 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:20:00 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:20:00 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:20:00 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-05 12:20:05 | INFO | vortex | User command (typed): close that
+2025-12-05 12:20:05 | INFO | vortex | System message: Closing notepad for you.
+2025-12-05 12:20:05 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:20:05 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:20:05 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:20:05 | INFO | vortex | Closed application: notepad
+2025-12-05 12:20:05 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:20:14 | INFO | vortex | User command (typed): remember i have an exam in 2 hours
+2025-12-05 12:20:14 | INFO | vortex | Memory added [5] (note): i have an exam in 2 hours
+2025-12-05 12:20:14 | INFO | vortex | Note stored: i have an exam in 2 hours
+2025-12-05 12:20:14 | INFO | vortex | System message: I'll remember that: i have an exam in 2 hours
+2025-12-05 12:20:14 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:20:14 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:20:14 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:20:14 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:20:29 | INFO | vortex | User command (typed): what did i told you to remember?
+2025-12-05 12:20:29 | INFO | vortex | Memory added [6] (note): ?
+2025-12-05 12:20:29 | INFO | vortex | Note stored: ?
+2025-12-05 12:20:29 | INFO | vortex | System message: I'll remember that: ?
+2025-12-05 12:20:29 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:20:29 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:20:29 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:20:29 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:20:36 | INFO | vortex | User command (typed): forget that
+2025-12-05 12:20:36 | INFO | vortex | System message: Got it. I'll forget that.
+2025-12-05 12:20:37 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:20:37 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:20:37 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:20:37 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:26:16 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 12:26:22 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 12:26:22 | INFO | vortex | Loaded 6 memories from disk.
+2025-12-05 12:26:22 | INFO | vortex | CameraMonitor started.
+2025-12-05 12:26:22 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-05 12:26:22 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 12:26:22 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:26:22 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:26:22 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:26:22 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:26:26 | INFO | vortex | WakeWordListener: wake word detected.
+2025-12-05 12:26:26 | INFO | vortex | Wake word accepted. Preparing for voice command.
+2025-12-05 12:26:26 | INFO | vortex | System message: Yes, Varchasva. I'm listening.
+2025-12-05 12:26:26 | INFO | vortex | Voice capture requested by UI or wake word.
+2025-12-05 12:26:26 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:26:26 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:26:26 | INFO | vortex | Recording voice phrase...
+2025-12-05 12:26:30 | INFO | vortex | Recording finished, verifying identity...
+2025-12-05 12:26:30 | INFO | vortex | Loading voice encoder (resemblyzer)...
+2025-12-05 12:26:30 | INFO | vortex | Voice encoder loaded.
+2025-12-05 12:26:31 | INFO | vortex | Voice similarity: 0.677
+2025-12-05 12:26:31 | WARNING | vortex | VOICE MISMATCH. similarity=0.677
+2025-12-05 12:26:31 | INFO | vortex | System message: Security check: VOICE MISMATCH.
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:26:31 | INFO | vortex | System message: Intruder alert. Identity could not be verified. Command ignored.
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:26:31 | INFO | vortex | Wake listener restarted after voice command.
+2025-12-05 12:26:31 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:26:43 | INFO | vortex | User command (typed): normal mode
+2025-12-05 12:26:43 | INFO | vortex | System message: Returning to normal operational mode.
+2025-12-05 12:26:49 | INFO | vortex | User command (typed): open notepad
+2025-12-05 12:26:49 | INFO | vortex | System message: Opening notepad for you.
+2025-12-05 12:26:49 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:26:49 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:26:49 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:26:49 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:26:49 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-05 12:26:55 | INFO | vortex | User command (typed): close that
+2025-12-05 12:26:55 | INFO | vortex | System message: Closing notepad for you.
+2025-12-05 12:26:55 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:26:55 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:26:55 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:26:55 | INFO | vortex | Closed application: notepad
+2025-12-05 12:26:55 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:27:05 | INFO | vortex | User command (typed): remember i have an exam in 2 hours
+2025-12-05 12:27:05 | INFO | vortex | Memory added [7] (note): i have an exam in 2 hours
+2025-12-05 12:27:05 | INFO | vortex | Note stored: i have an exam in 2 hours
+2025-12-05 12:27:05 | INFO | vortex | System message: I'll remember that: i have an exam in 2 hours
+2025-12-05 12:27:05 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:27:05 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:27:05 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:27:05 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:27:15 | INFO | vortex | User command (typed): what did i told you to remember?
+2025-12-05 12:27:15 | INFO | vortex | System message: Heard. How does that make you feel about your day?
+2025-12-05 12:27:15 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:27:15 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:27:15 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:27:15 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:27:29 | INFO | vortex | User command (typed): what did i told you about my exam?
+2025-12-05 12:27:29 | INFO | vortex | System message: Exam mode, huh? If you tell me the subject and date, I can help you plan what to do each day.
+2025-12-05 12:27:29 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:27:29 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:27:29 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:27:29 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:27:32 | INFO | vortex | System message: Quick systems check: your energy seems... unknown. How are you holding up?
+2025-12-05 12:27:32 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:27:32 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:27:32 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:27:32 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:28:01 | INFO | vortex | User command (typed): what did i tell you to remember?
+2025-12-05 12:28:01 | INFO | vortex | System message: Here are your latest notes:
+3) pad (2025-12-05T11:46:37)
+4) pad (2025-12-05T12:08:56)
+5) i have an exam in 2 hours (2025-12-05T12:20:14)
+6) ? (2025-12-05T12:20:29)
+7) i have an exam in 2 hours (2025-12-05T12:27:05)
+2025-12-05 12:28:01 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:28:01 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:28:01 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:28:01 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:28:43 | INFO | vortex | VORTEX logging initialized.
+2025-12-05 12:28:49 | INFO | vortex | Semantic encoder loaded: all-MiniLM-L6-v2
+2025-12-05 12:28:49 | INFO | vortex | Loaded 7 memories from disk.
+2025-12-05 12:28:49 | INFO | vortex | CameraMonitor started.
+2025-12-05 12:28:49 | INFO | vortex | System message: Good afternoon, Varchasva. VORTEX online and ready. You can ask me to help, or just talk to me.
+2025-12-05 12:28:49 | ERROR | vortex | Failed to pause wake listener before TTS: 'VortexController' object has no attribute 'wake_listener'
+2025-12-05 12:28:49 | INFO | vortex | Using custom Vortex wake word file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:28:49 | INFO | vortex | WakeWordListener: using custom keyword file: D:\GitHub\V.O.R.T.E.X\data\wakewords\vortex_en_windows_v3_0_0.ppn
+2025-12-05 12:28:49 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:28:49 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:11 | INFO | vortex | User command (typed): open notepad
+2025-12-05 12:29:11 | INFO | vortex | System message: Opening notepad for you.
+2025-12-05 12:29:11 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:11 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:11 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:11 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:11 | INFO | vortex | Opened application: notepad (['notepad.exe'])
+2025-12-05 12:29:17 | INFO | vortex | User command (typed): close that
+2025-12-05 12:29:17 | INFO | vortex | System message: Closing notepad for you.
+2025-12-05 12:29:17 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:17 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:17 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:17 | INFO | vortex | Closed application: notepad
+2025-12-05 12:29:17 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:33 | INFO | vortex | User command (typed): remember i have an exam in 2 hours
+2025-12-05 12:29:33 | INFO | vortex | Memory added [8] (note): i have an exam in 2 hours
+2025-12-05 12:29:33 | INFO | vortex | Note stored: i have an exam in 2 hours
+2025-12-05 12:29:33 | INFO | vortex | System message: I'll remember that: i have an exam in 2 hours
+2025-12-05 12:29:33 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:33 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:33 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:33 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:37 | INFO | vortex | User command (typed): what did i tell you to remember?
+2025-12-05 12:29:37 | INFO | vortex | System message: Here are your latest notes:
+4) pad (2025-12-05T12:08:56)
+5) i have an exam in 2 hours (2025-12-05T12:20:14)
+6) ? (2025-12-05T12:20:29)
+7) i have an exam in 2 hours (2025-12-05T12:27:05)
+8) i have an exam in 2 hours (2025-12-05T12:29:33)
+2025-12-05 12:29:37 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:37 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:37 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:37 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:52 | INFO | vortex | User command (typed): how are you
+2025-12-05 12:29:52 | INFO | vortex | System message: I'm good, Varchasva. All systems nominal, just vibing in the background. We can review what you've done and what's left.
+2025-12-05 12:29:52 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:52 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:52 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:52 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:29:57 | WARNING | vortex | CameraMonitor: camera appears covered/blocked.
+2025-12-05 12:29:57 | INFO | vortex | System message: Security warning: Camera feed obstructed or missing. Commands disabled.
+2025-12-05 12:29:57 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:29:57 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:29:57 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:29:57 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:30:02 | INFO | vortex | CameraMonitor: camera feed restored.
+2025-12-05 12:30:02 | INFO | vortex | System message: Camera feed restored. Normal operations resumed.
+2025-12-05 12:30:02 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:30:02 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:30:02 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:30:02 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:30:35 | INFO | vortex | User command (typed): forget that
+2025-12-05 12:30:35 | INFO | vortex | System message: Got it. I'll forget that.
+2025-12-05 12:30:35 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:30:35 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:30:35 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:30:35 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:31:08 | INFO | vortex | User command (typed): run focus session
+2025-12-05 12:31:08 | INFO | vortex | System message: Heard. Tell me more about that.
+2025-12-05 12:31:08 | INFO | vortex | WakeWordListener: exiting audio loop.
+2025-12-05 12:31:08 | INFO | vortex | WakeWordListener: stopped.
+2025-12-05 12:31:08 | INFO | vortex | WakeWordListener: started.
+2025-12-05 12:31:08 | INFO | vortex | WakeWordListener: audio stream opened (sample_rate=16000, frame_length=512)
+2025-12-05 12:31:10 | ERROR | vortex | WakeWordListener: error in loop: Stream is stopped [PaErrorCode -9983]
+2025-12-05 12:31:10 | INFO | vortex | WakeWordListener: exiting audio loop.

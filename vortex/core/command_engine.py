@@ -5,19 +5,14 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Optional
-import difflib
 
 
 class CommandType(Enum):
     OPEN_APP = auto()
     CLOSE_APP = auto()
-    NOTE = auto()
-    ENROLL_VOICE = auto()
-    ENROLL_FACE = auto()
-    SECURITY_MODE = auto()
-    NORMAL_MODE = auto()
+    NOTE_REMEMBER = auto()
+    NOTE_QUERY = auto()
     SMALLTALK = auto()
-    MEMORY_QUERY = auto()
     UNKNOWN = auto()
 
 
@@ -28,269 +23,239 @@ class ParsedCommand:
     app_name: Optional[str] = None
     note_text: Optional[str] = None
     message_to_user: str = ""
-    memory_action: Optional[str] = None   # "recent" / "search"
-    memory_query: Optional[str] = None    # search text
 
 
 class CommandEngine:
     """
-    Lightweight, rule-based intent parser for VORTEX.
-    No ML, no APIs – just clever pattern + fuzzy matching.
+    Very lightweight rule-based command parser.
+
+    It does NOT try to be an LLM – it just recognises a few patterns:
+      - open/close applications
+      - remember X
+      - what did I tell you / what do you remember
+      - otherwise falls back to SMALLTALK / UNKNOWN
     """
 
-    def __init__(self, owner_name: str = "User"):
-        self.owner_name = owner_name
-
-        # Words that often appear but don't change intent
-        self.filler_prefixes = [
-            "vortex", "jarvis", "hey vortex", "hey jarvis",
-            "please", "can you", "could you", "would you",
-            "will you", "could you please", "can you please",
-            "i want to", "i wanna", "i would like to",
-            "try", "just", "maybe", "kindly",
-        ]
-
-        # App synonyms; normalized to logical app names
-        self.known_apps = {
-            "notepad": "notepad",
-            "note pad": "notepad",
-            "pad": "notepad",
-            "text": "notepad",
-            "notes": "notepad",
-
-            "chrome": "chrome",
-            "browser": "chrome",
-            "google": "chrome",
-
-            "edge": "edge",
-            "microsoft edge": "edge",
-            "ms edge": "edge",
-
-            "whatsapp": "whatsapp",
-            "whats app": "whatsapp",
-
-            "code": "code",
-            "vs code": "code",
-            "visual studio code": "code",
+    def __init__(self):
+        # Logical app names mapped to simple keyword triggers
+        self.app_keywords = {
+            "notepad": ["notepad", "note pad"],
+            "chrome": ["chrome", "google chrome"],
+            "edge": ["edge", "microsoft edge"],
+            "code": ["vs code", "vscode", "code", "visual studio code"],
+            "whatsapp": ["whatsapp", "whats app"],
         }
 
-    # ------------------------------------------------------------------ public
+    # ------------------------------------------------------------------ #
+    # Public API
+    # ------------------------------------------------------------------ #
 
     def parse(self, text: str) -> ParsedCommand:
         raw = text.strip()
-        if not raw:
+        lowered = raw.lower().strip()
+
+        if not lowered:
             return ParsedCommand(
                 type=CommandType.UNKNOWN,
-                raw_text="",
-                message_to_user="I didn't hear anything to process."
-            )
-
-        lowered = raw.lower()
-        cleaned = self._strip_filler(lowered).strip()
-
-        # Voice / face enrollment
-        if any(kw in cleaned for kw in ["enrol my voice", "enroll my voice", "register my voice", "voice enrollment"]):
-            return ParsedCommand(
-                type=CommandType.ENROLL_VOICE,
                 raw_text=raw,
-                message_to_user="Starting voice enrollment procedure."
+                message_to_user="",
             )
 
-        if any(kw in cleaned for kw in ["enrol my face", "enroll my face", "register my face", "face enrollment"]):
-            return ParsedCommand(
-                type=CommandType.ENROLL_FACE,
-                raw_text=raw,
-                message_to_user="Starting face enrollment procedure."
-            )
+        # 1) App control
+        app_cmd = self._parse_app_command(lowered)
+        if app_cmd is not None:
+            app_cmd.raw_text = raw
+            return app_cmd
 
-        # Security / normal mode
-        if "security mode" in cleaned or "go secure" in cleaned or "lockdown" in cleaned:
-            return ParsedCommand(
-                type=CommandType.SECURITY_MODE,
-                raw_text=raw,
-                message_to_user="Entering security mode."
-            )
+        # 2) Memory: explicit queries ("what did I tell you to remember?")
+        mem_query = self._parse_memory_query(lowered)
+        if mem_query is not None:
+            mem_query.raw_text = raw
+            return mem_query
 
-        if "normal mode" in cleaned or "stand down" in cleaned or "back to normal" in cleaned:
-            return ParsedCommand(
-                type=CommandType.NORMAL_MODE,
-                raw_text=raw,
-                message_to_user="Returning to normal operational mode."
-            )
+        # 3) Memory: remember X / note that X
+        mem_store = self._parse_memory_store(lowered, raw)
+        if mem_store is not None:
+            return mem_store
 
-        # Open / close apps
-        if self._is_open_intent(cleaned):
-            app_name = self._extract_app_name(cleaned)
-            if app_name:
-                return ParsedCommand(
-                    type=CommandType.OPEN_APP,
-                    raw_text=raw,
-                    app_name=app_name,
-                    message_to_user=f"Opening {app_name} for you."
-                )
-
-        if self._is_close_intent(cleaned):
-            if "system" in cleaned and not self._extract_app_name(cleaned):
-                app_name = "code"
-            else:
-                app_name = self._extract_app_name(cleaned)
-
-            if app_name:
-                return ParsedCommand(
-                    type=CommandType.CLOSE_APP,
-                    raw_text=raw,
-                    app_name=app_name,
-                    message_to_user=f"Closing {app_name} for you."
-                )
-
-        # Notes / memory (add)
-        if self._looks_like_note(cleaned):
-            note = self._extract_note_text(cleaned, original=raw)
-            if note:
-                return ParsedCommand(
-                    type=CommandType.NOTE,
-                    raw_text=raw,
-                    note_text=note,
-                    message_to_user=f"I'll remember that: {note}"
-                )
-
-        # Memory queries
-        if self._looks_like_memory_query(cleaned):
-            action, query = self._parse_memory_query(cleaned, raw)
-            return ParsedCommand(
-                type=CommandType.MEMORY_QUERY,
-                raw_text=raw,
-                memory_action=action,
-                memory_query=query,
-                message_to_user=""
-            )
-
-        # Smalltalk / chitchat
-        if self._looks_like_smalltalk(cleaned):
+        # 4) Smalltalk vs unknown
+        if lowered.endswith("?"):
+            # Any unrecognised question goes to SMALLTALK
             return ParsedCommand(
                 type=CommandType.SMALLTALK,
                 raw_text=raw,
-                message_to_user="",  # personality will generate reply
+                message_to_user="",
             )
 
-        # Fallback
+        # Non-question, non-command → let personality handle
         return ParsedCommand(
             type=CommandType.UNKNOWN,
             raw_text=raw,
-            message_to_user="I'm still learning. I didn't understand that command yet."
+            message_to_user="",
         )
 
-    # ------------------------------------------------------------------ helpers
+    # ------------------------------------------------------------------ #
+    # Internal helpers
+    # ------------------------------------------------------------------ #
 
-    def _strip_filler(self, text: str) -> str:
-        result = text
-        changed = True
-        while changed:
-            changed = False
-            for prefix in self.filler_prefixes:
-                if result.startswith(prefix + " "):
-                    result = result[len(prefix):].lstrip()
-                    changed = True
-        return result
+    def _parse_app_command(self, lowered: str) -> Optional[ParsedCommand]:
+        """
+        Detects things like:
+          - open chrome
+          - launch vscode
+          - close notepad
+          - shut whatsapp
+        """
+        open_verbs = ("open", "launch", "start", "run")
+        close_verbs = ("close", "quit", "exit", "shut", "shut down", "kill")
 
-    def _is_open_intent(self, cleaned: str) -> bool:
-        open_words = [
-            "open", "start", "launch", "run", "fire up",
-            "bring up", "pull up", "show", "go to"
-        ]
-        return any(w in cleaned for w in open_words)
+        tokens = lowered.split()
 
-    def _is_close_intent(self, cleaned: str) -> bool:
-        close_words = [
-            "close", "quit", "exit", "shut", "kill",
-            "terminate", "stop"
-        ]
-        return any(w in cleaned for w in close_words)
+        if not tokens:
+            return None
 
-    def _extract_app_name(self, lowered: str) -> Optional[str]:
-        # 1) Exact substring match
-        for key, app in self.known_apps.items():
-            if key in lowered:
-                return app
+        first_two = " ".join(tokens[:2])
 
-        # 2) Fuzzy match on individual words
-        words = lowered.replace(".", " ").split()
-        keys = list(self.known_apps.keys())
+        is_open = tokens[0] in open_verbs
+        is_close = tokens[0] in close_verbs or first_two in close_verbs
 
-        for word in words:
-            if len(word) < 3:
-                continue
-            close = difflib.get_close_matches(word, keys, n=1, cutoff=0.6)
-            if close:
-                return self.known_apps[close[0]]
+        if not (is_open or is_close):
+            return None
+
+        # remove the verb ("open", "close", ..) from the beginning
+        if first_two in close_verbs:
+            remainder = lowered[len(first_two) :].strip()
+        else:
+            remainder = lowered[len(tokens[0]) :].strip()
+
+        if not remainder:
+            return None
+
+        # Try to match an app keyword in the remainder
+        app_name = None
+        for logical_name, keywords in self.app_keywords.items():
+            for kw in keywords:
+                if kw in remainder:
+                    app_name = logical_name
+                    break
+            if app_name:
+                break
+
+        if not app_name:
+            return None
+
+        if is_open:
+            msg = f"Opening {app_name} for you."
+            return ParsedCommand(
+                type=CommandType.OPEN_APP,
+                raw_text=lowered,
+                app_name=app_name,
+                message_to_user=msg,
+            )
+        else:
+            msg = f"Closing {app_name} for you."
+            return ParsedCommand(
+                type=CommandType.CLOSE_APP,
+                raw_text=lowered,
+                app_name=app_name,
+                message_to_user=msg,
+            )
+
+    # ------------------------------------------------------------------ #
+
+    def _parse_memory_query(self, lowered: str) -> Optional[ParsedCommand]:
+        """
+        Recognises questions ABOUT memory, e.g.:
+
+          - what did i tell you to remember?
+          - what did i tell you about my lab?
+          - what did i ask you to remember?
+          - what do you remember?
+          - what are things you noted down?
+          - what did i tell you yesterday?
+
+        These should NEVER store new notes.
+        """
+
+        # Normalise multiple spaces just a little bit
+        text = " ".join(lowered.split())
+
+        query_starts = (
+            "what did i tell you to remember",
+            "what did i tell you about",
+            "what did i ask you to remember",
+            "what did i tell you yesterday",
+            "what did i tell you last time",
+            "what did i tell you earlier",
+            "what do you remember",
+            "what can you remember",
+            "what are things you noted down",
+            "what did i tell you",
+        )
+
+        for prefix in query_starts:
+            if text.startswith(prefix):
+                return ParsedCommand(
+                    type=CommandType.NOTE_QUERY,
+                    raw_text=lowered,
+                    message_to_user="Here's what I remember related to that:",
+                )
 
         return None
 
-    def _looks_like_note(self, cleaned: str) -> bool:
-        note_triggers = [
-            "note that", "remember that", "remember to",
-            "make a note", "take a note", "i need to remember",
-            "remind me to", "remind me that",
-        ]
-        return any(t in cleaned for t in note_triggers)
+    # ------------------------------------------------------------------ #
 
-    def _extract_note_text(self, cleaned: str, original: str) -> str:
-        triggers = [
-            "note that", "remember that", "remember to",
-            "make a note", "take a note", "i need to remember",
-            "remind me to", "remind me that",
-        ]
+    def _parse_memory_store(self, lowered: str, raw: str) -> Optional[ParsedCommand]:
+        """
+        Recognises "remember X" / "note that X" / "make a note that X".
 
-        lowered_orig = original.lower()
-        for trig in triggers:
-            idx = lowered_orig.find(trig)
-            if idx != -1:
-                start = idx + len(trig)
-                return original[start:].strip(" .")
+        Examples:
+          - remember i have an exam at 2 pm on friday
+          - remember that my dbms lab is at 4 pm on friday
+          - note that i need to go to washroom in 2mins
+          - make a note that i have to submit lab file tomorrow
+        """
 
-        return original.strip()
+        text = lowered
 
-    def _looks_like_memory_query(self, cleaned: str) -> bool:
-        triggers = [
-            "what did i tell you to remember",
-            "what did i ask you to remember",
-            "what do you remember",
-            "show my notes",
-            "list my notes",
-            "show my reminders",
-            "list my reminders",
-            "what are my notes",
-            "what reminders do i have",
-        ]
-        if any(t in cleaned for t in triggers):
-            return True
-        if cleaned.startswith("do you remember"):
-            return True
-        return False
+        # Phrases that mean "store this":
+        store_prefixes = (
+            "remember that",
+            "remember to",
+            "remember ",
+            "note that",
+            "note down that",
+            "make a note that",
+            "take a note that",
+            "note down",
+            "take a note",
+        )
 
-    def _parse_memory_query(self, cleaned: str, original: str):
-        if cleaned.startswith("do you remember"):
-            lowered_orig = original.lower()
-            key = "do you remember"
-            idx = lowered_orig.find(key)
-            rest = original[idx + len(key):].strip(" ?.")
-            return "search", rest
-        # default: list recent notes
-        return "recent", ""
+        note_text = None
 
-    def _looks_like_smalltalk(self, cleaned: str) -> bool:
-        smalltalk_phrases = [
-            "how are you",
-            "how's it going",
-            "what's up",
-            "are you there",
-            "are you online",
-            "are you working",
-            "are you fully operational",
-            "are you fully functional",
-            "are you fine",
-            "are you ok",
-            "who are you",
-            "what can you do",
-        ]
-        return any(p in cleaned for p in smalltalk_phrases)
+        # Case 1: sentence starts with one of the store prefixes
+        for prefix in store_prefixes:
+            if text.startswith(prefix):
+                note_text = text[len(prefix) :].strip()
+                break
+
+        # Case 2: "… please remember that X" or "… so remember that X"
+        if note_text is None:
+            marker = "remember that"
+            if marker in text:
+                note_text = text.split(marker, 1)[1].strip()
+
+        if note_text is None:
+            return None
+
+        # Fallback: if we somehow stripped everything, just store the raw text
+        if not note_text:
+            note_text = raw
+
+        msg = f"I'll remember that: {note_text}"
+        return ParsedCommand(
+            type=CommandType.NOTE_REMEMBER,
+            raw_text=raw,
+            note_text=note_text,
+            message_to_user=msg,
+        )
